@@ -1,34 +1,41 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
+# which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Brainless Developer
+author: Fausto NA
+author_link: https://github.com/brainlessdeveloper
+author_description: >
+  I am a web developer based in Berlin.
+  At the moment I am working for store2be, a booking platform for promotion and retail locations.
+  We work with React, Ruby on Rails and sometimes Rust. Also, I love everything
+  about web development even if it's design-oriented so expect all sorts of topics.
+email: fausto.nunez@outlook.com
+description: >
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://brainlessdeveloper.com" # the base hostname & protocol for your site
+
+# Picturefill
+# A responsive image polyfill: http://scottjehl.github.io/picturefill/
+picturefill: false
+
+# Typography
+# To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
+# leave this ID blank
+typekit_kit_id: kwf5dox
 
 # Build settings
+gems: [jekyll-paginate]
 markdown: kramdown
-theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+permalink: pretty
+
+# Pagination
+paginate: 5
+
+# Sass
+sass:
+    style: :compressed
