@@ -51,16 +51,7 @@
         margin: 15px 0 25px;
         font-variant: small-caps;
         letter-spacing: 0.06em;
-
-        // Fix typekit line-height with excess top padding
-        padding: 23px 0 13px;
-    }
-
-    @include typekit-fallback {
-        .post-date {
-            // Reset a reasonable top padding in absence of abnormally tall typekit font line-height
-            padding-top: 18px;
-        }
+        padding: 10px 0 13px;
     }
 
     .post-body {

@@ -81,7 +81,7 @@ Now, at first I thought this was cool, but not extremely useful. Until I saw [t
 
 *Update:* This has been added to Chrome in version 56. Hurray!
 
-This property value solves the issue that many modern websites using as sticky header have. Nowadays, cross-browser implementations of a sticky header (or sidebar, or whatever) effect include JavaScript in one way or another, mostly due to the fact that ~~Chrome doesn’t support the native CSS value.~~ Elements with this property will behave as a relative positioned element until it reaches a threshold specified by its top property, at which point it will behave as a fixed position element. I guess the demo up there is self-explanatory. Here’s the syntax for sticky elements:
+This property value solves the issue that many modern websites using as sticky header have. Nowadays, cross-browser implementations of a sticky header (or sidebar, or whatever) effect include JavaScript in one way or another. Elements with this property will behave as a relative positioned element until it reaches a threshold specified by its top property, at which point it will behave as a fixed position element. I guess the demo up there is self-explanatory. Here’s the syntax for sticky elements:
 
 {% highlight css %}
 .element {
