@@ -9,7 +9,9 @@ If you’re a web developer, then for one reason or another you’ve probably pu
 
 The totally awesome CSS filter property has been around for a while already. Full support was first included in Chrome 18 (March 2012). Firefox adopted it early in version 3.6 but only achieved full support in Firefox 36 (January 2015). A little bit later on, Opera and Safari added support, and nowadays you can use it on most browsers, including the Android native app. Of course, with the exception of *cough* Internet Explorer (no support) and Microsoft Edge, which includes partial support.
 
-Before actually explaining what any of this does, I’d like to show you a little piece of code I’ve written to let you play around with filters. Go ahead, frolic away:  
+Before actually explaining what any of this does, I’d like to show you a little piece of code I’ve written to let you play around with filters. Go ahead, frolic away:
+
+{% include filters.html %}
 
 As you can see, there’s a million things you can do with the CSS filter property. If you haven’t yet, try using a GIF with it. For the lazy ones, [here’s a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](http://giphy.com/ellemuliarchyk).
 

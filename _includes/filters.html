@@ -1,0 +1,351 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Filter Playground</title>
+    <style>
+      .playgroundWrapper input[type=range] {
+        -webkit-appearance: none;
+        margin: 10px 0;
+      }
+      .playgroundWrapper input[type=range]:focus {
+        outline: none;
+      }
+      .playgroundWrapper input[type=range]::-webkit-slider-runnable-track {
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000;
+        background: #CFCFCF;
+        border-radius: 1px;
+        border: 0px solid #000000;
+      }
+      .playgroundWrapper input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #CFCFCF;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #E0E0E0;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+      }
+      .playgroundWrapper input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #CFCFCF;
+      }
+      .playgroundWrapper input[type=range]::-moz-range-track {
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000;
+        background: #CFCFCF;
+        border-radius: 1px;
+        border: 0px solid #000000;
+      }
+      .playgroundWrapper input[type=range]::-moz-range-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #CFCFCF;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #E0E0E0;
+        cursor: pointer;
+      }
+      .playgroundWrapper input[type=range]::-ms-track {
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      .playgroundWrapper input[type=range]::-ms-fill-lower {
+        background: #CFCFCF;
+        border: 0px solid #000000;
+        border-radius: 2px;
+        box-shadow: 0px 0px 0px #000000;
+      }
+      .playgroundWrapper input[type=range]::-ms-fill-upper {
+        background: #CFCFCF;
+        border: 0px solid #000000;
+        border-radius: 2px;
+        box-shadow: 0px 0px 0px #000000;
+      }
+      .playgroundWrapper input[type=range]::-ms-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 1px solid #CFCFCF;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #E0E0E0;
+        cursor: pointer;
+      }
+      .playgroundWrapper input[type=range]:focus::-ms-fill-lower {
+        background: #CFCFCF;
+      }
+      .playgroundWrapper input[type=range]:focus::-ms-fill-upper {
+        background: #CFCFCF;
+      }
+      body .playgroundWrapper {
+        font-family:Helvetica;
+        font-size:16px;
+        line-height:26px;
+        color:#333333;
+      }
+      .playgroundWrapper .imgWrap {
+        width:100%;
+        border-radius:3px;
+        margin-top:32px;
+        position:relative;
+      }
+      .playgroundWrapper .imgWrap img {
+        width:100%;
+      }
+      .playgroundWrapper a.deleter {
+        position:absolute;
+        right:0;
+        width:20px;
+        height:20px;
+        opacity:0.6;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:20px 20px;
+        background-image:url(http://brainlessdeveloper.com/wp-content/uploads/2016/04/trash-a.png);
+        display:inline-block;
+      }
+      .playgroundWrapper a.adder {
+        position:absolute;
+        right:0;
+        width:20px;
+        height:20px;
+        opacity:0.6;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:20px 20px;
+        background-image:url(http://brainlessdeveloper.com/wp-content/uploads/2016/04/plus-circled.png);
+        display:inline-block;
+      }
+      .playgroundWrapper input {
+        position:absolute;
+        right:30px;
+        width:250px;
+      }
+      .playgroundWrapper input[type=text] {
+        outline:none;
+        font-family:Helvetica;
+        color:grey;
+        font-size:16px;
+        border:2px dotted grey;
+      }
+      .playgroundWrapper span {
+        text-align:right;
+        position:absolute;
+        right:300px;
+      }
+      .playgroundWrapper {
+        position:relative;
+        width:440px;
+        transform:translateX(-40px);
+        margin:18px auto 0 auto;
+      }
+      #resultCss {
+        margin-top:20px;
+        width:auto;
+        height:30px;
+        display:block;
+        font-size: 16px;
+      }
+      #resultCss code {
+        font-size: 16px;
+      }
+      @media (max-width: 470px) {
+        .playgroundWrapper input {
+          width:150px;
+          right:20px;
+        }
+        .playgroundWrapper {
+          width:340px;
+        }
+        .playgroundWrapper span {
+          right:185px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="playgroundWrapper">
+      <span style="font-weight:bold;">Image URL</span>
+      <input placeholder="Try using GIFs too!" id="url" type="text"><a style="cursor:pointer;" class="adder" onclick="changeImage();"></a>
+      <br>
+      <span>Opacity</span>
+      <input id="opacity" type="range" min="0" max="100" value="100" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('opacity');"></a>
+      <br>
+      <span>Contrast</span>
+      <input id="contrast" type="range" min="0" max="200" value="100" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('contrast');"></a>
+      <br>
+      <span>Brightness</span>
+      <input id="brightness" type="range" min="0" max="200" value="100" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('brightness');"></a>
+      <br>
+      <span>Saturate</span>
+      <input id="saturate" type="range" min="0" max="600" value="100" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('saturate');"></a>
+      <br>
+      <span>Grayscale</span>
+      <input id="grayscale" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('grayscale');"></a>
+      <br>
+      <span>Hue-rotate</span>
+      <input id="hue-rotate" type="range" min="0" max="360" value="0" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('hue-rotate');"></a>
+      <br>
+      <span>Sepia</span>
+      <input id="sepia" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('sepia');"></a>
+      <br>
+      <span>Invert</span>
+      <input id="invert" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('invert');"></a>
+      <br>
+      <span>Blur</span>
+      <input id="blur" type="range" min="0" max="20" value="0" onchange="newFilter(this.id, this.value);"><a style="cursor:pointer;" class="deleter" onclick="removeFilter('blur');"></a>
+      <br>
+    </div>
+    <pre id="resultCss"><code class="language-css">The resulting CSS will appear here.</code></pre>
+    <div id="imgWrap" class="imgWrap post-image">
+      <div class="imgBorder">
+        <img src="http://brainlessdeveloper.com/wp-content/uploads/2016/04/cssfilters.jpg" alt="" id="victimImage">
+      </div>
+    </div>
+
+    <script>
+
+var victimImage = document.getElementById("victimImage");
+
+var appliedFilters = {};
+
+var semicolon = ";";
+
+var imgWrap = document.getElementById("imgWrap");
+
+var resultCss = document.getElementById("resultCss");
+
+function isEmpty(object) {
+
+  for(var key in object) {
+
+    if(object.hasOwnProperty(key)){
+      return false;
+    }
+
+  }
+
+  return true;
+
+}
+
+function changeImage (newUrl) {
+
+  var newUrl = document.getElementById("url").value;
+
+  if (newUrl.indexOf(".gif") !=-1) {
+    victimImage.src = newUrl;
+    imgWrap.classList.add("noCredit");
+  }
+
+  else if (newUrl.indexOf(".jpg") !=-1) {
+    victimImage.src = newUrl;
+    imgWrap.classList.add("noCredit");
+  }
+
+  else if (newUrl.indexOf(".jpeg") !=-1) {
+    victimImage.src = newUrl;
+    imgWrap.classList.add("noCredit");
+  }
+
+  else if (newUrl.indexOf(".png") !=-1) {
+    victimImage.src = newUrl;
+    imgWrap.classList.add("noCredit");
+  }
+
+  else {
+    alert("That is most probably not an image, mate.");
+  }
+
+  setTimeout (function() {
+    parent.setIframeHeight("section1");
+  },200);
+
+}
+
+function newFilter (filterName, filterValue) {
+
+  delete appliedFilters[filterName];
+
+  appliedFilters[filterName] = filterValue;
+
+  applyFilters();
+
+}
+
+function removeFilter (filterName) {
+
+  var removedFilter = document.getElementById(filterName);
+  removedFilter.value = removedFilter.defaultValue;
+
+  delete appliedFilters[filterName];
+
+  applyFilters();
+
+}
+
+function applyFilters() {
+
+  appliedStylesWebkit = " -webkit-filter:";
+  appliedStyles = " filter:";
+
+  for (var filter in appliedFilters) {
+
+    if (appliedFilters.hasOwnProperty(filter)) {
+
+      if (appliedFilters.hasOwnProperty(filter)) {
+
+        var removedFilter = document.getElementById(filter);
+
+        if (removedFilter.value == removedFilter.defaultValue) {
+          delete appliedFilters[removedFilter.id];
+          applyFilters();
+          return;
+        }
+
+      }
+
+      if (filter == "blur") {
+        appliedStyles += " " + filter + '(' + appliedFilters[filter] + 'px)';
+        appliedStylesWebkit += " " + filter + '(' + appliedFilters[filter] + 'px)';
+      }
+
+      else if (filter == "hue-rotate") {
+        appliedStyles += " " + filter + '(' + appliedFilters[filter] + 'deg)';
+        appliedStylesWebkit += " " + filter + '(' + appliedFilters[filter] + 'deg)';
+      }
+
+      else {
+        appliedStyles += " " + filter + '(' + appliedFilters[filter] + '%)';
+        appliedStylesWebkit += " " + filter + '(' + appliedFilters[filter] + '%)';
+      }
+
+    }
+
+  }
+
+  finalString = appliedStyles.concat(semicolon).concat(appliedStylesWebkit.concat(semicolon));
+
+  victimImage.style.cssText = finalString;
+
+  if (isEmpty(appliedFilters)) {
+    resultCss.innerHTML = "img { filter: none; -webkit-filter: none; }";
+  }
+  else {
+    resultCss.innerHTML = "img {"+ finalString + " }";
+  }
+
+}
+
+    </script>
+  </body>
+</html>
