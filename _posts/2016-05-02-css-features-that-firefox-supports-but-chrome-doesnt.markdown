@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "CSS features that Firefox supports but Chrome doesn't"
+comments: true
 date:   2016-05-02 00:32:51 +0200
 ---
 

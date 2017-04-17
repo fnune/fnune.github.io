@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Guide to CSS filters"
+comments: true
 date:   2016-04-16 10:32:51 +0200
 ---
 
