@@ -111,6 +111,17 @@
         }
     }
 
+    .post-image--small {
+        display: flex;
+        justify-content: center;
+
+        img,
+        video {
+            width: auto;
+            max-width: 50%;
+        }
+    }
+
     .post-image--split {
         @include min-breakpoint($image-splitting-breakpoint) {
             margin-right: -1 * $post-image-split-gutter;

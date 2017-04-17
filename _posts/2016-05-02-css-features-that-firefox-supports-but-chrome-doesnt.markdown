@@ -13,7 +13,21 @@ Scroll snap points, in case you haven’t heard of them yet, are a way of introd
 
 There are some cool libraries which implement this with cross-browser compatibility, such as the ever-famous [pagePiling.js](https://github.com/alvarotrigo/pagePiling.js) (which does a lot more things than just scroll snapping), but the native CSS property doesn’t work on Chrome.
 
-CSS scroll snap points work for the horizontal axis as well as for the vertical axis. For a great guide on how to use this, refer to [CSS Tricks](https://css-tricks.com/introducing-css-scroll-snap-points/). The basic syntax you have to use for this is as follows:
+CSS scroll snap points work for the horizontal axis as well as for the vertical axis. I'm going to give you an example of a vertical scrolling container with scroll snap points. Hop to Firefox if you're not there already.
+
+<div style="position:relative; max-height:200px; -webkit-overflow-scrolling: touch; scroll-snap-type: mandatory; scroll-snap-destination: 0% 100%; scroll-snap-points-y: repeat(200px); overflow:auto;">
+  <p style="position:absolute; bottom:10%; left:10%; color:rgba(0,0,0,0.2);">This will only work on Firefox</p>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#DFFFBC;">
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFCAB6;">
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#CCFFFF;">
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFD5FE;">
+  </div>
+</div>
+
+For a great guide on how to use this, refer to [CSS Tricks](https://css-tricks.com/introducing-css-scroll-snap-points/). The basic syntax you have to use for this is as follows:
 
 {% highlight css %}
 .container {
@@ -26,6 +40,10 @@ CSS scroll snap points work for the horizontal axis as well as for the vertical 
 ## Hyphenation
 
 Next up in our CSS features that don’t work on Chrome is hyphenation. Check out this piece of lorem. The upper picture was taken on Chrome, and the lower one was taken on Firefox. They both have hyphenation active, but obviously it only works on Firefox.
+
+<div class='post-image post-image--small'>
+  <img src='/img/css-features-chrome-firefox/hyphenation.jpg' alt='Hyphenation in Chrome vs Firefox' />
+</div>
 
 The hyphens property is tied to the language attribute you give your HTML, so be sure to use the correct language. Here is the different syntax options you can use in more detail:
 
@@ -81,6 +99,21 @@ Now, at first I thought this was cool, but not extremely useful. Until I saw [t
 ## Sticky positioning
 
 *Update:* This has been added to Chrome in version 56. Hurray!
+
+No idea how this one went past my sight for the original list. Thanks to reddit user <a href="https://www.reddit.com/user/Graftak9000" target="_blank">Graftak9000</a>, <a href="https://twitter.com/geoffrey_crofte" target="_blank">Geoffrey Crofte</a> and Nathan here in the comments for pointing this one out.
+
+<div style="position:relative; max-height:200px; overflow:auto;">
+  <p style="position:absolute; bottom:10%; left:10%; color:rgba(0,0,0,0.2);">Scroll down. This will work on Firefox and (now) Chrome 56+</p>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFCAB6;">
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:80px; background:#DFFFBC; position:sticky; top:0;">
+  <p style="text-align:center; display:block; line-height: 0; color:rgba(0,0,0,0.2);">This sticks to the specified 'top' value without any JS.</p>
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#CCFFFF;">
+  </div>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFD5FE;">
+  </div>
+</div>
 
 This property value solves the issue that many modern websites using as sticky header have. Nowadays, cross-browser implementations of a sticky header (or sidebar, or whatever) effect include JavaScript in one way or another. Elements with this property will behave as a relative positioned element until it reaches a threshold specified by its top property, at which point it will behave as a fixed position element. I guess the demo up there is self-explanatory. Here’s the syntax for sticky elements:
 
