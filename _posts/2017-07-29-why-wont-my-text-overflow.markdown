@@ -11,28 +11,28 @@ I present to you a **checklist** that should once and for all truncate that stub
 
 In the checklist, I'll be using the word "container". So let's define it first, just for this post: the "container" I'm talking about is the _immmediate_ parent of the element that contains the text node you want to truncate. For example:
 
-{% highlight html %}
+```html
 <div> <!-- This div is the container -->
   <span>I will NOT truncate. Nononononono, no!</span> <!-- Let's call this one "stubborn child" -->
 </div>
-{% endhighlight %}
+```
 
-Is your container NOT a flex container? -> [Checklist A](#checklist-a-for-non-flex-containers) is your friend.
+Is your container NOT a flex container? [Checklist A](#checklist-a-for-non-flex-containers) is your friend.
 
-Is your container a flex container? -> [Checklist B](#checklist-b-for-flex-containers) is for you.
+Is your container a flex container? [Checklist B](#checklist-b-for-flex-containers) is for you.
 
 ## Checklist A: for non-flex containers
 
-- [ ] Is the container a block-level element?
-- [ ] Does the container have a computed size determined by your CSS, or does it inherit one?
-- [ ] Did you add the `white-space: nowrap;` property to the container?
-- [ ] Did you add the `overflow: hidden;` property to the container?
-- [ ] Did you add the `text-overflow: ellipsis;` property to the container (duh)?
+1. Is the container a block-level element?
+2. Does the container have a computed size determined by your CSS, or does it inherit one?
+3. Did you add the `white-space: nowrap;` property to the container?
+4. Did you add the `overflow: hidden;` property to the container?
+5. Did you add the `text-overflow: ellipsis;` property to the container? (duh)
 
 ## Checklist B: for flex containers
 
-- [ ] Does the container have a computed size determined by your CSS, or does it inherit one?
-- [ ] Does the child also have a computed size determined by your CSS, or inherit one?
-- [ ] Did you add the `white-space: nowrap;` property to the child?
-- [ ] Did you add the `overflow: hidden;` property to the child?
-- [ ] Did you add the `text-overflow: ellipsis;` property to the child (duh)?
+1. Does the container have a computed size determined by your CSS, or does it inherit one?
+2. Does the child also have a computed size determined by your CSS, or inherit one?
+3. Did you add the `white-space: nowrap;` property to the child?
+4. Did you add the `overflow: hidden;` property to the child?
+5. Did you add the `text-overflow: ellipsis;` property to the child? (duh)
