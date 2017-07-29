@@ -18,21 +18,22 @@ In the checklist, I'll be using the word "container". So let's define it first, 
 ```
 
 Is your container NOT a flex container? [Checklist A](#checklist-a-for-non-flex-containers) is your friend.
-
 Is your container a flex container? [Checklist B](#checklist-b-for-flex-containers) is for you.
 
 ## Checklist A: for non-flex containers
 
-1. Is the container a block-level element?
-2. Does the container have a computed size determined by your CSS, or does it inherit one?
-3. Did you add the `white-space: nowrap;` property to the container?
-4. Did you add the `overflow: hidden;` property to the container?
-5. Did you add the `text-overflow: ellipsis;` property to the container? (duh)
+1. Is the container a [block-level element](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)?
+2. Does the container have a [computed size](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) determined by your CSS, or does it inherit one?
+3. Did you add the `white-space: nowrap;` property to the **container**?
+4. Did you add the `overflow: hidden;` property to the **container**?
+5. Did you add the `text-overflow: ellipsis;` property to the **container**? (duh)
 
 ## Checklist B: for flex containers
 
-1. Does the container have a computed size determined by your CSS, or does it inherit one?
-2. Does the child also have a computed size determined by your CSS, or inherit one?
-3. Did you add the `white-space: nowrap;` property to the child?
-4. Did you add the `overflow: hidden;` property to the child?
-5. Did you add the `text-overflow: ellipsis;` property to the child? (duh)
+1. Does the container have a [computed size](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) determined by your CSS, or does it inherit one?
+2. Does the child also have a [computed size](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) determined by your CSS, or does it inherit one?
+3. Did you add the `white-space: nowrap;` property to the **child**?
+4. Did you add the `overflow: hidden;` property to the **child**?
+5. Did you add the `text-overflow: ellipsis;` property to the **child**? (duh)
+
+Hope that helped. Here's some nice [documentation from MDN about the text-overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) which is well worth the read.
