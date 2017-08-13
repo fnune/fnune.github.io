@@ -45,7 +45,30 @@ If all of those pass, you're almost safe to think it will pass the first CI test
 
 What you need to do to submit a pull request is carefully explained in Servo's [Wiki Page about GitHub workflow](https://github.com/servo/servo/wiki/Github-workflow). Once you submit your pull request, you'll be promptly greeted by [a dog](https://github.com/bors-servo). You won't need to talk to `bors-servo` but Servo organization members can request CI retries by mentioning `@bors-servo`.
 
-## TODO
+## The review process and regression tests
 
-Coming from dynamic languages (mainly JavaScript), I had an uninformed opinion that type systems were a burden more than a liberation and would only make sense in huge projects.
+If needed, you're guaranteed to receive extensive help from the project maintainers. In fact, in some cases, I'm quite sure any of the Servo organization members could have solved the problem I was facing with less effort than it took to help me. [Here's some live proof](https://github.com/servo/servo/pulls?utf8=%E2%9C%93&q=is%3Apr%20author%3Abrainlessdeveloper). The help I receive when working on Servo **makes for an invaluable learning opportunity** and it makes contributing to the project all the more enjoyable. Do not be afraid to ask any doubts, and always do your research on the topic: if you study it enough, you'll be able to discuss with others and learn even more.
 
+Once your pull request is all green, you can request review by commenting `r?`. Somebody will automatically be assigned to the pull request depending on the code area you're working on. Servo organization members can request a full CI run by commenting `@bors-servo try`. This will trigger the rest of the CI suites, and the most important one is the [Web Platform Tests](https://developer.mozilla.org/en-US/docs/Mozilla/QA/web-platform-tests). It's a regression test suite used for Firefox. Many of the tests that run on the WPT suite for Servo come directly from the Firefox suite, but you can also [write your own new tests, modify existing ones or modify the expectations for existing test results](https://github.com/servo/servo/blob/master/tests/wpt/README.md). Many tests are expected to fail for Servo, and you can also submit a pull request to fix those failures. Of [my four pull requests to Servo](https://github.com/servo/servo/blob/master/tests/wpt/README.md), two of them have caused failures on the WPT suite and **most of the work related to the issue went on fixing and improving the tests**.
+
+Running the full test suite takes a long time. Usually around one hour. If a regression test fails live and you're working on a fix, you can always run the test locally. First, make a development build with `./mach build -d` and then run the specific test with `./mach test-wpt [path-to-test]`. Unexpected test results, such as `PASS, expected FAIL` will also make the CI suite fail: you'll need to update the test expectations by modifying the corresponding `.ini` file. On [the guide I linked above](https://github.com/servo/servo/blob/master/tests/wpt/README.md) there's all the information you need on how to work with the WPT suite.
+
+## Resources to help you figure out how to solve an issue
+
+Of course, this is highly dependent on what type of issue you picked. But in general, the most important resource is documentation. Reading [the HTML Living Standard](https://html.spec.whatwg.org/) is a great way to help you find the right way to solve a problem. Usually, all the problems are already solved and their solution is in the spec. You're just writing a different explanation of their solutions... in Rust. Quoting Kevlin Hennney:
+
+> The act of describing a program in unambiguous detail and the act of programming are one and the same.
+
+You can also find a huge amount of valuable information in [the Mozilla Developer Network](https://developer.mozilla.org/en-US/). Pretty much the same as the spec, but with a lot of examples, and a lot more verbosity. Do not make the same mistake I did and skim through the examples trying to find the exact line that will solve your problem: reading everything thoroughly is what will help you understand the issue best.
+
+If armed with a powerful enough tool, you'll be able to document your way out of your issue by just reading the source code and searching inside of it. I know all editors have project search functionality but this is a *huge* project. As of commit `b1d7b6bfcf`, the Servo repository has a whopping 6517647 lines of code (that's six and a half million). I used [loc](https://github.com/cgag/loc) to count those. So use something fast like [ripgrep](https://github.com/BurntSushi/ripgrep): it'll make your life a lot easier.
+
+In the end, you'll receive the most help from the project maintainers: just ask them. It's an extremely fun process.
+
+If you think I've missed a great resource, please comment below and I'll be sure to include it in this post, and use it on my own as well.
+
+## Conclusion
+
+Working on Servo is one of my main sources of learning nowadays and I'll keep on trying to find issues I can tackle. The tasks I've carried out for now have ranged from [a two line change dependency removal](https://github.com/servo/servo/pull/17811/files) to [properly setting the origin of fetch requests](https://github.com/servo/servo/pull/16508). The fetch API issue took me almost three months to get merged, mostly because of my lack of understanding of the project. But the project maintainers proved to be exceptionally helpful and pleasant to work with. They also never tried to rush a solution and always "followed" (and this should read "accommodated to" or "slowed down to") my pace.
+
+I encourage everyone reading this to check out the project and consider contributing to it. The time you spend working on a project like this is extremely valuable to you as a web developer, and in the end you can feel proud of helping build something on which your applications and websites will probably run on in the future.
