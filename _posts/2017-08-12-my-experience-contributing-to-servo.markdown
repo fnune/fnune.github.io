@@ -2,7 +2,6 @@
 layout: post
 title:  "My experience contributing to Servo"
 comments: true
-published: false
 date:   2017-08-12 12:47:51 +0200
 ---
 
