@@ -17,7 +17,7 @@ Let's talk about what actually working on the project feels like.
 
 ## Finding an issue
 
-First, you'll need to find an [issue](https://github.com/servo/servo/issues) you find interesting. Helpful labels are `E-easy`, `Good first PR`, and `C-assigned`. You can filter for issues that haven't been assigned to anyone yet by searching with a negative prefix: `-label:C-assigned`. Here's a good filter to start with:
+First, you'll need to find an [issue](https://github.com/servo/servo/issues) you find interesting. Helpful labels are `E-easy`, `Good first PR`, and `C-assigned`. You can filter for issues that haven't been assigned to anyone yet by searching with a negative prefix: `-label:C-assigned`. [Here's a good filter](https://github.com/servo/servo/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%20label%3AE-easy%20-label%3AC-assigned) to start with:
 
 ```
 is:issue is:open label:E-easy -label:C-assigned
