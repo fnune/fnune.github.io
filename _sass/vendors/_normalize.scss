@@ -441,16 +441,13 @@ ul {
 }
 
 /**
- * Remove padding and list style from lists
- */
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-/**
  * Fix line-height for code blocks
  */
 pre {
     line-height: 1.4;
+}
+
+li {
+  line-height: 1.4;
+  margin-bottom: 8px;
 }

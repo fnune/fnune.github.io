@@ -54,7 +54,7 @@ Running the full test suite takes a long time. Usually around one hour. If a reg
 
 ## Resources to help you figure out how to solve an issue
 
-Of course, this is highly dependent on what type of issue you picked. But in general, the most important resource is documentation. Reading [the HTML Living Standard](https://html.spec.whatwg.org/) is a great way to help you find the right way to solve a problem. Usually, all the problems are already solved and their solution is in the spec. You're just writing a different explanation of their solutions... in Rust. Quoting Kevlin Hennney:
+Of course, this is highly dependent on what type of issue you picked. But in general, the most important resource is documentation. Reading [the HTML Living Standard](https://html.spec.whatwg.org/) is a great way to help you find the right way to solve a problem. Usually, all the problems are already solved and their solution is in the spec. You're just writing a different explanation of their solutions... in Rust. Quoting Kevlin Henney:
 
 > The act of describing a program in unambiguous detail and the act of programming are one and the same.
 
