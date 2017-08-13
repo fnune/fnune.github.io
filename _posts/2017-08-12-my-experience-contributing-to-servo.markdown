@@ -11,7 +11,7 @@ Working on Servo was attractive to me from the start for several reasons:
 
 * It's written in Rust, and Rust has an exciting community, it's low level and modern, it's not shackled in any way by existing legacy code nor by industry requirements, and it just seemed like the perfect thing to help me quench my learning thirst.
 * Servo is a web browser engine, and working for a web browser engine as a web developer feels like working on the biggest possible project, on the foundation on which everything I'd ever done took place.
-* Servo has an enormous amount of [issues](https://github.com/servo/servo/issues) you're welcome to take. Some of these may seem extremely cryptic and complicated for someone new, but others are extremely trivial. You'll be sure to find the full gradient of difficulties in Servo issues, and there's even [Servo Starters](https://starters.servo.org/), which uses GitHub labels to show issues that are _Good first PR_s.
+* Servo has an enormous amount of [issues](https://github.com/servo/servo/issues) you're welcome to take. Some of these may seem extremely cryptic and complicated for someone new, but others are extremely trivial. You'll be sure to find the full gradient of difficulties in Servo issues, and there's even [Servo Starters](https://starters.servo.org/), which uses GitHub labels to show issues that are `Good first PR`s.
 
 Let's talk about what actually working on the project feels like.
 
@@ -70,4 +70,4 @@ If you think I've missed a great resource, please comment below and I'll be sure
 
 Working on Servo is one of my main sources of learning nowadays and I'll keep on trying to find issues I can tackle. The tasks I've carried out for now have ranged from [a two line change dependency removal](https://github.com/servo/servo/pull/17811/files) to [properly setting the origin of fetch requests](https://github.com/servo/servo/pull/16508). The fetch API issue took me almost three months to get merged, mostly because of my lack of understanding of the project. But the project maintainers proved to be exceptionally helpful and pleasant to work with. They also never tried to rush a solution and always "followed" (and this should read "accommodated to" or "slowed down to") my pace.
 
-I encourage everyone reading this to check out the project and consider contributing to it. The time you spend working on a project like this is extremely valuable to you as a web developer, and in the end you can feel proud of helping build something on which your applications and websites will probably run on in the future.
+I encourage everyone reading this to check out the project and consider contributing to it. The time you spend working on a project like this is extremely valuable to you as a web developer, and in the end you can feel proud of helping build something on which your applications and websites will probably run in the future.
