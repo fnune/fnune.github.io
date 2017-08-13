@@ -60,7 +60,7 @@ Of course, this is highly dependent on what type of issue you picked. But in gen
 
 You can also find a huge amount of valuable information in [the Mozilla Developer Network](https://developer.mozilla.org/en-US/). Pretty much the same as the spec, but with a lot of examples, and a lot more verbosity. Do not make the same mistake I did and skim through the examples trying to find the exact line that will solve your problem: reading everything thoroughly is what will help you understand the issue best.
 
-If armed with a powerful enough tool, you'll be able to document your way out of your issue by just reading the source code and searching inside of it. I know all editors have project search functionality but this is a *huge* project. As of commit `b1d7b6bfcf`, the Servo repository has a whopping 6517647 lines of code (that's six and a half million). I used [loc](https://github.com/cgag/loc) to count those. So use something fast like [ripgrep](https://github.com/BurntSushi/ripgrep): it'll make your life a lot easier.
+If armed with a powerful enough tool, you'll be able to document your way out of your issue by just reading the source code and searching inside of it. I know all editors have project search functionality but this is a *huge* project. As of commit `b1d7b6bfcf`, the Servo repository has a whopping 6,517,647 lines of code (that's six and a half million). I used [loc](https://github.com/cgag/loc) to count those. So use something fast like [ripgrep](https://github.com/BurntSushi/ripgrep): it'll make your life a lot easier.
 
 In the end, you'll receive the most help from the project maintainers: just ask them. It's an extremely fun process.
 
