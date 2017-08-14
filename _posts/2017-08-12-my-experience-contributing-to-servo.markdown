@@ -29,6 +29,8 @@ Also, don't forget [Servo Starters](https://starters.servo.org/).
 
 ## Working on your task
 
+Once you've found the issue you want to work on, make sure to leave a comment saying you're working on it so there's no two people implementing the same thing separately.
+
 Compiling Servo is understandably slow: it's a huge project. Your first run will likely take between thirty minutes and one hour depending on your machine and connection, and after some re-runs and testing you'll find yourself with a 15GB directory.
 
 Servo has its own tool, `mach`, which you can use to build for development (`./mach build -d`), for release (`./mach build -r`), and to do many other things. When you submit your pull request, it must pass some CI tests which you can try locally to save time:
