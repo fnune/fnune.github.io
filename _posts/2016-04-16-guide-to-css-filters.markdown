@@ -13,7 +13,7 @@ Before actually explaining what any of this does, I’d like to show you a littl
 
 {% include filters.html %}
 
-As you can see, there’s a million things you can do with the CSS filter property. If you haven’t yet, try using a GIF with it. For the lazy ones, [here’s a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](http://giphy.com/ellemuliarchyk).
+As you can see, there’s a million things you can do with the CSS filter property. If you haven’t yet, try using a GIF with it. For the lazy ones, [here’s a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](https://giphy.com/ellemuliarchyk).
 
 ## CSS filter FAQ
 ---
@@ -35,7 +35,7 @@ These two will yield the exact same visual effect. But most modern browsers use 
 
 #### What is hue-rotate? What the hell does it do to my element?
 
-I’ve based this information on [this Wikipedia article](https://en.wikipedia.org/wiki/Hue). Hue is one of the properties of a color. It is described by the [CIECAM02 model](https://en.wikipedia.org/wiki/CIECAM02) as “the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow”. Hue is to a color what timbre is to a sound, basically. Each one of the colors in our HTML element can be located (and represented by a degree) on this scale:
+I’ve based this information on [this Wikipedia article](https://en.wikipedia.org/wiki/Hue). Hue is one of the properties of a color. It is described by the [CIECAM02 model](https://en.wikipedia.org/wiki/CIECAM02) as “the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow”. Hue is to a color what timbre is to a sound, basically. Each one of the colors in our HTML element can be located (and represented by a degree) on this scale:
 
 <div class='post-image'>
   <img src='/img/guide-filters/hue-scale.png' alt='Hue scale' />
@@ -88,11 +88,11 @@ Here’s a visual example. That’s the drop-shadow filter on the left and the b
   <img style='box-shadow: 16px 16px 10px grey;' src='/img/guide-filters/cssfilters2.png' alt='PNG Example with box-shadow' />
 </div>
 
-For a more in-detail comparison, I’m going to link you to a great article by [the new code](http://thenewcode.com/): [box-shadow property vs. drop-shadow filter: a complete comparison](http://thenewcode.com/598/box-shadow-property-vs-drop-shadow-filter-a-complete-comparison).
+For a more in-detail comparison, I’m going to link you to a great article by [the new code](https://thenewcode.com/): [box-shadow property vs. drop-shadow filter: a complete comparison](https://thenewcode.com/598/box-shadow-property-vs-drop-shadow-filter-a-complete-comparison).
 
 #### More effects Vol. II: SVG filters
 
-The filters directly available with CSS are no more than a bunch of presets built on top of different definitions of SVG filters (which are essentially XML data). Building these specific filters from zero whenever you wanted to add them would be a [PITA](http://www.urbandictionary.com/define.php?term=pita), so some awesome people at W3C packed up the presumably more popular filters and created the filter property. This does mean though, that you can still add your own home-brewed SVG filters with the following syntax:
+The filters directly available with CSS are no more than a bunch of presets built on top of different definitions of SVG filters (which are essentially XML data). Building these specific filters from zero whenever you wanted to add them would be a [PITA](https://www.urbandictionary.com/define.php?term=pita), so some awesome people at W3C packed up the presumably more popular filters and created the filter property. This does mean though, that you can still add your own home-brewed SVG filters with the following syntax:
 
 {% highlight css %}
 img {

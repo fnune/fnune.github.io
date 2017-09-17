@@ -17,7 +17,7 @@ author_description: >
 email: fausto.nunez@outlook.com
 description: >
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://brainlessdeveloper.com" # the base hostname & protocol for your site
+url: "https://brainlessdeveloper.com" # the base hostname & protocol for your site
 
 # Picturefill
 # A responsive image polyfill: http://scottjehl.github.io/picturefill/
