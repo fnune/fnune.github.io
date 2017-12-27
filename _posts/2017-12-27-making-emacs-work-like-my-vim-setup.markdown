@@ -1,11 +1,17 @@
 ---
 layout: post
-title:  "Making Emacs work like my Vim setup"
+title:  "Making Emacs work like my Neovim setup"
 comments: true
 date:   2017-12-27 12:47:51 +0200
 ---
 
-I've been a Vim user and fan for a bit more than a year now. After having given it a reasonable spin I've become quite efficient at working with it, and it's been a pleasure all the way through. Certainly, I'm a lot faster with my Tmux/Vim/gitsh workspace than I was with either Atom, Sublime Text or VSCode, and I feel a lot more comfortable.
+## Table of contents
+
+# Making Emacs work like my Neovim setup
+
+I've been a Neovim user and fan for a bit more than a year now. After having given it a reasonable spin I've become quite efficient at working with it, and it's been a pleasure all the way through. Certainly, I'm a lot faster with my Tmux/Neovim/gitsh workspace than I was with either Atom, Sublime Text or VSCode, and I feel a lot more comfortable.
+
+_**Disclaimer**: from this point and forward, and although I use Neovim, I'll be using the words Vim and Neovim interchangeably. Whether I refer to the software packages or to a specific user community should be clear in context.
 
 During the last weeks I've noticed several tools and concepts in the Emacs which I've found attractive enough to try out the platform. These include:
 
@@ -15,3 +21,43 @@ During the last weeks I've noticed several tools and concepts in the Emacs which
 - Integration: I like the _never leave your editor_ and _kitchen sink in Emacs_ approach and although I doubt I'll ever manage emails or browse the web inside Emacs, I feel all warm and fuzzy when I realize I could if I wanted to. Many of these things are arguably possible in Vim but it feels like the Emacs community leans more towards it than the Vim counterpart.
 
 So I decided to surrender to my sacrilegous self and try to **emulate everything I do with Vim** from an empty Emacs config file built with Org-mode. And I must say: it's been a breeze! I haven't even needed to dedicate much time to learning actual Emacs, and what I've learned has actually been nice. In this post I'll try to go through what I did to rebuild my setup; I hope you'll enjoy it as much as I did.
+    
+### Package management
+
+### Sane defaults and basic Emacs settings
+
+### Vim things and Evil things
+    
+- Macros
+- Registers
+- Command repetition (`.`)
+- Auto-save and safety/backup features
+
+### Keybindings and the leader key
+
+### Project management and file navigation
+
+### Git workflow
+
+### Linting
+
+### Specific packages
+
+- VimCompletesMe
+- vim-tmux-navigator
+- auto-pairs
+- NerdTree
+- vim-emoji-complete
+- Tim Pope's stuff
+
+### Theming
+
+### Splits and Tmux integration
+
+### Language-specific support
+
+### Performance and server mode
+
+## Quick reference table
+
+## Conclusion
