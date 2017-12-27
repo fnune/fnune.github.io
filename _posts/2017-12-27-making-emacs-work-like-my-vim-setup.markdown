@@ -39,16 +39,18 @@ Package, however, does not take responsibility for automatic fetching, updates, 
 
 It didn't take me too long to learn this, and use-package allegedly does a thousand more things which I'll begin to learn with time.
 
-### Sane defaults and basic Emacs settings
-
 ### Vim things and Evil things
-    
-- Macros
-- Registers
-- Command repetition (`.`)
-- Auto-save and safety/backup features
 
-### Keybindings and the leader key
+[Evil](https://github.com/emacs-evil/evil) calls itself the _extensible vi layer for Emacs_, and claims that it _emulates the main features of Vim_. I'd say this is an understatement; Evil feels like a complete re-implementation of Vim. It makes you feel right at home once you start using it:
+
+- Macros: these work exactly as expected. Even making a visual selection and running `:norm @q` runs your `q` macro on the visual selection, just like in Vim. The only difference I've noticed is that execution is minimally slower, but the decrease in speed does not compare to that of VSCode's implementation of Vim macros, for example.
+- Registers: these also work exactly as expected. The only problem I've had is that I can't copy to the clipboard by using the `+` register, but this must be a misconfiguration on my part for Emac's clipboard integration, so I suspect it won't be a huge effort to fix it.
+- Command repetition (`.`): works as expected, except for some actions introduced by other packages. One of these, unfortunately, is [evil-surround](https://github.com/emacs-evil/evil-surround). [Here's the related issue](https://github.com/emacs-evil/evil-surround/issues/133).
+- Auto-save and safety/backup features: these can be easily configured to not happen at all or to happen in a specified directory (I'm using `/tmp`).
+- Ex commands (those starting with a colon `:`) like substitution, substitution with manual confirmation, invocation of macros in normal mode, etc. All work great and I haven't found an instance where they don't.
+- Marks: I don't make extensive use of these, but they also seem to be working great.
+
+Using [evil-leader]() you can configure a leader key. I've configured mine to `Space`, and added a several keybindings. The same results can be achieved with the more powerful [general.el](), and if you need chained keystrokes to produce a command (for example, I used to have `<leader> wq`, which I found faster than `:wq`), you can use [Hydra](). I haven't found a need for these and I'm doing just fine with evil-leader.
 
 ### Project management and file navigation
 
@@ -60,22 +62,19 @@ The scope of fzf is by no means comparable to that of Helm and Projectile, so th
 
 As you can see [on my Emacs configuration](), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
 
-### Linting
-
 ### Specific packages
+
+A quick search on your favorite engine will yield at least a couple different solutions to problems some of the nicest Vim plugins solve. Here's a quick list to encourage you:
 
 - [VimCompletesMe](): I enjoyed the simplicity of VimCompletesMe, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emac package [auto-complete]() provides the same ease of use and also feels lightweight.
 - [vim-tmux-navigator](): in Tmux, I use `<my-tmux-prefix>-[hjkl]` to navigate panes. Using Vim, I wanted windows to behave as if they were on the same level as Tmux panes, and vim-tmux-navigator works great for that. For Emacs there's a port called [emacs-navigator]().
 - [auto-pairs](): Emacs has a built-in mode that suits my needs. Enable it with `(electric-pair-mode 1)`.
 - [NerdTree](): the Emacs port [NeoTree]() does the original justice and, although I haven't gotten there yet, it can also be extended with Git integration and icons if you use GUI Emacs.
 - [vim-emoji-complete](): I use this to navigate and autocomplete through a list of Unicode emojis. In the company I work at, we use [Gitmojis]() extensively, so this is actually an important part of my workflow. You should check them out too, it may seem silly but it's quite helpful to be able to recognize what every commit does without even reading the message. For Emacs, there's an even better solution for inserting emojis into your buffer: [emojify](). This thing even lets you customize the list of emojis you get. For example, I've chosen to only display Unicode emojis, and not GitHub or vanilla ASCII emojis.
-- [Tim Pope's stuff](): there's an Emacs port for everything Mr. Pope does. Many of these go on top of [Evil](), and it's a no-brainer to add them and use them if you're used to their Vim counterpart.
+
+Regarding [Tim Pope plugins](https://github.com/tpope?tab=repositories): there's an Emacs port for everything Mr. Pope does. Many of these go on top of Evil, and it's a no-brainer to add them and use them if you're used to their Vim counterpart.
 
 ### Theming
-
-### Splits and Tmux integration
-
-### Language-specific support
 
 ### Performance and server mode
 
