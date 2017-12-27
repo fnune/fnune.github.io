@@ -2,6 +2,7 @@
 @mixin galileo-pagination {
     .pagination {
         @include clearfix;
+        list-style-type: none;
         margin: -10px auto 0;
         display: block;
         border-top: 1px solid $pagination-border-color;
