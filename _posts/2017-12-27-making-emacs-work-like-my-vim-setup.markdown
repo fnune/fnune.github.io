@@ -9,7 +9,7 @@ date:   2017-12-27 12:47:51 +0200
 
 I've been a Neovim user and fan for a bit more than a year now. After having given it a reasonable spin I've become quite efficient at working with it, and it's been a pleasure all the way through. Certainly, I'm a lot faster with my Tmux/Neovim/gitsh workspace than I was with either Atom, Sublime Text or VSCode, and I feel a lot more comfortable.
 
-> _Disclaimer: from this point and forward, and although I use Neovim, I'll be using the words Vim and Neovim interchangeably. Whether I refer to the software packages or to a specific user community should be clear in context._
+> _From this point and forward, and although I use Neovim, I'll be using the words Vim and Neovim interchangeably. Whether I refer to the software packages or to a specific user community should be clear in context._
 
 During the last weeks I've noticed several tools and concepts in the Emacs which I've found attractive enough to try out the platform. These include:
 
@@ -76,6 +76,39 @@ Regarding [Tim Pope plugins](https://github.com/tpope?tab=repositories): there's
 
 ### Theming
 
+Themes are really easy to set up on Emacs. Just add a use-package declaration and then load it with `(load-theme 'pretty-theme t)`. The second argument automatically answers "yes" to a couple security questions that pop up every time you load a new theme. Emacs themes can run arbitrary Elisp so they can do a lot of nasty stuff. Make sure you trust the sources where you get your themes.
+
+If I had to complain about anything, I'd say most themes work much better on the GUI version of Emacs, and I use the terminal version (`emacs -nw`). Many themes' backgrounds are broken and show up differently depending on your `$TERM` environment variable. Of the ones I've tried, I've found [Monokai]() and [Badger]() to work look best on terminal Emacs.
+
 ### Performance and server mode
+
+Neovim feels a lot snappier for a lot of interactions. This, however, is not important at all most of the time, because it never shows while writing or navigating text inside a buffer.
+
+The main difference in performance shows in startup time. Here's a quick-and-dirty comparison using `time`, with my full configuration loaded on both programs:
+
+```bash
+➜  time nvim +q
+nvim +q  0.13s user 0.02s system 97% cpu 0.160 total
+➜  time em +q
+emacs -nw +q  2.14s user 0.12s system 44% cpu 5.121 total
+```
+
+> _Please do not evaluate this as a benchmark: I haven't done anything to improve startup time on either Nvim or Emacs (like using use-package's `:defer t`)._
+
+Those two seconds of waiting is OK if you open Emacs once and work from there for each project. They is _not_ OK if you're using Emacs as a default editor for stuff like Git, or even your `$EDITOR` environment variable.
+
+Emac's solution to this is **server mode**. Basically, you start an Emacs server on your fully loaded instance (the one that took two seconds to open). From then on, if you want to open Emacs for a quick edit and you don't need the default directory to be the one you called Emacs on, you can go `emacsclient`.
+
+```
+➜  time emacsclient -nw -c -a "" +q
+emacsclient -nw -c -a "" +q  0.00s user 0.00s system 0% cpu 3.010 total
+```
+
+Yep - **instant**! That's more like it. I have that gravely arcane command (`emacsclient -nw -c -a ""`) set as my `$EDITOR` environment variable. Also, I have two aliases:
+
+- `em` opens a full Emacs instance.
+- `e` is used to manually call `emacsclient -nw -c -a ""`, which is also my `$EDITOR`.
+
+This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode]() (basically, there's no setup).
 
 ## Conclusion
