@@ -28,11 +28,11 @@ So I decided to surrender to my sacrilegous self and try to **emulate everything
 
 For package management needs the Vim community has contributed several awesome packages like [Pathogen]() or [vim-plug]() among the many worth mentioning. I've always used `vim-plug` and never found a problem with it. As active as the Emacs community is in regards to package development, I expected a solution that would provide the same level of comfort.
 
-Emacs comes bundled with Package, and this is as much as I'm aware of: it takes care of package repository management, and to configure it I only needed to add the links to those repositories and initialize it.
+Emacs comes bundled with `Package`, and this is as much as I'm aware of: it takes care of package repository management, and to configure it I only needed to add the links to those repositories and initialize it.
 
-Package, however, does not take responsibility for automatic fetching, updates, and encapsulation of configuration (which `vim-plug` does, and very well). For this, I've found the de-facto solution to be [use-package](). To be able to work with `use-package` using its minimal functionality, this is all you need to know:
+`Package`, however, does not take responsibility for automatic fetching, updates, and encapsulation of configuration (which `vim-plug` does, and very well). For this, I've found the de-facto solution to be [use-package](). To be able to work with `use-package` using its minimal functionality, this is all you need to know:
 
-- `use-package` can fetch whatever packages are made available through your Package configuration.
+- `use-package` can fetch whatever packages are made available through your `Package` configuration.
 - A basic declaration looks like this: `(use-package package-name)`.
 - If you add `:ensure t`, you'll get automatic fetching of your package and startup checks: `(use-package package-name :ensure t)`.
 - If you add `:defer t`, your package will load lazily: `(use-package package-name :ensure t :defer t)`.
@@ -60,12 +60,12 @@ It didn't take me too long to learn this, and `use-package` allegedly does a tho
 
 ### Specific packages
 
-- VimCompletesMe
-- vim-tmux-navigator
-- auto-pairs
-- NerdTree
-- vim-emoji-complete
-- Tim Pope's stuff
+- [VimCompletesMe](): I enjoyed the simplicity of `VimCompletesMe`, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emac package [auto-complete]() provides the same ease of use and also feels lightweight.
+- [vim-tmux-navigator](): in Tmux, I use `<my-tmux-prefix>-[hjkl]` to navigate panes. Using Vim, I wanted windows to behave as if they were on the same level as Tmux panes, and `vim-tmux-navigator` works great for that. For Emacs there's a port called [emacs-navigator]().
+- [auto-pairs](): Emacs has a built-in mode that suits my needs. Enable it with `(electric-pair-mode 1)`.
+- [NerdTree](): the Emacs port [NeoTree]() does the original justice and, although I haven't gotten there yet, it can also be extended with Git integration and icons if you use GUI Emacs.
+- [vim-emoji-complete](): I use this to navigate and autocomplete through a list of Unicode emojis. In the company I work at, we use [Gitmojis]() extensively, so this is actually an important part of my workflow. You should check them out too, it may seem silly but it's quite helpful to be able to recognize what every commit does without even reading the message. For Emacs, there's an even better solution for inserting emojis into your buffer: [emojify](). This thing even lets you customize the list of emojis you get. For example, I've chosen to only display Unicode emojis, and not GitHub or vanilla ASCII emojis.
+- [Tim Pope's stuff](): there's an Emacs port for everything Mr. Pope does. Many of these go on top of [Evil](), and it's a no-brainer to add them and use them if you're used to their Vim counterpart.
 
 ### Theming
 
