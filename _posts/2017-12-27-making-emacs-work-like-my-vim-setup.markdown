@@ -7,9 +7,9 @@ date:   2017-12-27 12:47:51 +0200
 
 ### Table of contents
 
-1. [Package management](#package-management): from [vim-plug]() to [Package.el]() and [use-package]().
-2. [Vim things and Evil things](#vim-things-and-evil-things): experiences using [Evil mode]().
-3. [Project management and file navigation](#project-management-and-file-navigation): from [fzf]() to [Helm]() and [Projectile]().
+1. [Package management](#package-management): from [vim-plug](https://github.com/junegunn/vim-plug) to [Package.el](https://www.emacswiki.org/emacs/ELPA) and [use-package](https://github.com/jwiegley/use-package).
+2. [Vim things and Evil things](#vim-things-and-evil-things): experiences using [Evil mode](https://github.com/emacs-evil/evil).
+3. [Project management and file navigation](#project-management-and-file-navigation): from [fzf](https://github.com/junegunn/fzf) to [Helm](https://github.com/emacs-helm/helm) and [Projectile](https://github.com/bbatsov/projectile).
 4. [Specific packages](#specific-packages): a small teaser on alternatives for popular Vim packages.
 5. [Theming](#theming): everybody wants some eye-candy.
 6. [Performance and server mode](#performance-and-server-mode): naïve comparison of how Neovim and Emacs feel differently performance-wise.
@@ -43,11 +43,11 @@ So I decided to surrender to my sacrilegous self and try to **emulate everything
 
 ### Package management
 
-For package management needs the Vim community has contributed several awesome packages like [Pathogen]() or [vim-plug]() among the many worth mentioning. I've always used vim-plug and never found a problem with it. As active as the Emacs community is in regards to package development, I expected a solution that would provide the same level of comfort.
+For package management needs the Vim community has contributed several awesome packages like [Pathogen](https://github.com/tpope/vim-pathogen) or [vim-plug](https://github.com/junegunn/vim-plug) among the many worth mentioning. I've always used vim-plug and never found a problem with it. As active as the Emacs community is in regards to package development, I expected a solution that would provide the same level of comfort.
 
 Emacs comes bundled with Package, and this is as much as I'm aware of: it takes care of package repository management, and to configure it I only needed to add the links to those repositories and initialize it.
 
-Package, however, does not take responsibility for automatic fetching, updates, and encapsulation of configuration (which vim-plug does, and very well). For this, I've found the de-facto solution to be [use-package](). To be able to work with use-package using its minimal functionality, this is all you need to know:
+Package, however, does not take responsibility for automatic fetching, updates, and encapsulation of configuration (which vim-plug does, and very well). For this, I've found the de-facto solution to be [use-package](https://github.com/jwiegley/use-package). To be able to work with use-package using its minimal functionality, this is all you need to know:
 
 - use-package can fetch whatever packages are made available through your Package configuration.
 - A basic declaration looks like this: `(use-package package-name)`.
@@ -60,36 +60,36 @@ It didn't take me too long to learn this, and use-package allegedly does a thous
 
 ### Vim things and Evil things
 
-[Evil](https://github.com/emacs-evil/evil) calls itself the _extensible vi layer for Emacs_, and claims that it _emulates the main features of Vim_. I'd say this is an understatement; Evil feels like a complete re-implementation of Vim. It makes you feel right at home once you start using it:
+[Evil](https://github.com/emacs-evil/evil) calls itself the _extensible vi layer for Emacs_, and claims that it _emulates the main features of Vim_. I'd say this is an understatement; Evil feels like a complete re-implementation of Vim's porcelain. It makes you feel right at home once you start using it:
 
 - Macros: these work exactly as expected. Even making a visual selection and running `:norm @q` runs your `q` macro on the visual selection, just like in Vim. The only difference I've noticed is that execution is minimally slower, but the decrease in speed does not compare to that of VSCode's implementation of Vim macros, for example.
-- Registers: these also work exactly as expected. The only problem I've had is that I can't copy to the clipboard by using the `+` register, but this must be a misconfiguration on my part for Emac's clipboard integration, so I suspect it won't be a huge effort to fix it.
+- Registers: registers also work exactly as expected. The only problem I've had is that I can't copy to the clipboard by using the `+` register, but this must be a misconfiguration on my part for Emac's clipboard integration, so I suspect it won't be a huge effort to fix it.
 - Command repetition (`.`): works as expected, except for some actions introduced by other packages. One of these, unfortunately, is [evil-surround](https://github.com/emacs-evil/evil-surround). [Here's the related issue](https://github.com/emacs-evil/evil-surround/issues/133).
-- Auto-save and safety/backup features: these can be easily configured to not happen at all or to happen in a specified directory (I'm using `/tmp`).
+- Auto-save and safety/backup features: they can be easily configured to not happen at all or to happen in a specified directory (I'm using `/tmp`).
 - Ex commands (those starting with a colon `:`) like substitution, substitution with manual confirmation, invocation of macros in normal mode, etc. All work great and I haven't found an instance where they don't.
-- Marks: I don't make extensive use of these, but they also seem to be working great.
+- Marks: I don't make extensive use of them, but they also seem to be working great.
 
-Using [evil-leader]() you can configure a leader key. I've configured mine to `Space`, and added a several keybindings. The same results can be achieved with the more powerful [general.el](), and if you need chained keystrokes to produce a command (for example, I used to have `<leader> wq`, which I found faster than `:wq`), you can use [Hydra](). I haven't found a need for these and I'm doing just fine with evil-leader.
+Using [evil-leader](https://github.com/cofi/evil-leader) you can configure a leader key. I've configured mine to `Space`, and added a several keybindings. The same results can be achieved with the more powerful [general.el](https://github.com/noctuid/general.el), and if you need chained keystrokes to produce a command (for example, I used to have `<leader> wq`, which I found faster than `:wq`), you can use [Hydra](https://github.com/abo-abo/hydra). I haven't found a need for these and I'm doing just fine with evil-leader.
 
 ### Project management and file navigation
 
-My setup using Vim is basically [fzf]() (which I use for many more things outside Vim) powered by [Ag (or The Silver Searcher)]() for finding files and [ripgrep]() for finding text in a project. This works flawlessly.
+My setup using Vim is basically [fzf](https://github.com/junegunn/fzf) (which I use for many more things outside Vim) powered by [Ag (or The Silver Searcher)](https://github.com/ggreer/the_silver_searcher) for finding files and [ripgrep](https://github.com/BurntSushi/ripgrep) for finding text in a project. This works flawlessly.
 
-I've found the combination of [Helm]() and [Projectile]() to be an adequate substitute to my former setup. On big projects like Servo, the difference in speed is noticeable (in favor of the Vim configuration) but I can live with that. I don't know why, but there's a longer load time on the Emacs setup.
+I've found the combination of [Helm](https://github.com/emacs-helm/helm) and [Projectile](https://github.com/bbatsov/projectile) to be an adequate substitute to my former setup. On big projects like Servo, the difference in speed is noticeable (in favor of the Vim configuration) but I can live with that. I don't know why, but there's a longer load time on the Emacs setup.
 
 The scope of fzf is by no means comparable to that of Helm and Projectile, so this is not meant to be a comparison but it does happen to be what covers my file-finding needs. Both setups enable extremely quick fuzzy search for files and content.
 
-As you can see [on my Emacs configuration](), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
+As you can see [on my Emacs configuration](https://github.com/brainlessdeveloper/emacs.d/), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
 
 ### Specific packages
 
 A quick search on your favorite engine will yield at least a couple different solutions to problems some of the nicest Vim plugins solve. Here's a quick list to encourage you:
 
-- [VimCompletesMe](): I enjoyed the simplicity of VimCompletesMe, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emacs package [auto-complete]() provides the same ease of use and also feels lightweight.
-- [vim-tmux-navigator](): in Tmux, I use `<my-tmux-prefix>-[hjkl]` to navigate panes. Using Vim, I wanted windows to behave as if they were on the same level as Tmux panes, and vim-tmux-navigator works great for that. For Emacs there's a port called [emacs-navigator]().
-- [auto-pairs](): Emacs has a built-in mode that suits my needs. Enable it with `(electric-pair-mode 1)`.
-- [NerdTree](): the Emacs port [NeoTree]() does the original justice and, although I haven't gotten there yet, it can also be extended with Git integration and icons if you use GUI Emacs.
-- [vim-emoji-complete](): I use this to navigate and autocomplete through a list of Unicode emojis. In the company I work at, we use [Gitmojis]() extensively, so this is actually an important part of my workflow. You should check them out too, it may seem silly but it's quite helpful to be able to recognize what every commit does without even reading the message. For Emacs, there's an even better solution for inserting emojis into your buffer: [emojify](). This thing even lets you customize the list of emojis you get. For example, I've chosen to only display Unicode emojis, and not GitHub or vanilla ASCII emojis.
+- [VimCompletesMe](https://github.com/ajh17/VimCompletesMe): I enjoyed the simplicity of VimCompletesMe, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emacs package [auto-complete](https://github.com/auto-complete/auto-complete) provides the same ease of use and also feels lightweight.
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator): in Tmux, I use `<my-tmux-prefix>-[hjkl]` to navigate panes. Using Vim, I wanted windows to behave as if they were on the same level as Tmux panes, and vim-tmux-navigator works great for that. For Emacs there's a port called [emacs-tmux-navigator](https://github.com/keith/evil-tmux-navigator).
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs): Emacs has a built-in mode that suits my needs. Enable it with `(electric-pair-mode 1)`.
+- [NerdTree](https://github.com/scrooloose/nerdtree): the Emacs port [NeoTree](https://github.com/jaypei/emacs-neotree) does the original justice and, although I haven't gotten there yet, it can also be extended with Git integration and icons if you use GUI Emacs.
+- [vim-emoji-complete](https://github.com/kyuhi/vim-emoji-complete): I use this to navigate and autocomplete through a list of Unicode emojis. In the company I work at, we use [Gitmojis](https://gitmoji.carloscuesta.me/) extensively, so this is actually an important part of my workflow. You should check them out too, it may seem silly but it's quite helpful to be able to recognize what every commit does without even reading the message. For Emacs, there's an even better solution for inserting emojis into your buffer: [emojify](https://github.com/iqbalansari/emacs-emojify). This thing even lets you customize the list of emojis you get. For example, I've chosen to only display Unicode emojis, and not GitHub or vanilla ASCII emojis.
 
 Regarding [Tim Pope plugins](https://github.com/tpope?tab=repositories): there's an Emacs port for everything Mr. Pope does. Many of these go on top of Evil, and it's a no-brainer to add them and use them if you're used to their Vim counterpart.
 
@@ -97,7 +97,7 @@ Regarding [Tim Pope plugins](https://github.com/tpope?tab=repositories): there's
 
 Themes are really easy to set up on Emacs. Just add a use-package declaration and then load it with `(load-theme 'pretty-theme t)`. The second argument automatically answers "yes" to a couple security questions that pop up every time you load a new theme. Emacs themes can run arbitrary Elisp so they can do a lot of nasty stuff. Make sure you trust the sources where you get your themes.
 
-If I had to complain about anything, I'd say most themes work much better on the GUI version of Emacs, and I use the terminal version (`emacs -nw`). Many themes' backgrounds are broken and show up differently depending on your `$TERM` environment variable. Of the ones I've tried, I've found [Monokai]() and [Badger]() to work look best on terminal Emacs.
+If I had to complain about anything, I'd say most themes work much better on the GUI version of Emacs, and I use the terminal version (`emacs -nw`). Many themes' backgrounds are broken and show up differently depending on your `$TERM` environment variable. Of the ones I've tried, I've found [Monokai](https://github.com/oneKelvinSmith/monokai-emacs) and [Badger](https://github.com/ccann/badger-theme) to work look best on terminal Emacs.
 
 ### Performance and server mode
 
@@ -128,7 +128,7 @@ Yep - **instant**! That's more like it. I have that gravely arcane command (`ema
 - `em` opens a full Emacs instance.
 - `e` is used to manually call `emacsclient -nw -c -a ""`, which is also my `$EDITOR`.
 
-This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode]() (basically, there's no setup).
+This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode](https://github.com/brainlessdeveloper/emacs.d/#server-and-client-setup) (basically, there's no setup).
 
 ## Conclusion
 
