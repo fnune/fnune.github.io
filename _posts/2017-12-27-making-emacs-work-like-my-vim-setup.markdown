@@ -5,7 +5,28 @@ comments: true
 date:   2017-12-27 12:47:51 +0200
 ---
 
-## Table of contents
+### Table of contents
+
+1. [Package management](#package-management): from [vim-plug]() to [Package.el]() and [use-package]().
+2. [Vim things and Evil things](#vim-things-and-evil-things): experiences using [Evil mode]().
+3. [Project management and file navigation](#project-management-and-file-navigation): from [fzf]() to [Helm]() and [Projectile]().
+4. [Specific packages](#specific-packages): a small teaser on alternatives for popular Vim packages.
+5. [Theming](#theming): everybody wants some eye-candy.
+6. [Performance and server mode](#performance-and-server-mode): naïve comparison of how Neovim and Emacs feel differently performance-wise.
+7. [Conclusion](#conclusion) and fare-thee-wells.
+
+### My configuration repositories
+
+Do not expect extremely polished dotfiles. I know some of you will be pulling your hair out with some of the stuff you see here:
+
+- Neovim: [https://github.com/brainlessdeveloper/vimrc](https://github.com/brainlessdeveloper/vimrc)
+- Emacs: [https://github.com/brainlessdeveloper/emacs.d/](https://github.com/brainlessdeveloper/emacs.d)
+
+> _I will not give you counsel, saying do this, or do that. For not in doing or contriving, nor in choosing between this course and another, can I avail; but only in knowing what was and is, and in part also what shall be._
+>
+> <div style="text-align: right;">&mdash; <cite>Galadriel</cite></div>
+
+---
 
 I've been a Neovim user and fan for a bit more than a year now. After having given it a reasonable spin I've become quite efficient at working with it, and it's been a pleasure all the way through. Certainly, I'm a lot faster with my Tmux/Neovim/gitsh workspace than I was with either Atom, Sublime Text or VSCode, and I feel a lot more comfortable.
 
@@ -20,8 +41,6 @@ During the last weeks I've noticed several tools and concepts in the Emacs which
 
 So I decided to surrender to my sacrilegous self and try to **emulate everything I do with Vim** from an empty Emacs config file built with Org-mode. And I must say: it's been a breeze! I haven't even needed to dedicate much time to learning actual Emacs, and what I've learned has actually been nice. In this post I'll try to go through what I did to rebuild my setup; I hope you'll enjoy it as much as I did.
 
-## Quick reference table
-    
 ### Package management
 
 For package management needs the Vim community has contributed several awesome packages like [Pathogen]() or [vim-plug]() among the many worth mentioning. I've always used vim-plug and never found a problem with it. As active as the Emacs community is in regards to package development, I expected a solution that would provide the same level of comfort.
@@ -66,7 +85,7 @@ As you can see [on my Emacs configuration](), my setup for Helm and Projectile i
 
 A quick search on your favorite engine will yield at least a couple different solutions to problems some of the nicest Vim plugins solve. Here's a quick list to encourage you:
 
-- [VimCompletesMe](): I enjoyed the simplicity of VimCompletesMe, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emac package [auto-complete]() provides the same ease of use and also feels lightweight.
+- [VimCompletesMe](): I enjoyed the simplicity of VimCompletesMe, which basically only extends Vim's autocomplete features and lets you use them by pressing `Tab`. I found that the Emacs package [auto-complete]() provides the same ease of use and also feels lightweight.
 - [vim-tmux-navigator](): in Tmux, I use `<my-tmux-prefix>-[hjkl]` to navigate panes. Using Vim, I wanted windows to behave as if they were on the same level as Tmux panes, and vim-tmux-navigator works great for that. For Emacs there's a port called [emacs-navigator]().
 - [auto-pairs](): Emacs has a built-in mode that suits my needs. Enable it with `(electric-pair-mode 1)`.
 - [NerdTree](): the Emacs port [NeoTree]() does the original justice and, although I haven't gotten there yet, it can also be extended with Git integration and icons if you use GUI Emacs.
@@ -93,9 +112,9 @@ nvim +q  0.13s user 0.02s system 97% cpu 0.160 total
 emacs -nw +q  2.14s user 0.12s system 44% cpu 5.121 total
 ```
 
-> _Please do not evaluate this as a benchmark: I haven't done anything to improve startup time on either Nvim or Emacs (like using use-package's `:defer t`)._
+> _Please do not evaluate this as any kind of benchmark: I haven't done anything to improve startup time on either Neovim or Emacs (like using use-package's `:defer t`)._
 
-Those two seconds of waiting is OK if you open Emacs once and work from there for each project. They is _not_ OK if you're using Emacs as a default editor for stuff like Git, or even your `$EDITOR` environment variable.
+The two seconds of waiting is OK if you open Emacs once and work from there for each project. It is _not_ OK if you're using Emacs as a default editor for stuff like Git, or even your `$EDITOR` environment variable.
 
 Emac's solution to this is **server mode**. Basically, you start an Emacs server on your fully loaded instance (the one that took two seconds to open). From then on, if you want to open Emacs for a quick edit and you don't need the default directory to be the one you called Emacs on, you can go `emacsclient`.
 
@@ -112,3 +131,7 @@ Yep - **instant**! That's more like it. I have that gravely arcane command (`ema
 This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode]() (basically, there's no setup).
 
 ## Conclusion
+
+Voilà! Now I can continue Vimming around. I can Vim around while writing Lisp comfortably, doing some GTD in Org-mode, using Magit, and having leveled up in snobbism 😭.
+
+Jokes aside, it feels good to have given both editors a chance. I have certainly had a taste of why both communities are so passionate about their preferences. I'll make another post as soon as I've discovered if I can actually use my new setup as fluently as my former configuration. Until then, happy new year!
