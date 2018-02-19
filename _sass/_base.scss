@@ -35,3 +35,24 @@ a {
     text-decoration: none;
     color: #443E40;
 }
+
+ul, ol {
+    margin: 5px 0 20px;
+
+    ul {
+        margin: 5px 0;
+    }
+}
+
+h1, h2 {
+    margin: 12px 0 18px;
+}
+
+h3, h4, h5, h6 {
+    margin: 8px 0 12px;
+}
+
+hr {
+    margin: 20px 0;
+    opacity: .2;
+}
