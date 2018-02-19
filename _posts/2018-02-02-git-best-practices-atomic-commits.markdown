@@ -31,7 +31,7 @@ Working on a project of medium-to-big size with awesome colleagues has turned bl
 
 ### Git Built-ins work better if your commits are thought-through
 
-There are several Git tools which benefit from a clean and sound commit history. In fact, they are kind of useless _if_ your commit history is not good. I the most important are `bisect`, `revert`, `blame` and `log`. I won't go about explaining them - it takes basic search engine usage skills to find explanations much better than those I could dish out myself. But I will try to argue why you can make better use of them if your commits are neatly organized.
+There are several Git tools which benefit from a clean and sound commit history. In fact, they are kind of useless _if_ your commit history is not good. The most important are `bisect`, `revert`, `blame` and `log`. I won't go about explaining them - it takes basic search engine usage skills to find explanations much better than those I could dish out myself. But I will try to argue why you can make better use of them if your commits are neatly organized.
 
 <a name='bisect'></a>
 
