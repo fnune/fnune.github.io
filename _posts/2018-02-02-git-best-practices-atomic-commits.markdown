@@ -7,7 +7,7 @@ date:   2018-02-19 12:47:51 +0200
 
 Reading up on best practices regarding the shape of commits and their messages is something most software developers have done. It's not hard to realize that there's a consensus, and that there's plenty of valid arguments supporting it. This consensus usually boils down to:
 
-- [Correctly formatting commits](https://chris.beams.io/posts/git-commit/): using an editor instead of the `-m` flag, never exceeding the maximum length, using the imperative because it's shorter and clearer, using the description, and making sure to maximize the expressiveness and meaning of the message.
+- [Correctly formatting commits](https://chris.beams.io/posts/git-commit/): using an editor instead of the `-m` flag, never exceeding the maximum length, using the [imperative](https://en.wikipedia.org/wiki/Grammatical_mood#Imperative) because it's shorter and clearer, using the description, and making sure to maximize the expressiveness and meaning of the message.
 - Agreeing on, and adopting a [branch workflow](http://nvie.com/posts/a-successful-git-branching-model/) that suits the nature of the product and the development team. This usually entails making sure the `master` branch always reflects a stable production state, and using a development branch as a staging environment.
 - Never [rewriting history](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) on the `master` and development branches.
 - [Committing often](https://sethrobertson.github.io/GitBestPractices/#sausage_metaphor) and keeping commits small.
