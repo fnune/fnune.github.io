@@ -1,0 +1,27 @@
+{% assign posts = site.categories['typescript'] %}
+
+{% if posts.size > 1 %}
+
+  > This post is part of an ongoing series on TypeScript. In it, I try to explain in a detailed way
+  different situations I've faced while building relatively big React applications using TypeScript,
+  and moving them from JavaScript. Here's a list of other posts I've written about TypeScript:
+
+  <blockquote>
+    <ul>
+      {% for post in posts %}
+        {% if post.url != page.url %}
+          <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <span>{{ post.title }}</span>
+            </a>
+            <span> · </span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </blockquote>
+
+---
+
+{% endif %}
