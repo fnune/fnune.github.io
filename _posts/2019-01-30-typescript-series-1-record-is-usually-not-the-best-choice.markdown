@@ -8,7 +8,7 @@ date: 2019-01-30 11:03:00 +0200
 
 {% include typescript.html %}
 
-It's often tempting to define a type for key-value stores using TypeScript's `Record` if you don't know your object's keys during develpoment.
+It's often tempting to define a type for key-value stores using TypeScript's `Record` if you don't know your object's keys during development.
 
 ```ts
 type Record<K extends string, T> = { [P in K]: T }
