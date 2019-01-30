@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "My experience contributing to Servo"
+title: 'My experience contributing to Servo'
 comments: true
-date:   2017-08-12 12:47:51 +0200
+date: 2017-08-12 12:47:51 +0200
 ---
 
 Some months ago a colleague introduced me to Rust and to the [Servo](https://servo.org) project. It's a web browser engine led by Mozilla, and [its code is available on GitHub](https://github.com/servo/servo) and is open to [contributions](https://github.com/servo/servo/blob/master/CONTRIBUTING.md).
 
 Working on Servo was attractive to me from the start for several reasons:
 
-* It's written in Rust, and Rust has an exciting community, it's low level and modern, it's not shackled in any way by existing legacy code nor by industry requirements, and it just seemed like the perfect thing to help me quench my learning thirst.
-* Servo is a web browser engine, and working for a web browser engine as a web developer feels like working on the biggest possible project, on the foundation on which everything I'd ever done took place.
-* Servo has an enormous amount of [issues](https://github.com/servo/servo/issues) you're welcome to take. Some of these may seem extremely cryptic and complicated for someone new, but others are extremely trivial. You'll be sure to find the full gradient of difficulties in Servo issues, and there's even [Servo Starters](https://starters.servo.org/), which uses GitHub labels to show issues that are `Good first PR`s.
+- It's written in Rust, and Rust has an exciting community, it's low level and modern, it's not shackled in any way by existing legacy code nor by industry requirements, and it just seemed like the perfect thing to help me quench my learning thirst.
+- Servo is a web browser engine, and working for a web browser engine as a web developer feels like working on the biggest possible project, on the foundation on which everything I'd ever done took place.
+- Servo has an enormous amount of [issues](https://github.com/servo/servo/issues) you're welcome to take. Some of these may seem extremely cryptic and complicated for someone new, but others are extremely trivial. You'll be sure to find the full gradient of difficulties in Servo issues, and there's even [Servo Starters](https://starters.servo.org/), which uses GitHub labels to show issues that are `Good first PR`s.
 
 Let's talk about what actually working on the project feels like.
 
@@ -35,10 +35,10 @@ Compiling Servo is understandably slow: it's a huge project. Your first run will
 
 Servo has its own tool, `mach`, which you can use to build for development (`./mach build -d`), for release (`./mach build -r`), and to do many other things. When you submit your pull request, it must pass some CI tests which you can try locally to save time:
 
-* `./mach build -d` for a development build.
-* `./mach test-unit` for the unit tests.
-* `./mach test-tidy` is the linter.
-* `./mach build-geckolib` and `./mach test-stylo`. [Here's more information about those two](https://wiki.mozilla.org/Quantum/Stylo).
+- `./mach build -d` for a development build.
+- `./mach test-unit` for the unit tests.
+- `./mach test-tidy` is the linter.
+- `./mach build-geckolib` and `./mach test-stylo`. [Here's more information about those two](https://wiki.mozilla.org/Quantum/Stylo).
 
 If all of those pass, you're almost safe to think it will pass the first CI tests. Check out [the complete `.travis.yml` file](https://github.com/servo/servo/blob/master/.travis.yml) to see the rest. Of course, even if your changes don't pass the tests, you can submit your pull request and expect help from the Servo project members.
 
@@ -62,7 +62,7 @@ Of course, this is highly dependent on what type of issue you picked. But in gen
 
 You can also find a huge amount of valuable information in [the Mozilla Developer Network](https://developer.mozilla.org/en-US/). Pretty much the same as the spec, but with a lot of examples, and a lot more verbosity. Do not make the same mistake I did and skim through the examples trying to find the exact line that will solve your problem: reading everything thoroughly is what will help you understand the issue best.
 
-If armed with a powerful enough tool, you'll be able to document your way out of your issue by just reading the source code and searching inside of it. I know all editors have project search functionality but this is a *huge* project. As of commit `b1d7b6bfcf`, the Servo repository has a whopping 6,517,647 lines of code (that's six and a half million). I used [loc](https://github.com/cgag/loc) to count those. So use something fast like [ripgrep](https://github.com/BurntSushi/ripgrep): it'll make your life a lot easier.
+If armed with a powerful enough tool, you'll be able to document your way out of your issue by just reading the source code and searching inside of it. I know all editors have project search functionality but this is a _huge_ project. As of commit `b1d7b6bfcf`, the Servo repository has a whopping 6,517,647 lines of code (that's six and a half million). I used [loc](https://github.com/cgag/loc) to count those. So use something fast like [ripgrep](https://github.com/BurntSushi/ripgrep): it'll make your life a lot easier.
 
 In the end, you'll receive the most help from the project maintainers: just ask them. It's an extremely fun process.
 
