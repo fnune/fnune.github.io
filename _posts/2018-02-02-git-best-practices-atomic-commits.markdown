@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Thoughts on atomic commits and quality of life"
+title: 'Thoughts on atomic commits and quality of life'
 comments: true
-date:   2018-02-19 12:47:51 +0200
+date: 2018-02-19 12:47:51 +0200
 ---
 
 Reading up on best practices regarding the shape of commits and their messages is something most software developers have done. It's not hard to realize that there's a consensus, and that there's plenty of valid arguments supporting it. This consensus usually boils down to:
@@ -17,10 +17,10 @@ Working on a project of medium-to-big size with awesome colleagues has turned bl
 ## Table of contents
 
 - [Git Built-ins work better if your commits are thought-through](#git-built-ins-work-better-if-your-commits-are-thought-through)
-    - [git bisect](#bisect)
-    - [git blame](#blame)
-    - [git revert](#revert)
-    - [git log](#log)
+  - [git bisect](#bisect)
+  - [git blame](#blame)
+  - [git revert](#revert)
+  - [git log](#log)
 - [Thinking of how to keep your commits small and clean helps write better code](#thinking-of-how-to-keep-your-commits-small-and-clean-helps-write-better-code)
 - [Keeping tests together with their relevant code whenever possible helps](#keeping-tests-together-with-their-relevant-code-whenever-possible-helps)
 - [CI and notification set-ups benefit from commits that build and pass tests](#ci-and-notification-set-ups-benefit-from-commits-that-build-and-pass-tests)
@@ -91,7 +91,7 @@ Planning your tests and commits before you start to code is a way to avoid tunne
 
 Although this just goes well with the idea that a commit should be atomic, and that its changes should conform a logical unit.
 
-This, however, introduces a question that's interesting and (as far as I understand) difficult to answer. The case for functionality-related changes and their corresponding tests living together in the same commit is easy to defend. It's easy to say "keep your commits atomic" but you can mold the definition of _atomic_ to your preferences like chewing gum. 
+This, however, introduces a question that's interesting and (as far as I understand) difficult to answer. The case for functionality-related changes and their corresponding tests living together in the same commit is easy to defend. It's easy to say "keep your commits atomic" but you can mold the definition of _atomic_ to your preferences like chewing gum.
 
 For example, say you're working on a task about adding a button to a view that deletes some resource, and confirms deletion with the user using a modal with a _delete_ button and a _cancel_ button. This is a React + Redux application, so to complete this, you need to do several things:
 

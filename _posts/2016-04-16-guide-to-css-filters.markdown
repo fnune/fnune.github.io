@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Guide to CSS filters"
+title: 'Guide to CSS filters'
 comments: true
-date:   2016-04-16 10:32:51 +0200
+date: 2016-04-16 10:32:51 +0200
 ---
 
 If you’re a web developer, then for one reason or another you’ve probably put your hands (like I have) on image editing software like Photoshop. Also, you’ve probably used the filter menu, which lets you give a layer cool effects such as blur or overlays, and gives you control of contrast, saturation, etc. Well, fear not! Enter CSS filters and say goodbye to the longest minutes of requesting work from our fellow designers: do it yourself! Unlock the powers of the CSS filter property and show the world some magic.
 
-The totally awesome CSS filter property has been around for a while already. Full support was first included in Chrome 18 (March 2012). Firefox adopted it early in version 3.6 but only achieved full support in Firefox 36 (January 2015). A little bit later on, Opera and Safari added support, and nowadays you can use it on most browsers, including the Android native app. Of course, with the exception of *cough* Internet Explorer (no support) and Microsoft Edge, which includes partial support.
+The totally awesome CSS filter property has been around for a while already. Full support was first included in Chrome 18 (March 2012). Firefox adopted it early in version 3.6 but only achieved full support in Firefox 36 (January 2015). A little bit later on, Opera and Safari added support, and nowadays you can use it on most browsers, including the Android native app. Of course, with the exception of _cough_ Internet Explorer (no support) and Microsoft Edge, which includes partial support.
 
 Before actually explaining what any of this does, I’d like to show you a little piece of code I’ve written to let you play around with filters. Go ahead, frolic away:
 
@@ -16,6 +16,7 @@ Before actually explaining what any of this does, I’d like to show you a littl
 As you can see, there’s a million things you can do with the CSS filter property. If you haven’t yet, try using a GIF with it. For the lazy ones, [here’s a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](https://giphy.com/ellemuliarchyk).
 
 ## CSS filter FAQ
+
 ---
 
 Most of these effects are self-explanatory. But there are some things which may cause a little bit of head scratching. Here’s my attempt at guessing what those are:
@@ -24,10 +25,10 @@ Most of these effects are self-explanatory. But there are some things which may 
 
 {% highlight css %}
 img {
-  /* A filter... */
-  filter: opacity(50%);
-  /* Or normal opacity... */
-  opacity: 0.5;
+/_ A filter... _/
+filter: opacity(50%);
+/_ Or normal opacity... _/
+opacity: 0.5;
 }
 {% endhighlight %}
 
@@ -69,7 +70,7 @@ There are two more functions you can do with the CSS filter property other than 
 
 {% highlight css %}
 img {
-  filter: drop-shadow(16px 16px 10px grey);
+filter: drop-shadow(16px 16px 10px grey);
 }
 {% endhighlight %}
 
@@ -81,7 +82,7 @@ The values stand for `h-shadow v-shadow blur spread color`, and the result of th
 
 #### But what is the difference between drop-shadow and box-shadow?
 
-Here’s a visual example. That’s the drop-shadow filter on the left and the box-shadow property on the right, on the same image. As you can see, the filter respects the alpha layer on your PNG while the box-shadow property applies the effect on the limits of the canvas. If you were to give an element with a drop-shadow filter a `pseudo-element`  such as `:after` or `:before`, the filter would respect that, too.
+Here’s a visual example. That’s the drop-shadow filter on the left and the box-shadow property on the right, on the same image. As you can see, the filter respects the alpha layer on your PNG while the box-shadow property applies the effect on the limits of the canvas. If you were to give an element with a drop-shadow filter a `pseudo-element` such as `:after` or `:before`, the filter would respect that, too.
 
 <div class='post-image post-image--split'>
   <img style='filter: drop-shadow(16px 16px 10px grey);' src='/img/guide-filters/cssfilters2.png' alt='PNG Example with drop-shadow' />
@@ -96,7 +97,7 @@ The filters directly available with CSS are no more than a bunch of presets buil
 
 {% highlight css %}
 img {
-  filter: url(#);
+filter: url(#);
 }
 {% endhighlight %}
 

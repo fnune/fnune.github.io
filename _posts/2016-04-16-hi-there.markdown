@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Hi there!"
+title: 'Hi there!'
 comments: true
-date:   2016-04-16 00:32:51 +0200
+date: 2016-04-16 00:32:51 +0200
 ---
 
 Welcome to Brainless Developer. In this blog I will feature memories of my adventures in the world of web development. Expect to see glorious tales of victory as well as stories of how I continuously bang my head against the brick walls of technology. When I try to do anything that’s new to me, I’ll go ahead and try to explain it here. I want to share my learning process with the world and help you make better digital products, and also learn from your criticism.

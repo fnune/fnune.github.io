@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "CSS features that Firefox supports but Chrome doesn't"
+title: "CSS features that Firefox supports but Chrome doesn't"
 comments: true
-date:   2016-05-02 00:32:51 +0200
+date: 2016-05-02 00:32:51 +0200
 ---
 
 This is a short list of CSS features that work on Firefox but not yet on Chrome. In particular, features that would be really cool to use in production if the other major browsers supported them. Maybe you didn’t know about some of these. Hopefully, I’ll get you informed on them. I’ll update this when the glorious day comes in which we are able to use these without polyfills or any other kind of external libraries.
@@ -31,9 +31,9 @@ For a great guide on how to use this, refer to [CSS Tricks](https://css-tricks.
 
 {% highlight css %}
 .container {
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y:repeat(px, vh, vw, percentage);
-  scroll-snap-destination: x y;
+scroll-snap-type: mandatory;
+scroll-snap-points-y:repeat(px, vh, vw, percentage);
+scroll-snap-destination: x y;
 }
 {% endhighlight %}
 
@@ -49,13 +49,13 @@ The hyphens property is tied to the language attribute you give your HTML, so be
 
 {% highlight css %}
 .element-that-contains-text {
-  hyphens: none;
-  hyphens: manual;
-  hyphens: auto;
-  /* And as usual... */
-  hyphens: inherit;
-  hyphens: initial;
-  hyphens: unset;
+hyphens: none;
+hyphens: manual;
+hyphens: auto;
+/_ And as usual... _/
+hyphens: inherit;
+hyphens: initial;
+hyphens: unset;
 }
 {% endhighlight %}
 
@@ -68,6 +68,7 @@ I have recently been informed by a tweet by [Michael Scharnagl](https://twitter
 This feature is awesome! Its effect is a little bit difficult to pick up on. Here’s my attempt at explaining it. The CSS background property accepts several different values, such as colors and image URLs. In Firefox, you can also use the `element()` function as a value for the background property. Let’s set up two `div` elements with some simple markup:
 
 {% highlight html %}
+
 <div id='element-on-the-left'>
   <!-- whatever content here, this will be
   the source for the element() function -->
@@ -83,8 +84,8 @@ Next, we will use this markup to generate a **live image** of the element on t
 
 {% highlight css %}
 #element-on-the-right {
-  /* set whatever size here and... */
-  background: -moz-element(#element-on-the-left);
+/_ set whatever size here and... _/
+background: -moz-element(#element-on-the-left);
 }
 {% endhighlight %}
 
@@ -98,7 +99,7 @@ Now, at first I thought this was cool, but not extremely useful. Until I saw [t
 
 ## Sticky positioning
 
-*Update:* This has been added to Chrome in version 56. Hurray!
+_Update:_ This has been added to Chrome in version 56. Hurray!
 
 No idea how this one went past my sight for the original list. Thanks to reddit user <a href="https://www.reddit.com/user/Graftak9000" target="_blank">Graftak9000</a>, <a href="https://twitter.com/geoffrey_crofte" target="_blank">Geoffrey Crofte</a> and Nathan here in the comments for pointing this one out.
 
@@ -119,8 +120,8 @@ This property value solves the issue that many modern websites using as sticky h
 
 {% highlight css %}
 .element {
-  position: sticky;
-  top: /* Your value */;
+position: sticky;
+top: /_ Your value _/;
 }
 {% endhighlight %}
 
