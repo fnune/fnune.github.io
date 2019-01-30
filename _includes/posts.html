@@ -1,0 +1,11 @@
+<ul>
+  {% for post in include.posts %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <span>{{ post.title }}</span>
+    </a>
+    <span> · </span>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+  </li>
+  {% endfor %}
+</ul>
