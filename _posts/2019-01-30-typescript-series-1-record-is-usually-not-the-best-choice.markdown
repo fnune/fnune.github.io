@@ -28,10 +28,10 @@ const dogsByBreed: Record<Breed, Dog[]> = {
   dachshund: [{ name: 'Charlie' }],
 }
 
-dogsByBreed.poodle // Type is Dogs[], value is undefined.
+dogsByBreed.poodle // Type is Dog[], value is undefined.
 ```
 
-We never told TypeScript that our property access may not return a value, so it will accept the type of the returned value to be `Dogs[]`. Use your own type for these situations. Here are example implementations:
+We never told TypeScript that our property access may not return a value, so it will accept the type of the returned value to be `Dog[]`. Use your own type for these situations. Here are example implementations:
 
 ```ts
 type Dictionary<K extends string, T> = Partial<Record<K, T>>
@@ -46,7 +46,7 @@ const dogsByBreed: Dictionary<Breed, Dog[]> = {
   dachshund: [{ name: 'Charlie' }],
 }
 
-dogsByBreed.poodle // Type is Dogs[] | undefined, value is undefined.
+dogsByBreed.poodle // Type is Dog[] | undefined, value is undefined.
 ```
 
 This way, you'll be forced to handle the `undefined` case.
