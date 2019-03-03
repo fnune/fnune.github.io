@@ -8,11 +8,11 @@ date: 2019-02-27 18:15:00 +0200
 
 {% include typescript.html %}
 
-The `is` keyword in TypeScript is used to specify that the a function is a type predicate. Here's [the Wikipedia entry for predicates](<https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>):
+The `is` keyword in TypeScript is used to specify that a function is a type predicate. Here's [the Wikipedia entry for predicates](<https://en.wikipedia.org/wiki/Predicate_(mathematical_logic)>):
 
 > In mathematical logic, a predicate is commonly understood to be a Boolean-valued function `P`: `X → {true, false}`, called the predicate on `X`. [...] Informally, a predicate is a statement that may be true or false depending on the values of its variables.
 
-A type predicate is a function returning a boolean value that can be used to identify the type of an expression. In TypeScript, type predicates can be expressed using the following syntax:
+A _type_ predicate is a function returning a boolean value that can be used to identify the type of an expression. In TypeScript, type predicates can be expressed using the following syntax:
 
 ```ts
 function isCollie(dog: Dog): dog is Collie {
@@ -20,7 +20,7 @@ function isCollie(dog: Dog): dog is Collie {
 }
 ```
 
-Type guards can be implemented using the `instanceof` and `typeof` JavaScript operators, but can also be implemented with the `is` keyword like in the example above. Type guards of this nature are user-defined type guards.
+Type guards can be implemented using the `instanceof` and `typeof` JavaScript operators, but can also be implemented with the `is` keyword like in the example above. Type guards of this nature are _user-defined_ type guards.
 
 While useful, user-defined type guards are a vector for runtime errors in TypeScript applications. It's very easy to implement them in a way that makes a piece of code unsafe. Unsuspecting developers that use them from there on may expand the surface of unsafety. Here's some example code:
 
@@ -59,4 +59,4 @@ Granted, that's a sloppy snippet, but it should serve to illustrate the example.
 Related documentation and links:
 
 - [TypeScript handbook entry on advanced types, section on type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html){:target="\_blank"}
-- [This article](https://www.matthewgerstman.com/ts-tricks-type-guards/){:target="\_blank"} as posted on Hacker News, and [its comments](https://news.ycombinator.com/item?id=18975373){:target="\_blank"}
+- [This article](https://www.matthewgerstman.com/ts-tricks-type-guards/){:target="\_blank"}, as posted on Hacker News, and [its comments](https://news.ycombinator.com/item?id=18975373){:target="\_blank"}
