@@ -19,15 +19,6 @@ description: >
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brainlessdeveloper.com" # the base hostname & protocol for your site
 
-# Picturefill
-# A responsive image polyfill: http://scottjehl.github.io/picturefill/
-picturefill: false
-
-# Typography
-# To use, publish a kit and enter the ID here. If you do not wish to use Typekit,
-# leave this ID blank
-typekit_kit_id:
-
 # Build settings
 gems: [jekyll-paginate]
 markdown: kramdown
