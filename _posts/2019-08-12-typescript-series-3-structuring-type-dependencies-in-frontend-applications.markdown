@@ -62,7 +62,7 @@ You may stop thinking about the design of your components' API and just use the 
 
 Transformations to the underlying data necessary for a component may be done repeatedly in different components that use the same type as a parameter. This could affect performance, but most importantly, it could make other developers rewrite code that's already somewhere else.
 
-Subtly, using big types directly instead of thinking of a lean API for your components also goes against layering of your applications concerns. If you want to separate the presentation layer from the domain and data layers, using a type that represents your data in the presentation layer is likely to introduce coupling.
+Subtly, using big types directly instead of thinking of a lean API for your components also goes against layering of your application's concerns. If you want to separate the presentation layer from the domain and data layers, using a type that represents your data in the presentation layer is likely to introduce coupling.
 
 ## An alternative
 
