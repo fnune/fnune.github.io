@@ -20,7 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brainlessdeveloper.com" # the base hostname & protocol for your site
 
 # Build settings
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 markdown: kramdown
 permalink: pretty
 
@@ -30,3 +30,16 @@ paginate: 5
 # Sass
 sass:
   style: :compressed
+
+# Sitemap
+sitemap:
+  filename: "/sitemap.xml"
+  exclude:
+      - "/atom.xml"
+      - "/feed.xml"
+      - "/feed/index.xml"
+      - "/css/screen.scss"
+  include_posts:
+      - "/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
