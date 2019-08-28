@@ -20,12 +20,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brainlessdeveloper.com" # the base hostname & protocol for your site
 
 # Build settings
-plugins: [jekyll-paginate]
+plugins: [jekyll-sitemap]
 markdown: kramdown
 permalink: pretty
-
-# Pagination
-paginate: 5
 
 # Sass
 sass:
