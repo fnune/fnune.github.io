@@ -1,4 +1,4 @@
-# [brainlessdeveloper.com](https://brainlessdeveloper.com)
+# [fnune.com](https://fnune.com)
 
 This is my blog about technology. It uses the awesome [Galileo theme for Jekyll](https://github.com/rowanoulton/galileo-theme).
 

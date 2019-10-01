@@ -20,8 +20,8 @@ excerpt: 'I decided to surrender to my sacrilegous self and try to emulate every
 
 Do not expect extremely polished dotfiles. I know some of you will be pulling your hair out with some of the stuff you see here:
 
-- Neovim: [https://github.com/brainlessdeveloper/vimrc](https://github.com/brainlessdeveloper/vimrc)
-- Emacs: [https://github.com/brainlessdeveloper/emacs.d/](https://github.com/brainlessdeveloper/emacs.d)
+- Neovim: [https://github.com/fnune/vimrc](https://github.com/fnune/vimrc)
+- Emacs: [https://github.com/fnune/emacs.d/](https://github.com/fnune/emacs.d)
 
 > _I will not give you counsel, saying do this, or do that. For not in doing or contriving, nor in choosing between this course and another, can I avail; but only in knowing what was and is, and in part also what shall be._
 >
@@ -80,7 +80,7 @@ I've found the combination of [Helm](https://github.com/emacs-helm/helm) and [Pr
 
 The scope of fzf is by no means comparable to that of Helm and Projectile, so this is not meant to be a comparison but it does happen to be what covers my file-finding needs. Both setups enable extremely quick fuzzy search for files and content.
 
-As you can see [on my Emacs configuration](https://github.com/brainlessdeveloper/emacs.d/), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
+As you can see [on my Emacs configuration](https://github.com/fnune/emacs.d/), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
 
 ### Specific packages
 
@@ -129,7 +129,7 @@ Yep - **instant**! That's more like it. I have that gravely arcane command (`ema
 - `em` opens a full Emacs instance.
 - `e` is used to manually call `emacsclient -nw -c -a ""`, which is also my `$EDITOR`.
 
-This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode](https://github.com/brainlessdeveloper/emacs.d/#server-and-client-setup) (basically, there's no setup).
+This is admittedly a lot of work compared to just having an editor that loads quickly all the time. But it works! You can see the [section of my config file where I set up server mode](https://github.com/fnune/emacs.d/#server-and-client-setup) (basically, there's no setup).
 
 ## Conclusion
 

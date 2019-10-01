@@ -130,7 +130,7 @@ I usually start writing changes and commit as soon as I find I've done anything 
 
 The point is, your feature branch does not need to come out perfect from the moment of its creation: create a lot of mini-commits at the start. You can package them up properly later with an interactive rebase or by amending. But _do_ think right from the start of how you want the final product to look.
 
-Knowing `git` in and out will obviously help. I've used [gitsh](https://github.com/thoughtbot/gitsh) for a long time but since I [moved from Vim to Emacs](https://brainlessdeveloper.com/2017/12/27/making-emacs-work-like-my-vim-setup/) I've been using [Magit](https://github.com/magit/magit). The thing is just amazing and I've never used `git` so quickly and freely. It was one of my reasons to move to Emacs, too.
+Knowing `git` in and out will obviously help. I've used [gitsh](https://github.com/thoughtbot/gitsh) for a long time but since I [moved from Vim to Emacs](https://fnune.com/2017/12/27/making-emacs-work-like-my-vim-setup/) I've been using [Magit](https://github.com/magit/magit). The thing is just amazing and I've never used `git` so quickly and freely. It was one of my reasons to move to Emacs, too.
 
 ---
 

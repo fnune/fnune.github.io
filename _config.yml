@@ -6,9 +6,9 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Brainless Developer
-author: Fausto NA
-author_link: https://github.com/brainlessdeveloper
+title: Fausto's personal website
+author: Fausto Núñez Alberro
+author_link: https://github.com/fnune
 author_description: >
   I am a web developer based in Berlin.
   At the moment I am working for store2be, a booking platform for promotion and retail locations.
@@ -17,7 +17,7 @@ author_description: >
 email: fausto.nunez@outlook.com
 description: >
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://brainlessdeveloper.com" # the base hostname & protocol for your site
+url: "https://fnune.com" # the base hostname & protocol for your site
 
 # Build settings
 plugins: [jekyll-sitemap]
