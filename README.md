@@ -1,5 +1,5 @@
 # [fnune.com](https://fnune.com)
 
-This is my blog about technology. It uses the awesome [Galileo theme for Jekyll](https://github.com/rowanoulton/galileo-theme).
+This is my blog about technology.
 
-I'd be honored to receive guest posts as PRs.
+I'd gladly welcome guest posts, suggested edits, corrections and general contributions as PRs.
