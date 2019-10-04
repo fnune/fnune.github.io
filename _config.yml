@@ -26,6 +26,7 @@ permalink: pretty
 
 # Sass
 sass:
+  sass_dir: _scss
   style: :compressed
 
 # Sitemap

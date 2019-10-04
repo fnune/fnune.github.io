@@ -1,0 +1,55 @@
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  color: $base-content-color;
+  hyphens: auto;
+  min-height: 100vh;
+  line-height: 1.6;
+  margin: auto;
+  max-width: 42rem;
+  overflow-y: scroll;
+  padding: $body-padding;
+  box-shadow: $body-box-shadow;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: $base-content-color;
+  background-color: $base-content-color;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $purple;
+  }
+
+  &:focus {
+    color: $red;
+  }
+}
