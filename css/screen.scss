@@ -2,23 +2,7 @@
 docs: //jekyllrb.com/docs/front-matter/
 ---
 
-@charset "utf-8";
+@charset 'utf-8';
 
-body {
-  color: #222;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  hyphens: auto;
-  line-height: 1.6;
-  margin: auto;
-  max-width: 40rem;
-  overflow-y: scroll;
-  padding: 2rem;
-}
-
-img {
-  max-width: 100%;
-}
-
-pre {
-  overflow-x: auto;
-}
+@import 'syntax';
+@import 'main';
