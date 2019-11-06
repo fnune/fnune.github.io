@@ -10,10 +10,10 @@ title: Fausto's personal website
 author: Fausto Núñez Alberro
 author_link: https://github.com/fnune
 author_description: >
-  I am a web developer based in Berlin.
-  At the moment I am working for store2be, a booking platform for promotion and retail locations.
-  We work with React, Ruby on Rails and sometimes Rust. Also, I love everything
-  about web development even if it's design-oriented so expect all sorts of topics.
+  I am a web developer based in Berlin.  At the moment I am working for
+  store2be, a startup building a booking platform for live marketing. We work
+  with React, Ruby on Rails and sometimes Rust. Also, I love everything about
+  web development even if it's design-oriented so expect all sorts of topics.
 email: fausto.nunez@outlook.com
 description: >
 baseurl: "" # the subpath of your site, e.g. /blog
