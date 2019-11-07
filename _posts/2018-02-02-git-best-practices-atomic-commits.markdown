@@ -3,6 +3,7 @@ layout: post
 title: 'Thoughts on atomic commits and quality of life'
 comments: true
 date: 2018-02-19 12:47:51 +0200
+excerpt: "In this post, I try to share some of the confirming experiences and observations that have helped me in the process of following git best practices."
 ---
 
 Reading up on best practices regarding the shape of commits and their messages is something most software developers have done. It's not hard to realize that there's a consensus, and that there's plenty of valid arguments supporting it. This consensus usually boils down to:

@@ -2,24 +2,25 @@
 layout: post
 title: 'Guide to CSS filters'
 comments: true
-date: 2016-04-16 10:32:51 +0200
+date: 2016-04-16 10:32:51  0200
+excerpt: 'An interactive introduction to CSS filters that includes a playground to produce code using sliders, to better visualize the effect of each filter on an image.'
 ---
 
-If you’re a web developer, then for one reason or another you’ve probably put your hands (like I have) on image editing software like Photoshop. Also, you’ve probably used the filter menu, which lets you give a layer cool effects such as blur or overlays, and gives you control of contrast, saturation, etc. Well, fear not! Enter CSS filters and say goodbye to the longest minutes of requesting work from our fellow designers: do it yourself! Unlock the powers of the CSS filter property and show the world some magic.
+If you're a web developer, then for one reason or another you've probably put your hands (like I have) on image editing software like Photoshop. Also, you've probably used the filter menu, which lets you give a layer cool effects such as blur or overlays, and gives you control of contrast, saturation, etc. Well, fear not! Enter CSS filters and say goodbye to the longest minutes of requesting work from our fellow designers: do it yourself! Unlock the powers of the CSS filter property and show the world some magic.
 
-The totally awesome CSS filter property has been around for a while already. Full support was first included in Chrome 18 (March 2012). Firefox adopted it early in version 3.6 but only achieved full support in Firefox 36 (January 2015). A little bit later on, Opera and Safari added support, and nowadays you can use it on most browsers, including the Android native app. Of course, with the exception of _cough_ Internet Explorer (no support) and Microsoft Edge, which includes partial support.
+The totally awesome CSS filter property has been around for a while already. Full support was first included in Chrome 18 (March 2012). Firefox adopted it early in version 3.6 but only achieved full support in Firefox 36 (January 2015). A little bit later on, Opera and Safari added support, and nowadays you can use it on most browsers, including the Android native app. Of course, with the exception of _cough_ Internet Explorer (no support) and Microsoft Edge, which includes partial support.
 
-Before actually explaining what any of this does, I’d like to show you a little piece of code I’ve written to let you play around with filters. Go ahead, frolic away:
+Before actually explaining what any of this does, I'd like to show you a little piece of code I've written to let you play around with filters. Go ahead, frolic away:
 
 {% include filters.html %}
 
-As you can see, there’s a million things you can do with the CSS filter property. If you haven’t yet, try using a GIF with it. For the lazy ones, [here’s a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](https://giphy.com/ellemuliarchyk).
+As you can see, there's a million things you can do with the CSS filter property. If you haven't yet, try using a GIF with it. For the lazy ones, [here's a link]({{ site.url}}/img/guide-filters/cssfiltertest-1.gif) to a very cool one by [Elle Muliarchyk](https://giphy.com/ellemuliarchyk).
 
 ## CSS filter FAQ
 
 ---
 
-Most of these effects are self-explanatory. But there are some things which may cause a little bit of head scratching. Here’s my attempt at guessing what those are:
+Most of these effects are self-explanatory. But there are some things which may cause a little bit of head scratching. Here's my attempt at guessing what those are:
 
 #### Why would I use an opacity filter when I can just use the good old opacity property?
 
@@ -36,7 +37,7 @@ These two will yield the exact same visual effect. But most modern browsers use 
 
 #### What is hue-rotate? What the hell does it do to my element?
 
-I’ve based this information on [this Wikipedia article](https://en.wikipedia.org/wiki/Hue). Hue is one of the properties of a color. It is described by the [CIECAM02 model](https://en.wikipedia.org/wiki/CIECAM02) as “the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow”. Hue is to a color what timbre is to a sound, basically. Each one of the colors in our HTML element can be located (and represented by a degree) on this scale:
+I've based this information on [this Wikipedia article](https://en.wikipedia.org/wiki/Hue). Hue is one of the properties of a color. It is described by the [CIECAM02 model](https://en.wikipedia.org/wiki/CIECAM02) as “the degree to which a stimulus can be described as similar to or different from stimuli that are described as red, green, blue, and yellow”. Hue is to a color what timbre is to a sound, basically. Each one of the colors in our HTML element can be located (and represented by a degree) on this scale:
 
 <img src='/img/guide-filters/hue-scale.png' alt='Hue scale' />
 
@@ -48,7 +49,7 @@ filter: hue-rotate(20deg);
 
 ...you shift every single one of the colors in your HTML element 20 degrees to the right in the scale up there. CSS uses a little bit of a more rudimentary scale though, so what you get is an approximation.
 
-Hue is a cyclical property. Use my filter generator and apply a 360 degree hue-rotate. You’ll see you get the exact same result with a 0 degree hue-rotate, or with no filter at all.
+Hue is a cyclical property. Use my filter generator and apply a 360 degree hue-rotate. You'll see you get the exact same result with a 0 degree hue-rotate, or with no filter at all.
 
 #### Which different units should I be using with each filter?
 
@@ -64,7 +65,7 @@ For `hue-rotate`, you use degrees. This has already been explained in the last s
 
 #### More effects Vol. I: drop-shadow
 
-There are two more functions you can do with the CSS filter property other than the ones I’ve included in my little program up there. One of them is an effect very similar to box-shadow. It’s called drop-shadow and the syntax goes as follows:
+There are two more functions you can do with the CSS filter property other than the ones I've included in my little program up there. One of them is an effect very similar to box-shadow. It's called drop-shadow and the syntax goes as follows:
 
 ```css
 img {
@@ -78,14 +79,14 @@ The values stand for `h-shadow v-shadow blur spread color`, and the result of th
 
 #### But what is the difference between drop-shadow and box-shadow?
 
-Here’s a visual example. That’s the drop-shadow filter on the left and the box-shadow property on the right, on the same image. As you can see, the filter respects the alpha layer on your PNG while the box-shadow property applies the effect on the limits of the canvas. If you were to give an element with a drop-shadow filter a `pseudo-element` such as `:after` or `:before`, the filter would respect that, too.
+Here's a visual example. That's the drop-shadow filter on the left and the box-shadow property on the right, on the same image. As you can see, the filter respects the alpha layer on your PNG while the box-shadow property applies the effect on the limits of the canvas. If you were to give an element with a drop-shadow filter a `pseudo-element` such as `:after` or `:before`, the filter would respect that, too.
 
 <div style='display: flex; padding: 2rem 0;'>
   <img style='filter: drop-shadow(16px 16px 10px grey); width: 50%;' src='/img/guide-filters/cssfilters2.png' alt='PNG Example with drop-shadow' />
   <img style='box-shadow: 16px 16px 10px grey; width: 50%;' src='/img/guide-filters/cssfilters2.png' alt='PNG Example with box-shadow' />
 </div>
 
-For a more in-detail comparison, I’m going to link you to a great article by [the new code](https://thenewcode.com/): [box-shadow property vs. drop-shadow filter: a complete comparison](https://thenewcode.com/598/box-shadow-property-vs-drop-shadow-filter-a-complete-comparison).
+For a more in-detail comparison, I'm going to link you to a great article by [the new code](https://thenewcode.com/): [box-shadow property vs. drop-shadow filter: a complete comparison](https://thenewcode.com/598/box-shadow-property-vs-drop-shadow-filter-a-complete-comparison).
 
 #### More effects Vol. II: SVG filters
 
@@ -97,4 +98,4 @@ img {
 }
 ```
 
-You can reference on-page anchors by giving your filter an ID and then using that as the URL. If you’d like to go more in-depth on how to create your own filters, check out [this article](http://www.creativebloq.com/netmag/how-go-beyond-basics-svg-filters-71412280).
+You can reference on-page anchors by giving your filter an ID and then using that as the URL. If you'd like to go more in-depth on how to create your own filters, check out [this article](http://www.creativebloq.com/netmag/how-go-beyond-basics-svg-filters-71412280).

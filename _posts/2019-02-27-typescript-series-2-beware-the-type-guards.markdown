@@ -4,6 +4,7 @@ title: 'TypeScript - Beware the user-defined type guards'
 comments: true
 categories: [typescript]
 date: 2019-02-27 18:15:00 +0200
+excerpt: "While useful, user-defined type guards are a vector for runtime errors in TypeScript applications. It's very easy to implement them in a way that makes a piece of code unsafe."
 ---
 
 {% include typescript.html %}

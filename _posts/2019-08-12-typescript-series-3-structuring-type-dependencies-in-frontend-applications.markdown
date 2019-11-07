@@ -4,6 +4,7 @@ title: 'TypeScript - Structuring type dependencies in frontend applications'
 comments: true
 categories: [typescript]
 date: 2019-08-12 19:55:00 +0200
+excerpt: "In this post I try to explain why although tempting, it's a bad idea to use \"big\" types (representing parts of your domain model and often coming from code generation) across your application code."
 ---
 
 {% include typescript.html %}
@@ -18,19 +19,19 @@ Let's start with a visual representation of what I'm trying to stop you from doi
 
 ```
 ├── types
-│   └── api.ts
+│   └── api.ts
 └── views
     ├── booking
-    │   ├── Booking.spec.tsx
-    │   └── Booking.tsx
+    │   ├── Booking.spec.tsx
+    │   └── Booking.tsx
     ├── hotel
-    │   ├── Hotel.spec.tsx
-    │   ├── Hotel.tsx
-    │   ├── HotelDescription.tsx
-    │   ├── HotelRooms.tsx
-    │   └── room
-    │       ├── Room.spec.tsx
-    │       └── Room.tsx
+    │   ├── Hotel.spec.tsx
+    │   ├── Hotel.tsx
+    │   ├── HotelDescription.tsx
+    │   ├── HotelRooms.tsx
+    │   └── room
+    │       ├── Room.spec.tsx
+    │       └── Room.tsx
     └── search
         ├── Search.spec.tsx
         └── Search.tsx

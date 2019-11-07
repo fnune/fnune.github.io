@@ -4,6 +4,7 @@ title: 'TypeScript - Using Record is usually not the best choice'
 comments: true
 categories: [typescript]
 date: 2019-01-30 11:03:00 +0200
+excerpt: 'Using the TypeScript <code>Record</code> type can result in unexpected type unsafety. In this post, I suggest using a <code>Dictionary</code> type that solves this.'
 ---
 
 {% include typescript.html %}

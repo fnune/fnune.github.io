@@ -3,17 +3,18 @@ layout: post
 title: 'Hi there!'
 comments: true
 date: 2016-04-16 00:32:51 +0200
+excerpt: 'An introduction to my blog and me.'
 ---
 
-Welcome to my personal website. In this blog I will feature memories of my adventures in the world of web development. Expect to see glorious tales of victory as well as stories of how I continuously bang my head against the brick walls of technology. When I try to do anything that’s new to me, I’ll go ahead and try to explain it here. I want to share my learning process with the world and help you make better digital products, and also learn from your criticism.
+Welcome to my personal website. In this blog I will feature memories of my adventures in the world of web development. Expect to see glorious tales of victory as well as stories of how I continuously bang my head against the brick walls of technology. When I try to do anything that's new to me, I'll go ahead and try to explain it here. I want to share my learning process with the world and help you make better digital products, and also learn from your criticism.
 
-I am a self-taught web developer from Spain. I studied International Business in Valencia, but halfway through it I discovered it just wasn’t my thing. I have learned extensively from my major though, and I don’t regret having done it. My native language, as you might have imagined, is Spanish. I’ll try my best at blogging in English, you know, one’s got to keep up with the rest of the planet in terms of language skills.
+I am a self-taught web developer from Uruguay. I studied International Business in Valencia, where I lived for around 13 years. Halfway through my studies, I discovered it just wasn't my thing. I have learned extensively from my major though, and I don't regret having done it. My native language, as you might have imagined, is Spanish. I'll try my best at blogging in English, you know, one's got to keep up with the rest of the planet in terms of language skills.
 
-## It’s a great day to live.
+## It's a great day to live.
 
-A bit more than a week before the writing of this post, SpaceX’s Falcon 9 [successfully landed on sea](http://news.discovery.com/space/private-spaceflight/spacex-falcon-9-rocket-nails-ocean-landing-160408.htm) on top of an autonomous spaceport drone ship after having deployed its cargo, which was directed towards the International Space Station. I mean, tell me that’s not real life Star Wars. Anyway, things like that are what motivates me to do something that others can enjoy. Contemplating the greatness of those feats makes me feel small and irrelevant to anything, and I want to fight that by helping you make better websites.
+A bit more than a week before the writing of this post, SpaceX's Falcon 9 [successfully landed on sea](http://news.discovery.com/space/private-spaceflight/spacex-falcon-9-rocket-nails-ocean-landing-160408.htm) on top of an autonomous spaceport drone ship after having deployed its cargo, which was directed towards the International Space Station. I mean, tell me that's not real life Star Wars. Anyway, things like that are what motivates me to do something that others can enjoy. Contemplating the greatness of those feats makes me feel small and irrelevant to anything, and I want to fight that by helping you make better websites.
 
-Anyway, enough babbling around. I’ll leave you with an awesome (and unbelievably real) picture of a space rocket returning from the skies and gloriously landing on a drone ship, on planet Earth:
+Anyway, enough babbling around. I'll leave you with an awesome (and unbelievably real) picture of a space rocket returning from the skies and gloriously landing on a drone ship, on planet Earth:
 
 <div class='post-image'>
   <img src='/img/hello/falcon.jpg' alt='Falcon 9 Drone Ship Landing' />

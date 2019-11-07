@@ -6,6 +6,7 @@
     </a>
     <span> · </span>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+    <p>{{ post.excerpt }}</p>
   </li>
   {% endfor %}
 </ul>

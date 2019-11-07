@@ -3,6 +3,7 @@ layout: post
 title: 'Recursive vim macros on multiple files using arglist'
 comments: true
 date: 2019-07-05 11:10:00 +0200
+excerpt: 'I use vim macros to implement a repeated code change in a relatively big codebase. I learn of a way to apply macros that exhaust occurrences in one file across multiple files using only vim.'
 ---
 
 For readers in a hurry:

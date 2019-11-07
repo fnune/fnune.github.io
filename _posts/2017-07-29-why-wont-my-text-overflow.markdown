@@ -3,11 +3,12 @@ layout: post
 title: "Why won't my text overflow? Where's my ellipsis!?"
 comments: true
 date: 2017-07-29 12:47:51 +0200
+excerpt: "A checklist that should help you once and for all truncate that stubborn <code>span</code> and print some beautiful ellipses at the end of your one-liners."
 ---
 
 The `text-overflow` property is a PITA to deal with because on its own, it **won't force text to overflow**. Say what? Its name IS _text overflow_. Anyway, what it actually does is to define the behavior of a text node _if_ it overflows. The job of actually making it overflow is yours and only yours.
 
-I present to you a **checklist** that should once and for all truncate that stubborn `span` and print some beautiful [ellipses](https://en.wikipedia.org/wiki/Ellipsis) at the end of your one-liners.
+I present to you a **checklist** that should help you once and for all truncate that stubborn `span` and print some beautiful [ellipses](https://en.wikipedia.org/wiki/Ellipsis) at the end of your one-liners.
 
 In the checklist, I'll be using the word "container". So let's define it first, just for this post: the "container" I'm talking about is the _immmediate_ parent of the element that contains the text node you want to truncate. For example:
 

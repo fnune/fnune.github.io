@@ -3,6 +3,7 @@ layout: post
 title: 'My experience contributing to Servo'
 comments: true
 date: 2017-08-12 12:47:51 +0200
+excerpt: "An introduction to Mozilla's Servo project built in Rust, where I try to encourage people to contribute and tell my own story along the way."
 ---
 
 Some months ago a colleague introduced me to Rust and to the [Servo](https://servo.org) project. It's a web browser engine led by Mozilla, and [its code is available on GitHub](https://github.com/servo/servo) and is open to [contributions](https://github.com/servo/servo/blob/master/CONTRIBUTING.md).

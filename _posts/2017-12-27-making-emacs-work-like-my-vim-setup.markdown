@@ -3,7 +3,7 @@ layout: post
 title: 'Making Emacs work like my Neovim setup'
 comments: true
 date: 2017-12-27 12:47:51 +0200
-excerpt: 'I decided to surrender to my sacrilegous self and try to emulate everything I do with Vim from an empty Emacs config file built with Org-mode'
+excerpt: 'I decided to surrender to my sacrilegous self and try to emulate everything I do with Vim from an empty Emacs config file built with Org-mode.'
 ---
 
 ### Table of contents

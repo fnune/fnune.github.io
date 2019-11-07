@@ -3,6 +3,7 @@ layout: post
 title: 'How to listen to music'
 comments: true
 date: 2018-04-28 11:03:00 +0200
+excerpt: 'A rant on how I think people can better appreciate and enjoy music, and perhaps other types of art, too.'
 ---
 
 One of the things that makes me most grateful for technology is the availability of content. The years of work of people long dead before you learned about them, the biggest achievements of infinitely inspired people, the rich life experience of the wisest artists and philosophers, translated to a piece of art; nowadays, these are all available to us in a one-click checkout, at the mercy of our speed typing their names on our keyboards. Music can be obtained as easily as it can be dismissed.
