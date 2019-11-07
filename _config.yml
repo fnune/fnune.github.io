@@ -20,7 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fnune.com" # the base hostname & protocol for your site
 
 # Build settings
-plugins: [jekyll-sitemap]
+plugins: [jekyll-sitemap, jekyll-autoprefixer]
 markdown: kramdown
 permalink: pretty
 
