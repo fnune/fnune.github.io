@@ -2,7 +2,7 @@
 layout: post
 title: "CSS features that Firefox supports but Chrome doesn't"
 comments: true
-date: 2016-05-02 00:32:51  0200
+date: 2016-05-02 00:32:51 +0200
 excerpt: 'This is a short list of CSS features that work on Firefox but not yet on Chrome. In particular, features that would be really cool to use in production if the other major browsers supported them.'
 ---
 
