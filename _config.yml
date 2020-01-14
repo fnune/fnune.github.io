@@ -17,6 +17,7 @@ author_description: >
 email: fausto.nunez@mailbox.org
 description: >
 baseurl: "" # the subpath of your site, e.g. /blog
+repository_url: "https://github.com/fnune/fnune.github.io"
 url: "https://fnune.com" # the base hostname & protocol for your site
 
 # Build settings
