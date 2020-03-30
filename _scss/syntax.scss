@@ -11,7 +11,8 @@ code {
 
   & pre {
     padding: 0.9rem 1.1rem;
-    border: 1px solid $base-content-color;
+    border-left: 5px solid $blue;
+    background-color: rgba($grey, 0.2);
     color: $base-code-color;
   }
 
