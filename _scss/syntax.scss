@@ -1,5 +1,10 @@
 @import 'variables';
 
+pre,
+code {
+  font-family: $code-font-family;
+}
+
 .highlight {
   background: #ffffff;
   font-size: $code-font-size;
