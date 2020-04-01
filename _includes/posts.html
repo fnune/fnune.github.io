@@ -1,16 +1,10 @@
-{% for post in include.posts %}
-<article class="blog-entry">
-  <header>
-    <h1>
-      <a href="{{ post.url | prepend: site.baseurl }}">
-        {{ post.title }}
-      </a>
-    </h1>
-  </header>
-  <blockquote>{{ post.excerpt }}</blockquote>
-  <footer>
+<ol type="i" reversed>
+  {% for post in include.posts %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      {{ post.title }}
+    </a>
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
-  </footer>
-</article>
-<hr />
-{% endfor %}
+  </li>
+  {% endfor %}
+</ol>
