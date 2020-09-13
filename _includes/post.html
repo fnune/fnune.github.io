@@ -3,7 +3,9 @@
     <h1>{{ include.post.title }}</h1>
     <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%A, %B %-d, %Y" }}</time>
     <span>|</span>
-    <a href="{{ site.repository_url }}/blob/master/{{ include.post.path }}">Edit this post on GitHub</a>
+    <a href="/atom.xml">RSS</a>
+    <span>|</span>
+    <a href="{{ site.repository_url }}/blob/master/{{ include.post.path }}">Edit on GitHub</a>
     <span>|</span>
     <a href="/">Read more of my posts</a>
   </header>

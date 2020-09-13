@@ -7,21 +7,29 @@
 
 # Site settings
 title: Fausto's personal blog
-author: Fausto Núñez Alberro
-author_link: https://github.com/fnune
-author_description: >
-  I am a web developer based in Berlin.  At the moment I am working for
+description: >
+  I am a web developer based in Berlin. At the moment I am working for
   store2be, a startup building a booking platform for live marketing. We work
   with React, Ruby on Rails and sometimes Rust. Also, I love everything about
   web development even if it's design-oriented so expect all sorts of topics.
-email: fausto.nunez@mailbox.org
-description: >
+author:
+  name: Fausto Núñez Alberro
+  link: https://github.com/fnune
+  description: >
+    I am a web developer based in Berlin. At the moment I am working for
+    store2be, a startup building a booking platform for live marketing. We work
+    with React, Ruby on Rails and sometimes Rust. Also, I love everything about
+    web development even if it's design-oriented so expect all sorts of topics.
+  email: fausto.nunez@mailbox.org
 baseurl: "" # the subpath of your site, e.g. /blog
 repository_url: "https://github.com/fnune/fnune.github.io"
 url: "https://fnune.com" # the base hostname & protocol for your site
 
+feed:
+  path: atom.xml
+
 # Build settings
-plugins: [jekyll-sitemap, jekyll-autoprefixer]
+plugins: [jekyll-sitemap, jekyll-autoprefixer, jekyll-feed]
 markdown: kramdown
 permalink: pretty
 
