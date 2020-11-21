@@ -8,18 +8,16 @@
 # Site settings
 title: Fausto's personal blog
 description: >
-  I am a web developer based in Berlin. At the moment I am working for
-  store2be, a startup building a booking platform for live marketing. We work
-  with React, Ruby on Rails and sometimes Rust. Also, I love everything about
-  web development even if it's design-oriented so expect all sorts of topics.
+  I am a web developer based in Berlin. I work for Memfault, where we create
+  developer tools for firmware developers. I have a focus on front-end web
+  development, but I'm trying to become a generalist.
 author:
   name: Fausto Núñez Alberro
   link: https://github.com/fnune
   description: >
-    I am a web developer based in Berlin. At the moment I am working for
-    store2be, a startup building a booking platform for live marketing. We work
-    with React, Ruby on Rails and sometimes Rust. Also, I love everything about
-    web development even if it's design-oriented so expect all sorts of topics.
+    I am a web developer based in Berlin. I work for Memfault, where we create
+    developer tools for firmware developers. I have a focus on front-end web
+    development, but I'm trying to become a generalist.
   email: fausto.nunez@mailbox.org
 baseurl: "" # the subpath of your site, e.g. /blog
 repository_url: "https://github.com/fnune/fnune.github.io"
