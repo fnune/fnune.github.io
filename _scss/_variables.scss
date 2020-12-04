@@ -1,16 +1,19 @@
-$base-code-color: #222;
-$base-content-color: #444444;
-$base-font-family: 'Fira Sans', sans-serif;
-$base-font-size: 16px;
-
-$blue: #1558d6;
-$purple: #6c3d9e;
-$red: #f7567c;
+$black: #1c1e26;
+$blue: #a06a4e;
+$purple: #b072d1;
+$red: #df5273;
 $grey: #e6e6e6;
 
-$body-padding: 2rem;
+$base-code-color: #222;
+$base-content-color: $black;
+$base-font-family: 'Ligconsolata', monospace;
+$base-font-size: 16px;
+
+$body-horizontal-padding: 2rem;
+$body-padding: 0.3rem $body-horizontal-padding $body-horizontal-padding;
+$body-background-color: #ffffff;
 
 $code-font-size: 1rem;
-$code-font-family: 'Fira Code';
+$code-font-family: 'Ligconsolata';
 
 $heading-anchor-base-color: $blue;

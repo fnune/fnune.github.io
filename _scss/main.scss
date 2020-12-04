@@ -1,9 +1,22 @@
 @import 'variables';
 
+@font-face {
+  font-family: 'Ligconsolata';
+  font-weight: bold;
+  src: url('../assets/Ligconsolata-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ligconsolata';
+  font-weight: normal;
+  src: url('../assets/Ligconsolata-Regular.otf') format('opentype');
+}
+
 html {
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  background-color: $black;
 }
 
 * {
@@ -11,6 +24,7 @@ html {
 }
 
 body {
+  background-color: $body-background-color;
   color: $base-content-color;
   hyphens: auto;
   min-height: 100vh;
@@ -19,6 +33,15 @@ body {
   max-width: 42rem;
   overflow-y: scroll;
   padding: $body-padding;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
 }
 
 img {

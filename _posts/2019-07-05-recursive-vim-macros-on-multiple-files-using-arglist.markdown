@@ -127,27 +127,27 @@ as the argument list. You can jump to each file in this list.
 
 The documentation had an answer to all my questions:
 
-- How can I add things to my argument list?
+How can I add things to my argument list?
 
-  ```
-  :ar :args
-  :ar[gs]
+```
+:ar :args
+:ar[gs]
 
-  Print the argument list, with the current file in square brackets.
+Print the argument list, with the current file in square brackets.
 
-  :ar[gs] [++opt] [+cmd] {arglist}
+:ar[gs] [++opt] [+cmd] {arglist}
 
-  Define {arglist} as the new argument list and edit the first one.
-  ```
+Define {arglist} as the new argument list and edit the first one.
+```
 
-- How can I do things on files in the argument list?
+How can I do things on files in the argument list?
 
-  ```
-  :argdo :[range]argdo[!] {cmd}
+```
+:argdo :[range]argdo[!] {cmd}
 
-  Execute {cmd} for each file in the argument list or, if [range] is specified,
-  only for arguments in that range.
-  ```
+Execute {cmd} for each file in the argument list or, if [range] is specified,
+only for arguments in that range.
+```
 
 So that means `args` will return the current argument list and `args {arglist}` will set it. Here we go, then!
 
