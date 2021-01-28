@@ -6,11 +6,30 @@ date: 2021-01-28 05:32:51 +0200
 excerpt: 'An introduction to the new gap attribute, previously only for Grid layouts, now also available for Flex layouts with almost full support in 2021. Includes a quick look at how developers have worked their way around this before, and probably still have to today.'
 ---
 
-Gaps or gutters around items became really easy to use with the introduction of the `gap` attribute for Grid layouts around 2018. **Flexbox now supports this** as well on all major browsers, at the time of writing, with the exception of Safari.
+Adding gaps between items became really easy with the introduction of the `gap` attribute for Grid layouts around 2018. And at the time of writing, `gap` is also supported for Flexbox layouts by [most major browsers, with the notable exception of Safari](https://caniuse.com/flexbox-gap).
+
+As a quick reminder, this is how `gap` works with Grid layouts:
+
+```css
+.boxes {
+  display: grid;
+  gap: 12px;
+}
+```
+
+<div class="boxes boxes--wrap boxes--flexible-grid">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
 
 <aside class="no-support-warning">
   Your browser does not support the <code>gap</code> property in Flexbox layouts. The examples using it wont't make sense. You have been warned. Support checked following ideas from <a style="color: white; font-weight: bold;" href="https://ishadeed.com/article/flexbox-gap/">Ahmad Shadeed</a>.
 </aside>
+
+And you'll get the exact same experience with Flexbox layout:
 
 ```css
 .boxes {
@@ -18,8 +37,6 @@ Gaps or gutters around items became really easy to use with the introduction of 
   gap: 12px;
 }
 ```
-
-Yields:
 
 <div class="boxes boxes--gap">
   <div class="box"></div>
@@ -29,7 +46,7 @@ Yields:
   <div class="box"></div>
 </div>
 
-This works with `flex-wrap: wrap`, too, and this is a great differentiator with older methods:
+The main difference is that you can now combine it with `flex-wrap: wrap`.
 
 <div class="boxes boxes--gap boxes--wrap">
   <div class="box"></div>
@@ -42,9 +59,7 @@ This works with `flex-wrap: wrap`, too, and this is a great differentiator with 
   <div class="box"></div>
 </div>
 
-## The hacks of old, or the workarounds of today
-
-If you need support for Safari (and it's early 2021) or older versions of Chrome and Firefox, you're going to have to use one of the following.
+If you need support for Safari (and it's early 2021) or older versions of Chrome and Firefox, you'll have to resort to one of the many workarounds.
 
 ### Margins on everything but the last thing
 
@@ -79,7 +94,7 @@ A drawback is that we can't support potential wrapping items, since we would nee
 
 ### The lobotomized owl
 
-I've resorted to using this one most often, if I'm being completely honest, because of the memorable name. There are some advantages, though, but those are best explained by [A List Apart](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/).
+I've used this one the most. If I'm being honest, probably because of the memorable name. There are some advantages, though, but those are best explained by [A List Apart](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/).
 
 ```css
 .boxes > * + * {
@@ -95,7 +110,7 @@ I've resorted to using this one most often, if I'm being completely honest, beca
   <div class="box"></div>
 </div>
 
-The lobotomized owl can't be used for wrapping layouts either:
+Sadly, the lobotomized owl doesn't handle wrapping either:
 
 <div class="boxes boxes--lobotomized-owl boxes--wrap">
   <div class="box box--bad"></div>
@@ -110,7 +125,7 @@ The lobotomized owl can't be used for wrapping layouts either:
 
 ### Hidden negative margins
 
-A workaround for wrapping layouts using a wrapping component with `overflow: hidden`.
+This one works by wrapping the layout with `overflow: hidden`.
 
 ```css
 .wrapper {
@@ -158,7 +173,7 @@ To illustrate why the wrapper is necessary, here it is without it:
 
 ### Flexible grid
 
-We can achieve a very similar result using Grid:
+We can achieve a very similar result using a Grid layout:
 
 ```css
 .boxes {
@@ -179,7 +194,7 @@ We can achieve a very similar result using Grid:
   <div class="box"></div>
 </div>
 
-Why only "very similar"? [What can Flexbox do that Grid can't?](https://github.com/rachelandrew/cssgrid-ama/issues/15) Flexbox is content-driven and Grid is layout-driven. A wrapping layout with items of different computed sized isn't possible with Grid. Here's the example from above repurposed to attempt an auto-sized, auto-wrapping layout:
+Why only "very similar"? [What can Flexbox do that Grid can't?](https://github.com/rachelandrew/cssgrid-ama/issues/15) Flexbox is content-driven and Grid is layout-driven. A wrapping layout with items of different computed sized isn't possible with Grid. Here's the example from above repurposed to attempt an auto-sized, auto-wrapping layout, but sadly the items all have the same width:
 
 <div class="boxes boxes--flexible-grid boxes--flex-exclusive-grid">
   <div class="box box--bad">Raindrops on roses</div>
@@ -190,9 +205,7 @@ Why only "very similar"? [What can Flexbox do that Grid can't?](https://github.c
   <div class="box box--bad">These are a few of my favorite things</div>
 </div>
 
-...it's close, but the items all have the same width.
-
-Here's another attempt with `grid-auto-flow: column` and `white-space: nowrap`:
+Here's another attempt with `grid-auto-flow: column` and `white-space: nowrap` which unfortunately no longer features auto-wrapping columns:
 
 <div class="boxes boxes--flexible-grid boxes--flex-exclusive-grid-auto-flow">
   <div class="box box--bad">Raindrops on roses</div>
@@ -203,9 +216,7 @@ Here's another attempt with `grid-auto-flow: column` and `white-space: nowrap`:
   <div class="box box--bad">These are a few of my favorite things</div>
 </div>
 
-...which unfortunately no longer features auto-wrapping columns.
-
-The same thing, however, is a basic use-case of Flexbox:
+As mentioned in the beginning, this is trivial with `flex-wrap: wrap`.
 
 ```css
 .boxes {
@@ -228,13 +239,9 @@ The same thing, however, is a basic use-case of Flexbox:
   <div class="box">These are a few of my favorite things</div>
 </div>
 
-If you manage to do this with Grid, do <a href="{{ site.repository_url }}/blob/master/{{ page.path }}">submit a pull-request to edit this post</a>! I'll be happy to merge it and learn something new along the way.
+If you manage to do this with Grid, please <a href="{{ site.repository_url }}/blob/master/{{ page.path }}">submit a pull-request to edit this post</a>! I'll be happy to merge it and learn something new along the way.
 
----
-
-As of January 2021, the only major browser where it's unsupported is Safari. Check out [current support on Can I Use](https://caniuse.com/flexbox-gap). I'm looking forward to being able to use `gap` with Flexbox.
-
-I wish you a great day!
+I'm looking forward to use `gap` with Flexbox. Especially once the next major version of Safari is released, which should include [the Webkit changeset that added support for it](https://trac.webkit.org/changeset/267829/webkit).
 
 <style>
 .boxes {
