@@ -228,7 +228,7 @@ The same thing, however, is a basic use-case of Flexbox:
   <div class="box">These are a few of my favorite things</div>
 </div>
 
-If you manage to do this with Grid, do <a href="{{ site.repository_url }}/blob/master/{{ include.post.path }}">submit a pull-request to edit this post</a>! I'll be happy to merge it and learn something new along the way.
+If you manage to do this with Grid, do <a href="{{ site.repository_url }}/blob/master/{{ page.path }}">submit a pull-request to edit this post</a>! I'll be happy to merge it and learn something new along the way.
 
 ---
 
