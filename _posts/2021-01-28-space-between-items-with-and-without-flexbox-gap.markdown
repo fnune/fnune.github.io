@@ -194,7 +194,7 @@ We can achieve a very similar result using a Grid layout:
   <div class="box"></div>
 </div>
 
-Why only "very similar"? [What can Flexbox do that Grid can't?](https://github.com/rachelandrew/cssgrid-ama/issues/15) Flexbox is content-driven and Grid is layout-driven. A wrapping layout with items of different computed sized isn't possible with Grid. Here's the example from above repurposed to attempt an auto-sized, auto-wrapping layout, but sadly the items all have the same width:
+Why only "very similar"? [What can Flexbox do that Grid can't?](https://github.com/rachelandrew/cssgrid-ama/issues/15) Flexbox is content-driven and Grid is layout-driven. A wrapping layout with items of different computed sizes isn't possible with Grid. Here's the example from above repurposed to attempt an auto-sized, auto-wrapping layout. The items all end up with the same width:
 
 <div class="boxes boxes--flexible-grid boxes--flex-exclusive-grid">
   <div class="box box--bad">Raindrops on roses</div>
@@ -241,7 +241,9 @@ As mentioned in the beginning, this is trivial with `flex-wrap: wrap`.
 
 If you manage to do this with Grid, please <a href="{{ site.repository_url }}/blob/master/{{ page.path }}">submit a pull-request to edit this post</a>! I'll be happy to merge it and learn something new along the way.
 
-I'm looking forward to use `gap` with Flexbox. Especially once the next major version of Safari is released, which should include [the Webkit changeset that added support for it](https://trac.webkit.org/changeset/267829/webkit).
+I'm looking forward to using `gap` with Flexbox. Especially once the next major version of Safari is released, which should include [the Webkit changeset that added support for it](https://trac.webkit.org/changeset/267829/webkit).
+
+Thanks to [sirlantis for a careful review of this post](https://github.com/fnune/fnune.github.io/pull/17).
 
 <style>
 .boxes {
