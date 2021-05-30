@@ -28,8 +28,6 @@ Working on a project of medium-to-big size with awesome colleagues has turned bl
 - [Peers will not know what your code does, and eventually, neither will you](#peers-will-not-know-what-your-code-does-and-eventually-neither-will-you)
 - [You can integrate best practices with a comfortable personal workflow](#you-can-integrate-best-practices-with-a-comfortable-personal-workflow)
 
----
-
 ### Git built-ins work better if your commits are thought-through
 
 There are several Git tools which benefit from a clean and sound commit history. In fact, they are kind of useless _if_ your commit history is not good. The most important are `bisect`, `revert`, `blame` and `log`. I won't go about explaining them - it takes basic search engine usage skills to find explanations much better than those I could dish out myself. But I will try to argue why you can make better use of them if your commits are neatly organized.
@@ -78,15 +76,11 @@ git log
 
 This one should be pretty straightforward too. The quality of your commit messages and their structure and separation translates directly to a better log, and happier teammates.
 
----
-
 ### Thinking of how to keep your commits small and clean helps write better code
 
 Just like test-driven development helps with planning ahead and makes you feel certain about what you're doing and what's next, trying to figure out what your pull request is going to look like when it's ready is also beneficial.
 
 Planning your tests and commits before you start to code is a way to avoid tunnel vision, auto-piloting and silly mistakes. Thinking of the logical units of which a feature or bug-fix should be composed is a great first step towards solving a problem.
-
----
 
 ### Keeping tests together with their relevant code whenever possible helps
 
@@ -107,23 +101,17 @@ Maybe, if you needed to refactor something to make any of the steps happen, then
 
 It's hard to go wrong if you actually _bring up these questions_ with your team and figure out a solution together. Hopefully, by now I've managed to convince you that it's worth dedicating time to this.
 
----
-
 ### CI and notification set-ups benefit from commits that build and pass tests
 
 Checking for a successful build and regressions after every commit by adding appropriate tests helps if you want to check out the project at any particular commit hash or (God forbid) roll back a deployment.
 
 If you've configured, for example, Slack notifications from your CI system or from GitHub, you'll find that their usefulness increases largely if your commits are correctly formatted and expressive. A build failure message that includes commits with their descriptions is only as useful as the messages and descriptions.
 
----
-
 ### Peers will not know what your code does, and eventually, neither will you
 
 Ultimately, you can only write a good message and a good description for your commit if its contents conform a single logical unit. Your commits can become your documentation, and navigating your repository's history can be an extremely powerful tool.
 
 If you haven't learned how to take advantage of some of the more advanced Git tools, maybe somebody else or you, in the future, will. And they will be extremely glad that the commits they're navigating look great and make sense.
-
----
 
 ### You can integrate best practices with a comfortable personal workflow
 

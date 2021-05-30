@@ -12,8 +12,6 @@ The way things are, it's become hard to be a responsible music listener. Correct
 
 My view of the world might be a bit skewed, but here goes a bold statement: listening to music, and learning how to listen to music is one of the most important and worthwhile things on which you can spend your time. My intention with this post is to stir up your curiosity and hopefully inspire you to start listening to music in an active way; I promise, there is a bit of effort involved, but the reward is only as great as you can imagine.
 
----
-
 ## Spend some time together with it
 
 Music can be used in many different ways, and one piece of music means different things to different people. One day everything's gone awry and you come home beaten to the ground, but you turn on your computer and find solace in the first music that comes to your mind. Suddenly, you're somewhere else, you physically feel better. Another day, you're together with a group of people, and you wonder: what music could build a comfortable atmosphere, where everyone feels like talking to each other? While working or studying, you turn on some instrumentals that help you concentrate and give your brain some place it can go for a short time when its attention span is over.
@@ -21,8 +19,6 @@ Music can be used in many different ways, and one piece of music means different
 In all those situations, you're rewarded enormously by music. But there's something you definitely know but maybe haven't done in a while: choose a band's album or a composer's group of works, lay down with a good pair of headphones, close your eyes, crank up the volume and pay attention to what you're listening to. As if you were trying to meditate, focus on whatever part of the sound catches your attention. Let yourself stop thinking critically and become a child. Be carried away by whichever feeling you're being transmitted, and listen. Try to listen as if you were never going to be able to hear it again. Make use of the fact that you're hardwired to respond emotionally to different combinations of sound and silence; don't be scared, because when you're done, you'll still be lying in bed, unscathed.
 
 The more you give yourself to a piece of music, the more you'll get back from it. When you're done listening, try to learn something new about the author. Was there a reason behind this composition? Could you figure it out without any research? This goes for music without text too: what's the hidden meaning? Listen to it again, and maybe you'll find it more wonderful than last time. You don't need to know anything, no theory, no technique, no proficiency in any instrument will help you: the responsibility of listening to music lies exclusively in your ears and your brain.
-
----
 
 ## Get rid of "your type of music"
 
@@ -33,8 +29,6 @@ There's a sea of compositions you can discover if you have the time, but also if
 Do not dismiss a piece of music without listening to most of it. Sometimes, the best comes at the end. Develop an ability to discern music composed with the heart from music composed with any sort of interest. Try to spot any pretentiousness in the way things are laid out. Admire effort and humility: these can be easily spotted, too.
 
 Try to forget about any concept of "good music" you have. If you enjoy it for the right reasons, then it's good music. If you sharpen, or completely change the tools you use to choose the music you listen to, you'll find there's not enough time to listen to all the things you like.
-
----
 
 ## Discover and revisit the old
 
