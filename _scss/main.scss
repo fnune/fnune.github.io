@@ -38,7 +38,10 @@ h6 {
   }
 }
 
-img {
+img,
+svg {
+  display: block;
+  margin: auto;
   max-width: 100%;
 }
 
