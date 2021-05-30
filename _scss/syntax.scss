@@ -12,6 +12,8 @@ code {
   & pre {
     padding: 0.9rem $body-horizontal-padding;
     background-color: rgba($grey, 0.2);
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
     margin-left: -$body-horizontal-padding;
     margin-right: -$body-horizontal-padding;
     color: $base-code-color;
