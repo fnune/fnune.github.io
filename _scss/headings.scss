@@ -2,7 +2,21 @@
 
 $heading-anchor-color: lighten($heading-anchor-base-color, 42%);
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &:hover {
+    .heading-anchor {
+      visibility: visible;
+    }
+  }
+}
+
 .heading-anchor {
+  visibility: hidden;
   color: $heading-anchor-color;
 
   &:visited {
