@@ -1,14 +1,14 @@
 ---
 layout: post
-title: 'Making LunarVim work like my Neovim setup'
+title: 'Nuking most of my .vimrc and just using LunarVim'
 comments: true
 date: 2021-11-20 21:35:51 +0200
 excerpt: "Setting up Neovim to work like an IDE has become a maintenance burden. LunarVim looks like a promising solution that abstracts this away from me, so let's give it a try!"
 ---
 
-The recent developments that landed with Neovim 0.5 provide it with built-in support for the [Language Server Protocol](https://neovim.io/doc/lsp/). Before [adopting this new feature](https://github.com/fnune/dotfiles/commit/64c128c8cebbf8296eb1326a034bc766ece27ae2) I had been using the wonderful [coc.nvim](https://github.com/neoclide/coc.nvim) for my language server needs, and although I was enjoying the new built-ins, the amount of work I needed to do to get stuff set up increased, and I had to get used to writing Lua.
+The recent developments that landed with Neovim 0.5 provide it with built-in support for the [Language Server Protocol](https://neovim.io/doc/lsp/). Before [adopting this new feature](https://github.com/fnune/dotfiles/commit/64c128c8cebbf8296eb1326a034bc766ece27ae2) I had been using the wonderful [coc.nvim](https://github.com/neoclide/coc.nvim) for my language server needs. With all the new tricks Neovim was learning, the amount of work I needed to do to get everything working the way I wanted increased steadily.
 
-My configuration became a Frankenstein of Vimscript and Lua, and this came with unexpected drawbacks such as having a syntax error in the middle of a Lua block be reported as if it had happened at the beginning of the block.
+My configuration became a Frankenstein of Lua and Vimscript, and this came with unexpected drawbacks such as having a syntax error in the middle of a Lua block be reported as if it had happened at the beginning of the block.
 
 Setting up Neovim to work like an IDE was starting to become a maintenance burden for me, and I didn't have the patience to clean it all up again. Enter [LunarVim](https://www.lunarvim.org):
 
