@@ -78,6 +78,22 @@ This would pop up a view similar to Telescope, and I could fuzzy-filter _the sea
 
 Unfortunately, this is not possible in vanilla Telescope, and I've yet to find a solution for this. It is a big part of my daily workflow, so I might revert to `fzf.vim` for my text-search needs.
 
+<div id="grep-input-string" />
+
+_Thanks to [two helpful Redditors](https://old.reddit.com/r/neovim/comments/qysjgf/nuking_most_of_my_vimrc_and_just_using_lunarvim/hlkxhjl/), I've managed to find a solution for this. With the following snippet, pressing `<leader>sT` will do something very similar to `:Rg`, and will also take the word under the cursor as an initial value:_
+
+```lua
+function GrepInputString()
+  local default = vim.api.nvim_eval([[expand("<cword>")]])
+  local input = vim.fn.input({
+    prompt = "Search for: ",
+    default = default,
+  })
+  require("telescope.builtin").grep_string({ search = input })
+end
+lvim.builtin.which_key.mappings["sT"] = { "<cmd>lua GrepInputString()<CR>", "Text under cursor" }
+```
+
 ## File explorer
 
 I was a happy user of [`nnn`](https://github.com/jarun/nnn), a terminal file explorer with [a Vim plugin](https://github.com/mcchrish/nnn.vim). It's great, but some features are compile-in, which may be a nuisance to some.
