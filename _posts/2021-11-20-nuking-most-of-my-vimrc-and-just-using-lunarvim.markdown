@@ -80,7 +80,7 @@ Unfortunately, this is not possible in vanilla Telescope, and I've yet to find a
 
 <div id="grep-input-string" />
 
-_Thanks to [two helpful Redditors](https://old.reddit.com/r/neovim/comments/qysjgf/nuking_most_of_my_vimrc_and_just_using_lunarvim/hlkxhjl/), I've managed to find a solution for this. With the following snippet, pressing `<leader>sT` will do something very similar to `:Rg`, and will also take the word under the cursor as an initial value:_
+_Thanks to [two helpful Redditors](https://old.reddit.com/r/neovim/comments/qysjgf/nuking_most_of_my_vimrc_and_just_using_lunarvim/hljkbz5/), I've managed to find a solution for this. With the following snippet, pressing `<leader>sT` will do something very similar to `:Rg`, and will also take the word under the cursor as an initial value:_
 
 ```lua
 function GrepInputString()
