@@ -118,8 +118,7 @@ It's implemented [here][rm-scroll-res-impl] and works roughly so:
   generic, so there's no enforcement from Remix to make sure that this is the case. I can have
   a `loader` that returns `number` but then access `string[]` in `useLoaderData` and unless I
   actively share the types, TypeScript won't have a chance to complain. In my
-  opinion, `LoaderFunction` should take a required type argument for the return type, and another (
-  perhaps optional?) for query parameters.
+  opinion, `LoaderFunction` should take a required type argument for the return type, and another for query parameters, which can probably be optional.
   - One could argue that this is the responsibility of the developer, and it is, but by not
     requiring any type arguments, Remix isn't helping.
   - It's also inconsistent because `LoaderFunction` takes no type arguments but `useLoaderData`
