@@ -106,7 +106,7 @@ It's implemented [here][rm-scroll-res-impl] and works roughly so:
   - [x] `TODO`: find out why `export const loader` can't be used directly and needs to be accessed
         via `useLoaderData`. My guess: the purpose is to call the loader during server rendering and
         then to reuse the same data during rehydration, to initialize a frontend cache with. Remix
-        developers simply decided to for a standard way to access Remix functionality, and this just
+        developers simply decided to go for a standard way to access Remix functionality, and this just
         looks consistent.
     - It looks like I was correct: Remix [hands off][rm-route-handoff] serialized data to the client
       as a string and then has the client route reuse this data. It works similarly to
