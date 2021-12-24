@@ -100,10 +100,10 @@ It's implemented [here][rm-scroll-res-impl] and works roughly so:
     sense.
 - The `loader` pattern (see [related docs][rm-loader]) with an `export const loader` coupled with a
   `useLoaderData` call imported from `remix` feels a bit weird to me. I suppose there must be quite
-  a bit going on at build time for this to be worth the indirection. My first impression is that if
-  it shouldn't be necessary? Why can't I go `export const loader = someRemixUtility(async () => {})`
-  instead, removing the `useLoaderData` call inside the component? The client and server bundles can
-  still provide different implementations of `someRemixUtility`.
+  a bit going on at hydration time for this to be worth the indirection. My first impression is that
+  if it shouldn't be necessary? Why can't I go `export const loader = someRemixUtility(async () =>
+  {})` instead, removing the `useLoaderData` call inside the component? The client and server
+  bundles can still provide different implementations of `someRemixUtility`.
   - [x] `TODO`: find out why `export const loader` can't be used directly and needs to be accessed
     via `useLoaderData`. My guess: the purpose is to call the loader during server rendering and
     then to reuse the same data during rehydration, to initialize a frontend cache with. Remix
