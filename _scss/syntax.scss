@@ -5,6 +5,14 @@ code {
   font-family: $code-font-family;
 }
 
+code.highlighter-rouge {
+  background: #fff6f1;
+  border: 1px solid #f7e5db;
+  border-radius: 6px;
+  padding: 0 4px;
+  color: $base-code-color;
+}
+
 .highlight {
   background: #ffffff;
   font-size: $code-font-size;
