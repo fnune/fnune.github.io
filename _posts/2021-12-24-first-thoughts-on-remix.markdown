@@ -43,7 +43,7 @@ component](#the-scrollrestoration--component) and on [the `loader` pattern](#on-
     a feature of `react-router` that got [dropped][rr-scroll-res] after the developers noticed
     scroll restoration working increasingly better out of the box on major browsers.
     - [x] `TODO`: find
-      out [how `<ScrollRestoration />` is implemented](#the-scrollrestoration--component).
+          out [how `<ScrollRestoration />` is implemented](#the-scrollrestoration--component).
     - Remix [documentation on scroll restoration][rm-scroll-res] mentions that this component works
       by restoring the scroll level before rehydration. This should eliminate the jarring effect of
       having the scroll point being restored after the page loads completely.
@@ -101,14 +101,13 @@ It's implemented [here][rm-scroll-res-impl] and works roughly so:
 - The `loader` pattern (see [related docs][rm-loader]) with an `export const loader` coupled with a
   `useLoaderData` call imported from `remix` feels a bit weird to me. I suppose there must be quite
   a bit going on at hydration time for this to be worth the indirection. My first impression is that
-  if it shouldn't be necessary? Why can't I go `export const loader = someRemixUtility(async () =>
-  {})` instead, removing the `useLoaderData` call inside the component? The client and server
+  it shouldn't be necessary? Why can't I go `export const loader = someRemixUtility(async () => {})` instead, removing the `useLoaderData` call inside the component? The client and server
   bundles can still provide different implementations of `someRemixUtility`.
   - [x] `TODO`: find out why `export const loader` can't be used directly and needs to be accessed
-    via `useLoaderData`. My guess: the purpose is to call the loader during server rendering and
-    then to reuse the same data during rehydration, to initialize a frontend cache with. Remix
-    developers simply decided to for a standard way to access Remix functionality, and this just
-    looks consistent.
+        via `useLoaderData`. My guess: the purpose is to call the loader during server rendering and
+        then to reuse the same data during rehydration, to initialize a frontend cache with. Remix
+        developers simply decided to for a standard way to access Remix functionality, and this just
+        looks consistent.
     - It looks like I was correct: Remix [hands off][rm-route-handoff] serialized data to the client
       as a string and then has the client route reuse this data. It works similarly to
       what [Apollo GraphQL recommends][apollo-ssr].
@@ -152,19 +151,11 @@ Relevant documentation:
 - [`useLayoutEffect` documentation](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
 
 [rm-loader]: https://remix.run/docs/en/v1/api/conventions#loader
-
 [rr-scroll-res]: https://v5.reactrouter.com/web/guides/scroll-restoration
-
 [rm-scroll-res]: https://remix.run/docs/en/v1/api/remix#scrollrestoration
-
 [rm-scroll-res-impl]: https://github.com/remix-run/remix/blob/1fd70960e4d88740df5bf407a6ba2cd2b9549459/packages/remix-react/scroll-restoration.tsx
-
 [rm-route-handoff]: https://github.com/remix-run/remix/blob/1fd70960e4d88740df5bf407a6ba2cd2b9549459/packages/remix-server-runtime/server.ts#L448-L453
-
 [rm-tutorial]: https://remix.run/docs/en/v1/tutorials/jokes
-
 [rm-documentation]: https://remix.run/docs/en/v1
-
 [rh]: https://github.com/nfl/react-helmet
-
 [apollo-ssr]: https://www.apollographql.com/docs/react/performance/server-side-rendering/#executing-queries-with-getdatafromtree
