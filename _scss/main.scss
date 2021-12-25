@@ -1,17 +1,5 @@
 @import 'variables';
 
-@font-face {
-  font-family: 'Ligconsolata';
-  font-weight: bold;
-  src: url('../assets/Ligconsolata-Bold.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Ligconsolata';
-  font-weight: normal;
-  src: url('../assets/Ligconsolata-Regular.otf') format('opentype');
-}
-
 html {
   box-sizing: border-box;
   font-family: $base-font-family;
@@ -30,7 +18,7 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   margin: auto;
-  max-width: 42rem;
+  max-width: 44rem;
   overflow-y: scroll;
   padding: $body-padding;
 }

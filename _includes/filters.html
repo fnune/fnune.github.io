@@ -87,7 +87,7 @@
         background: #cfcfcf;
       }
       body .playgroundWrapper {
-        font-family: Helvetica;
+        font-family: sans-serif;
         font-size: 16px;
         line-height: 26px;
         color: #333333;
@@ -132,7 +132,7 @@
       }
       .playgroundWrapper input[type='text'] {
         outline: none;
-        font-family: Helvetica;
+        font-family: sans-serif;
         color: grey;
         font-size: 16px;
         border: 2px dotted grey;
@@ -174,102 +174,75 @@
   </head>
   <body>
     <div class="playgroundWrapper">
-      <span style="font-weight:bold;">Image URL</span>
+      <span style="font-weight: bold">Image URL</span>
       <input placeholder="Try using GIFs too!" id="url" type="text" /><a
-        style="cursor:pointer;"
+        style="cursor: pointer"
         class="adder"
         onclick="changeImage();"
       ></a>
       <br />
       <span>Opacity</span>
-      <input
-        id="opacity"
-        type="range"
-        min="0"
-        max="100"
-        value="100"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('opacity');"></a>
+      <input id="opacity" type="range" min="0" max="100" value="100" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('opacity');"
+      ></a>
       <br />
       <span>Contrast</span>
-      <input
-        id="contrast"
-        type="range"
-        min="0"
-        max="200"
-        value="100"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('contrast');"></a>
+      <input id="contrast" type="range" min="0" max="200" value="100" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('contrast');"
+      ></a>
       <br />
       <span>Brightness</span>
-      <input
-        id="brightness"
-        type="range"
-        min="0"
-        max="200"
-        value="100"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('brightness');"></a>
+      <input id="brightness" type="range" min="0" max="200" value="100" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('brightness');"
+      ></a>
       <br />
       <span>Saturate</span>
-      <input
-        id="saturate"
-        type="range"
-        min="0"
-        max="600"
-        value="100"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('saturate');"></a>
+      <input id="saturate" type="range" min="0" max="600" value="100" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('saturate');"
+      ></a>
       <br />
       <span>Grayscale</span>
-      <input
-        id="grayscale"
-        type="range"
-        min="0"
-        max="100"
-        value="0"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('grayscale');"></a>
+      <input id="grayscale" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('grayscale');"
+      ></a>
       <br />
       <span>Hue-rotate</span>
-      <input
-        id="hue-rotate"
-        type="range"
-        min="0"
-        max="360"
-        value="0"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('hue-rotate');"></a>
+      <input id="hue-rotate" type="range" min="0" max="360" value="0" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('hue-rotate');"
+      ></a>
       <br />
       <span>Sepia</span>
-      <input
-        id="sepia"
-        type="range"
-        min="0"
-        max="100"
-        value="0"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('sepia');"></a>
+      <input id="sepia" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('sepia');"
+      ></a>
       <br />
       <span>Invert</span>
-      <input
-        id="invert"
-        type="range"
-        min="0"
-        max="100"
-        value="0"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('invert');"></a>
+      <input id="invert" type="range" min="0" max="100" value="0" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('invert');"
+      ></a>
       <br />
       <span>Blur</span>
-      <input
-        id="blur"
-        type="range"
-        min="0"
-        max="20"
-        value="0"
-        onchange="newFilter(this.id, this.value);"
-      /><a style="cursor:pointer;" class="deleter" onclick="removeFilter('blur');"></a>
+      <input id="blur" type="range" min="0" max="20" value="0" onchange="newFilter(this.id, this.value);" /><a
+        style="cursor: pointer"
+        class="deleter"
+        onclick="removeFilter('blur');"
+      ></a>
       <br />
     </div>
     <pre id="resultCss"><code>The resulting CSS will appear here.</code></pre>
@@ -319,7 +292,7 @@
           alert('That is most probably not an image, mate.')
         }
 
-        setTimeout(function() {
+        setTimeout(function () {
           parent.setIframeHeight('section1')
         }, 200)
       }

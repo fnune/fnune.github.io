@@ -4,16 +4,18 @@ $purple: #b072d1;
 $red: #df5273;
 $grey: #e6e6e6;
 
+$system-mono: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
 $base-code-color: #444;
 $base-content-color: $black;
-$base-font-family: 'Ligconsolata', monospace;
-$base-font-size: 19px;
+$base-font-family: $system-mono;
+$base-font-size: 18px;
 
 $body-horizontal-padding: 2rem;
 $body-padding: 0.3rem $body-horizontal-padding $body-horizontal-padding;
 $body-background-color: #ffffff;
 
 $code-font-size: 1rem;
-$code-font-family: 'Ligconsolata';
+$code-font-family: $system-mono;
 
 $heading-anchor-base-color: $blue;
