@@ -1,0 +1,28 @@
+{% assign posts = site.categories['usairb'] %}
+
+  > This is a development log of [`usairb`](https://github.com/fnune/usairb), a
+  project I'm building to learn embedded Linux. The goal is to transform any
+  embedded Linux device with access to the Internet into a multiplexing
+  transmitter for USB hubs.
+
+{% if posts.size > 0 %}
+  <blockquote>
+    <p>See other posts here:</p>
+    <ul>
+      {% for post in posts %}
+        {% if post.url != page.url %}
+          <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <span>{{ post.title }}</span>
+            </a>
+            <span> · </span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </blockquote>
+
+{% endif %}
+
+---

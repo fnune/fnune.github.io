@@ -73,6 +73,7 @@ PLATFORMS
 
 DEPENDENCIES
   execjs (= 2.7.0)
+  ffi (~> 1.13)
   jekyll
   jekyll-autoprefixer
   jekyll-feed
