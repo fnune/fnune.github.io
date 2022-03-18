@@ -9,10 +9,13 @@ excerpt: "Entry #1 of the usairb development log (USB/IP and embedded Linux)"
 
 {% include usairb.html %}
 
-First development day. Added an [empty
-`CHANGELOG`](https://github.com/fnune/usairb/blob/main/CHANGELOG.md) and a
-[`README`](https://github.com/fnune/usairb/blob/main/README.md), and started
-this development log.
+First development day. Added an [empty `CHANGELOG`][git-changelog] and a
+[`README`][git-readme], and started this development log. See [the code at the
+time of writing][git-permalink] if you'd like to follow along.
+
+[git-readme]: https://github.com/fnune/usairb/blob/main/README.md
+[git-changelog]: https://github.com/fnune/usairb/blob/main/CHANGELOG.md
+[git-permalink]: https://github.com/fnune/usairb/blob/1721bd891d896dd77d38214a9bb63030b4145fad/src/main.c
 
 ## Introduction
 
@@ -41,7 +44,7 @@ I guess you can call it a no-frills experience if there's no product for you to
 use!
 
 [usairb-repo]: https://github.com/fnune/usairb
-[usbip]: https://wiki.archlinux.org/title/USB/IP
+[usbip]: http://usbip.sourceforge.net
 
 ## Planning features of the host device
 
