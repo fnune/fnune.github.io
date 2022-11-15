@@ -67,8 +67,16 @@ const dogsByBreed: Record<Breed, Dog[]> = {
 dogsByBreed.poodle
 ```
 
+## The `satisfies` operator
+
+The release of TypeScript 4.9 includes a new operator called `satisfies`. It can be used to avoid the need for a `Dictionary` typed. Read more about it in [the TypeScript 4.9 release announcement][typescript-4.9]{:target="\_blank"} or in [my post about using `Record` together with the `satisfies` operator][new-post].
+
+[new-post]: {% post_url 2022-11-15-typescript-series-5-record-and-the-satisfies-operator %}
+[typescript-4.9]: https://devblogs.microsoft.com/typescript/announcing-typescript-4-9/
+
 ---
 
 Related documentation:
 
 - [TypeScript handbook entry on advanced types, section on discriminated unions](https://www.typescriptlang.org/docs/handbook/advanced-types.html){:target="\_blank"}
+- [TypeScript 4.9 release announcement][typescript-4.9]{:target="\_blank"}
