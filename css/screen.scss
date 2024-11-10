@@ -4,7 +4,7 @@ docs: //jekyllrb.com/docs/front-matter/
 
 @charset 'utf-8';
 
-@import 'syntax';
-@import 'main';
-@import 'headings';
-@import 'index';
+@use 'syntax';
+@use 'main';
+@use 'headings';
+@use 'index';

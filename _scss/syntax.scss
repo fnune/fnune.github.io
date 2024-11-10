@@ -1,8 +1,8 @@
-@import 'variables';
+@use 'variables' as var;
 
 pre,
 code {
-  font-family: $code-font-family;
+  font-family: var.$code-font-family;
 }
 
 code.highlighter-rouge {
@@ -10,21 +10,21 @@ code.highlighter-rouge {
   border: 1px solid #f7e5db;
   border-radius: 6px;
   padding: 0 4px;
-  color: $base-code-color;
+  color: var.$base-code-color;
 }
 
 .highlight {
   background: #ffffff;
-  font-size: $code-font-size;
+  font-size: var.$code-font-size;
 
   & pre {
-    padding: 0.9rem $body-horizontal-padding;
-    background-color: rgba($grey, 0.2);
-    border-top: 1px solid $grey;
-    border-bottom: 1px solid $grey;
-    margin-left: -$body-horizontal-padding;
-    margin-right: -$body-horizontal-padding;
-    color: $base-code-color;
+    padding: 0.9rem var.$body-horizontal-padding;
+    background-color: rgba(var.$grey, 0.2);
+    border-top: 1px solid var.$grey;
+    border-bottom: 1px solid var.$grey;
+    margin-left: -(var.$body-horizontal-padding);
+    margin-right: -(var.$body-horizontal-padding);
+    color: var.$base-code-color;
   }
 
   .hll {

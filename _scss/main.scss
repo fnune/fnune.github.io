@@ -1,10 +1,10 @@
-@import 'variables';
+@use 'variables' as var;
 
 html {
   box-sizing: border-box;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  background-color: $black;
+  font-family: var.$base-font-family;
+  font-size: var.$base-font-size;
+  background-color: var.$black;
 }
 
 * {
@@ -12,15 +12,15 @@ html {
 }
 
 body {
-  background-color: $body-background-color;
-  color: $base-content-color;
+  background-color: var.$body-background-color;
+  color: var.$base-content-color;
   hyphens: auto;
   min-height: 100vh;
   line-height: 1.6;
   margin: auto;
   max-width: 44rem;
   overflow-y: scroll;
-  padding: $body-padding;
+  padding: var.$body-padding;
 }
 
 h1,
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $black;
+  color: var.$black;
   line-height: 1.3;
   margin-bottom: 0.25em;
 
@@ -52,16 +52,16 @@ pre {
 hr {
   border: none;
   height: 1px;
-  color: $grey;
-  background-color: $grey;
+  color: var.$grey;
+  background-color: var.$grey;
 }
 
 a {
   text-decoration: none;
-  color: $blue;
+  color: var.$blue;
 
   &:visited {
-    color: $purple;
+    color: var.$purple;
   }
 
   &:hover {
@@ -69,6 +69,6 @@ a {
   }
 
   &:focus {
-    color: $red;
+    color: var.$red;
   }
 }

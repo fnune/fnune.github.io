@@ -1,6 +1,8 @@
-@import 'variables';
+@use 'sass:color';
 
-$heading-anchor-color: lighten($heading-anchor-base-color, 42%);
+@use 'variables' as var;
+
+$heading-anchor-color: color.adjust(var.$heading-anchor-base-color, $lightness: 42%);
 
 h1,
 h2,
@@ -24,11 +26,11 @@ h6 {
   }
 
   &:hover {
-    color: $heading-anchor-base-color;
+    color: var.$heading-anchor-base-color;
     text-decoration: underline;
   }
 
   &:focus {
-    color: $red;
+    color: var.$red;
   }
 }
