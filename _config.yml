@@ -8,20 +8,20 @@
 # Site settings
 title: Fausto's personal blog
 description: >
-  I am a web developer based in Berlin. I work for Memfault, where we create
-  developer tools for firmware developers. I have a focus on front-end web
-  development, but I'm trying to become a generalist.
+  I am a web developer based in Berlin. I work for Pulumi, where we create
+  developer tools for companies shipping to the cloud. I have a focus on
+  front-end web development, but I'm trying to become a generalist.
 author:
   name: Fausto Núñez Alberro
   link: https://github.com/fnune
   description: >
-    I am a web developer based in Berlin. I work for <a href="https://memfault.com">Memfault</a>,
-    where we create developer tools for firmware developers. I have a focus on
+    I am a web developer based in Berlin. I work for Pulumi, where we create
+    developer tools for companies shipping to the cloud. I have a focus on
     front-end web development, but I'm trying to become a generalist.
   email: fausto.nunez@mailbox.org
-baseurl: "" # the subpath of your site, e.g. /blog
-repository_url: "https://github.com/fnune/fnune.github.io"
-url: "https://fnune.com" # the base hostname & protocol for your site
+baseurl: '' # the subpath of your site, e.g. /blog
+repository_url: 'https://github.com/fnune/fnune.github.io'
+url: 'https://fnune.com' # the base hostname & protocol for your site
 
 feed:
   path: atom.xml
@@ -38,13 +38,13 @@ sass:
 
 # Sitemap
 sitemap:
-  filename: "/sitemap.xml"
+  filename: '/sitemap.xml'
   exclude:
-      - "/atom.xml"
-      - "/feed.xml"
-      - "/feed/index.xml"
-      - "/css/screen.scss"
+    - '/atom.xml'
+    - '/feed.xml'
+    - '/feed/index.xml'
+    - '/css/screen.scss'
   include_posts:
-      - "/index.html"
-  change_frequency_name: "change_frequency"
-  priority_name: "priority"
+    - '/index.html'
+  change_frequency_name: 'change_frequency'
+  priority_name: 'priority'
