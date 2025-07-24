@@ -16,6 +16,8 @@ h6 {
 }
 
 .heading-anchor {
+  display: inline-block;
+  width: 0;
   visibility: hidden;
   color: $heading-anchor-color;
 
