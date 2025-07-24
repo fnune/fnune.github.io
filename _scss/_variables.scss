@@ -10,6 +10,11 @@ $base-code-color: #444;
 $base-content-color: $black;
 $base-font-family: $system-mono;
 $base-font-size: 18px;
+$mobile-font-size: 16px;
+$small-mobile-font-size: 15px;
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
 
 $body-horizontal-padding: 2rem;
 $body-padding: 0.3rem $body-horizontal-padding $body-horizontal-padding;

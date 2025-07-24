@@ -5,6 +5,14 @@ html {
   font-family: $base-font-family;
   font-size: $base-font-size;
   background-color: $black;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: $mobile-font-size;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: $small-mobile-font-size;
+  }
 }
 
 * {
