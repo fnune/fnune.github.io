@@ -59,7 +59,7 @@ hardware = {
 };
 ```
 
-The NixOS Wiki has [an article on TUXEDO devices][nixos-wiki-tuxedo]. It points at the fact that, as of July 2025, there is no package in `nixpkgs` that can install the official TUXEDO Control Center. It looks like the reasons include implementation attempts including [thousands of generated Nix code to declare the dependencies of the Angular frontend][thousands], and the frontend [requiring Electron 11], which was [released in 2020][electron-11-release] and is deemed ancient. It also points at a community flake that has been abandoned, and that makes this module available outside of `nixpkgs`.
+The NixOS Wiki has [an article on TUXEDO devices][nixos-wiki-tuxedo]. It points at the fact that, as of July 2025, there is no package in `nixpkgs` that can install the official TUXEDO Control Center. It looks like the reasons include implementation attempts including [thousands of generated Nix code to declare the dependencies of the Angular frontend][thousands], and the frontend requiring Electron 11, which was [released in 2020][electron-11-release] and is deemed ancient. It also points at a community flake that has been abandoned, and that makes this module available outside of `nixpkgs`.
 
 The other option suggested by the Wiki is to use [`tuxedo-rs`][tuxedo-rs], which exists because "TCC and its tccd service rely on Node.js which makes it slow, memory hungry and hard to package". I agree in principle, but it lacks certain features that I found useful in the TUXEDO Control Center:
 
@@ -186,7 +186,6 @@ With the [release of Debian 13 Trixie][debian-13] looming, I may try to move my 
 
 [configuration.melian.nix]: https://github.com/fnune/home.nix/blob/main/os/configuration.melian.nix
 [electron-11-release]: https://www.electronjs.org/blog/electron-11-0
-[electron-11]: https://github.com/NixOS/nixpkgs/pull/135841/files#diff-cf63ada070d26ae503c1677c2203621461e737e8103cb4489362f9d4d54c7bc2R3
 [faq-update]: https://www.tuxedocomputers.com/en/Infos/Help-Support/Frequently-asked-questions/ACPI-Error-Reports.tuxedo
 [infinitybook-faq]: https://www.tuxedocomputers.com/en/FAQ-TUXEDO-InfinityBook-Pro-14-Gen9-AMD.tuxedo
 [infinitybook]: https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen9-AMD.tuxedo
