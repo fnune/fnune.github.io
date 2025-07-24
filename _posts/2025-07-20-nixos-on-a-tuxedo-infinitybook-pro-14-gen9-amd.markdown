@@ -100,7 +100,7 @@ The `acpi.ec_no_wakeup=1` param [was also mentioned in their FAQ][infinitybook-f
 
 The addition of TUXEDO Control Center left me confused as to which widget to use to manage CPU frequencies and governors. KDE Plasma's PowerDevil provides integration, such as a slider under the system tray battery icon, and (as of recently) the battery icon changes to indicate which power profile is in use.
 
-Changing the profile using TUXEDO Control Center does not reflect in a change in the KDE Plasma widget, so ~Claude wrote~ I wrote a script to monitor different system properties as I changed the TUXEDO Control Center and KDE Plasma options:
+Changing the profile using TUXEDO Control Center does not reflect in a change in the KDE Plasma widget, so <del>Claude wrote</del> I wrote a script to monitor different system properties as I changed the TUXEDO Control Center and KDE Plasma options:
 
 ```sh
 #!/usr/bin/env bash
