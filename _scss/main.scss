@@ -60,7 +60,7 @@ pre {
 }
 
 blockquote {
-  margin: 1.5em 0;
+  margin: $block-spacing 0;
   padding: 0.2em 0 0.2em 1.25em;
   border-left: 3px solid var(--border);
   color: var(--fg);
@@ -94,7 +94,7 @@ ol {
 
 hr {
   border: none;
-  height: 1px;
+  height: $border-width;
   color: var(--border);
   background-color: var(--border);
 }

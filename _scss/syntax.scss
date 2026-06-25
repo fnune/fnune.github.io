@@ -7,24 +7,22 @@ code {
 
 code.highlighter-rouge {
   background: var(--code-inline-bg);
-  border: 1px solid var(--code-inline-border);
-  border-radius: 6px;
+  border: $border-width solid var(--code-inline-border);
+  border-radius: $border-radius;
   padding: 0 4px;
   font-size: $code-font-size;
   color: var(--code-fg);
 }
 
 .highlight {
-  background: var(--code-block-bg);
   font-size: $code-font-size;
+  margin: $block-spacing (-$code-padding-inline / 2);
 
   pre {
-    padding: 0.9rem $body-horizontal-padding;
+    padding: $code-padding-block $code-padding-inline;
     background-color: var(--code-block-bg);
-    border-top: 1px solid var(--code-block-border);
-    border-bottom: 1px solid var(--code-block-border);
-    margin-left: -$body-horizontal-padding;
-    margin-right: -$body-horizontal-padding;
+    border: $border-width solid var(--code-block-border);
+    border-radius: $border-radius;
     color: var(--code-fg);
   }
 
