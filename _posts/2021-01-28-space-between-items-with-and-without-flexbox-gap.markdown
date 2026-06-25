@@ -249,7 +249,7 @@ Thanks to [sirlantis for a careful review of this post](https://github.com/fnune
 .boxes {
   display: flex;
   border-radius: 5px;
-  background-color: #e6e6e6;
+  background-color: var(--border);
 }
 
 .boxes--gap {

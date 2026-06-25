@@ -1,38 +1,30 @@
 @use 'variables' as *;
 
-$syntax-comment: #999988;
-$syntax-grey: #999999;
-$syntax-string: #bb8844;
-$syntax-number: #009999;
-$syntax-name: #008080;
-$syntax-type: #445588;
-$syntax-function: #990000;
-
 pre,
 code {
   font-family: $code-font-family;
 }
 
 code.highlighter-rouge {
-  background: #fff6f1;
-  border: 1px solid #f7e5db;
+  background: var(--code-inline-bg);
+  border: 1px solid var(--code-inline-border);
   border-radius: 6px;
   padding: 0 4px;
-  color: $base-code-color;
+  color: var(--code-fg);
 }
 
 .highlight {
-  background: #fff;
+  background: var(--code-block-bg);
   font-size: $code-font-size;
 
   pre {
     padding: 0.9rem $body-horizontal-padding;
-    background-color: rgba($grey, 0.2);
-    border-top: 1px solid $grey;
-    border-bottom: 1px solid $grey;
+    background-color: var(--code-block-bg);
+    border-top: 1px solid var(--code-block-border);
+    border-bottom: 1px solid var(--code-block-border);
     margin-left: -$body-horizontal-padding;
     margin-right: -$body-horizontal-padding;
-    color: $base-code-color;
+    color: var(--code-fg);
   }
 
   .hll {
@@ -44,17 +36,17 @@ code.highlighter-rouge {
   .cm,
   .cpf,
   .c1 {
-    color: $syntax-comment;
+    color: var(--syntax-comment);
     font-style: italic;
   }
 
   .cp {
-    color: $syntax-grey;
+    color: var(--syntax-builtin);
     font-weight: bold;
   }
 
   .cs {
-    color: $syntax-grey;
+    color: var(--syntax-builtin);
     font-weight: bold;
     font-style: italic;
   }
@@ -62,7 +54,7 @@ code.highlighter-rouge {
   .gh,
   .nb,
   .bp {
-    color: $syntax-grey;
+    color: var(--syntax-builtin);
   }
 
   .k,
@@ -74,6 +66,7 @@ code.highlighter-rouge {
   .kr,
   .ow,
   .gs {
+    color: var(--syntax-keyword);
     font-weight: bold;
   }
 
@@ -83,13 +76,13 @@ code.highlighter-rouge {
   }
 
   .gd {
-    color: #000;
-    background-color: #ffdddd;
+    color: var(--syntax-diff-del-fg);
+    background-color: var(--syntax-diff-del-bg);
   }
 
   .gi {
-    color: #000;
-    background-color: #ddffdd;
+    color: var(--syntax-diff-add-fg);
+    background-color: var(--syntax-diff-add-bg);
   }
 
   .ge {
@@ -102,21 +95,21 @@ code.highlighter-rouge {
   }
 
   .go {
-    color: #888;
+    color: var(--syntax-builtin);
   }
 
   .gp,
   .nn {
-    color: #555;
+    color: var(--syntax-builtin);
   }
 
   .gu {
-    color: #aaa;
+    color: var(--syntax-builtin);
   }
 
   .kt,
   .nc {
-    color: $syntax-type;
+    color: var(--syntax-type);
     font-weight: bold;
   }
 
@@ -127,7 +120,7 @@ code.highlighter-rouge {
   .mi,
   .mo,
   .il {
-    color: $syntax-number;
+    color: var(--syntax-number);
   }
 
   .s,
@@ -143,7 +136,7 @@ code.highlighter-rouge {
   .sx,
   .s1,
   .ss {
-    color: $syntax-string;
+    color: var(--syntax-string);
   }
 
   .na,
@@ -153,13 +146,13 @@ code.highlighter-rouge {
   .vg,
   .vi,
   .vm {
-    color: $syntax-name;
+    color: var(--syntax-name);
   }
 
   .ne,
   .nf,
   .fm {
-    color: $syntax-function;
+    color: var(--syntax-function);
     font-weight: bold;
   }
 
@@ -168,14 +161,14 @@ code.highlighter-rouge {
   }
 
   .nt {
-    color: #000080;
+    color: var(--syntax-name);
   }
 
   .sr {
-    color: #808000;
+    color: var(--syntax-string);
   }
 
   .w {
-    color: #bbb;
+    color: var(--syntax-builtin);
   }
 }

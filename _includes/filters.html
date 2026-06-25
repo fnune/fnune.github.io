@@ -5,6 +5,7 @@
     <style>
       .playgroundWrapper input[type='range'] {
         -webkit-appearance: none;
+        background: transparent;
         margin: 10px 0;
       }
       .playgroundWrapper input[type='range']:focus {
@@ -90,7 +91,7 @@
         font-family: sans-serif;
         font-size: 16px;
         line-height: 26px;
-        color: #333333;
+        color: var(--fg);
       }
       .playgroundWrapper .imgWrap {
         width: 100%;
@@ -133,9 +134,10 @@
       .playgroundWrapper input[type='text'] {
         outline: none;
         font-family: sans-serif;
-        color: grey;
+        color: var(--fg);
+        background: transparent;
         font-size: 16px;
-        border: 2px dotted grey;
+        border: 2px dotted var(--border);
       }
       .playgroundWrapper span {
         text-align: right;
@@ -168,6 +170,17 @@
         }
         .playgroundWrapper span {
           right: 185px;
+        }
+      }
+
+      [data-theme='dark'] .playgroundWrapper a.deleter,
+      [data-theme='dark'] .playgroundWrapper a.adder {
+        filter: invert(1);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) .playgroundWrapper a.deleter,
+        :root:not([data-theme='light']) .playgroundWrapper a.adder {
+          filter: invert(1);
         }
       }
     </style>

@@ -3,3 +3,36 @@
   <p>Find me on <a href="{{ site.author.link }}" target="_blank" rel="noopener noreferrer">GitHub</a>. Subscribe using <a href="/atom.xml">RSS</a>.</p>
   <p>© {{ site.author.name }}</p>
 </footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    var order = ['system', 'light', 'dark'];
+    function stored() {
+      try {
+        var v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'system';
+      } catch (e) {
+        return 'system';
+      }
+    }
+    function apply(mode) {
+      if (mode === 'system') {
+        document.documentElement.removeAttribute('data-theme');
+        try { localStorage.removeItem('theme'); } catch (e) {}
+      } else {
+        document.documentElement.setAttribute('data-theme', mode);
+        try { localStorage.setItem('theme', mode); } catch (e) {}
+      }
+    }
+    function render() {
+      btn.textContent = 'Theme: ' + stored();
+    }
+    btn.addEventListener('click', function () {
+      apply(order[(order.indexOf(stored()) + 1) % order.length]);
+      render();
+    });
+    render();
+  })();
+</script>
