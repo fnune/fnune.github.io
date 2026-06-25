@@ -7,5 +7,19 @@
       >
     </p>
   </header>
-  {% include anchor_headings.html html=content anchorBody="#" anchorClass="heading-anchor" %}
+  {% capture body %}{% include anchor_headings.html html=content anchorBody="#" anchorClass="heading-anchor" %}{% endcapture %}
+  {% capture toc %}{{ content | toc_only }}{% endcapture %}
+  {% assign tocItems = toc | split: '<li' | size | minus: 1 %}
+  {% if tocItems > 1 %}
+    {% assign intro = body | split: '<h2' | first %}
+    {% assign rest = body | remove_first: intro %}
+    {{ intro }}
+    <nav aria-label="Table of contents">
+      <h2>Table of contents</h2>
+      {{ toc }}
+    </nav>
+    {{ rest }}
+  {% else %}
+    {{ body }}
+  {% endif %}
 </article>

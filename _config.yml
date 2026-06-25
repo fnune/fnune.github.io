@@ -27,9 +27,19 @@ feed:
   path: atom.xml
 
 # Build settings
-plugins: [jekyll-sitemap, jekyll-autoprefixer, jekyll-feed]
+plugins: [jekyll-sitemap, jekyll-autoprefixer, jekyll-feed, jekyll-toc]
 markdown: kramdown
 permalink: pretty
+
+toc:
+  min_level: 2
+  max_level: 4
+
+defaults:
+  - scope:
+      type: posts
+    values:
+      toc: true
 
 # Sass
 sass:

@@ -7,23 +7,6 @@ date: 2025-10-16 11:59:00 +0200
 excerpt: 'I try to review code quickly and in a standard manner: my goal is to enable colleagues and improve velocity.'
 ---
 
-- [Guiding principles](#guiding-principles)
-  - [Unblock the author](#unblock-the-author)
-  - [Reviews must be actionable](#reviews-must-be-actionable)
-- [The process](#the-process)
-  - [Default action: approve](#default-action-approve)
-  - [Use request changes liberally](#use-request-changes-liberally)
-  - [Not feeling confident to review?](#not-feeling-confident-to-review)
-- [Comment categories](#comment-categories)
-  - [Nit](#nit)
-  - [Super-nit](#super-nit)
-  - ["Would like to see" / questions](#would-like-to-see--questions)
-  - [Off-topic](#off-topic)
-    - [Off-topic: product decision](#off-topic-product-decision)
-  - [Logic issue / bug](#logic-issue--bug)
-  - [Celebratory / thanks](#celebratory--thanks)
-- [Cross-linking](#cross-linking)
-
 ## Guiding principles
 
 ### Unblock the author

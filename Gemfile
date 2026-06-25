@@ -4,6 +4,7 @@ gem 'jekyll', '~> 4.4'
 gem 'jekyll-autoprefixer', '~> 1.0'
 gem 'jekyll-feed', '~> 0.17'
 gem 'jekyll-sitemap', '~> 1.4'
+gem 'jekyll-toc', '~> 0.19'
 
 gem 'webrick', '~> 1.9'
 gem 'execjs', '~> 2.7.0'
