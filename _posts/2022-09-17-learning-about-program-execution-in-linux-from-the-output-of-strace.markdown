@@ -115,7 +115,7 @@ This leaves us with the question: which currently-running program is `execve` re
 
 Programs in Linux are executed by means of a mechanism called [fork-exec](https://en.wikipedia.org/wiki/Fork%E2%80%93exec). The `fork` system call creates a child process by duplicating the calling process.
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.21050049662585 411.74482531780495" width="487.21050049662585" height="411.74482531780495">
+<svg class="excalidraw" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.21050049662585 411.74482531780495" width="487.21050049662585" height="411.74482531780495">
   <!-- svg-source:excalidraw -->
 
   <defs>
@@ -136,7 +136,7 @@ This means when `execve` gets called, it's substituting the cloned instance of o
 
 At the end of `execve` our process for `hello.out` has received a newly initialized stack, heap and data segments as fresh new virtual address space. In memory, it looks a little bit like this:
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.5 327.5" width="538.5" height="327.5">
+<svg class="excalidraw" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.5 327.5" width="538.5" height="327.5">
   <!-- svg-source:excalidraw -->
 
   <defs>

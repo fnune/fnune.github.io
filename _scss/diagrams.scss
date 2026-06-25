@@ -1,0 +1,32 @@
+.excalidraw rect {
+  fill: transparent;
+}
+
+@mixin diagram-dark {
+  .excalidraw {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .mermaid {
+    .flowchart-link {
+      stroke: var(--fg) !important;
+      stroke-width: 2px !important;
+    }
+
+    .marker,
+    .arrowMarkerPath {
+      fill: var(--fg) !important;
+      stroke: var(--fg) !important;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    @include diagram-dark;
+  }
+}
+
+[data-theme='dark'] {
+  @include diagram-dark;
+}
