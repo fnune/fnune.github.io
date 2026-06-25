@@ -1,12 +1,13 @@
 {% assign posts = site.categories['usairb'] %}
 
-  > This is a development log of [`usairb`](https://github.com/fnune/usairb), a
-  project I'm building to learn embedded Linux. The goal is to transform any
-  embedded Linux device with access to the Internet into a multiplexing
-  transmitter for USB hubs.
-
-{% if posts.size > 1 %}
   <blockquote>
+    <p>
+      This is a development log of <a href="https://github.com/fnune/usairb"><code>usairb</code></a>, a
+      project I'm building to learn embedded Linux. The goal is to transform any
+      embedded Linux device with access to the Internet into a multiplexing
+      transmitter for USB hubs.
+    </p>
+{% if posts.size > 1 %}
     <p>See other posts here:</p>
     <ul>
       {% for post in posts %}
@@ -21,8 +22,7 @@
         {% endif %}
       {% endfor %}
     </ul>
-  </blockquote>
-
 {% endif %}
+  </blockquote>
 
 ---
