@@ -23,9 +23,12 @@ Do not expect extremely polished dotfiles. I know some of you will be pulling yo
 - Neovim: [https://github.com/fnune/vimrc](https://github.com/fnune/vimrc)
 - Emacs: [https://github.com/fnune/emacs.d/](https://github.com/fnune/emacs.d)
 
-> _I will not give you counsel, saying do this, or do that. For not in doing or contriving, nor in choosing between this course and another, can I avail; but only in knowing what was and is, and in part also what shall be._
->
-> <div style="text-align: right;">&mdash; <cite>Galadriel</cite></div>
+<figure>
+  <blockquote>
+    <p>I will not give you counsel, saying do this, or do that. For not in doing or contriving, nor in choosing between this course and another, can I avail; but only in knowing what was and is, and in part also what shall be.</p>
+  </blockquote>
+  <figcaption>&mdash; Galadriel</figcaption>
+</figure>
 
 ---
 

@@ -48,11 +48,31 @@ h6 {
   }
 }
 
+p {
+  margin: 0 0 $paragraph-spacing;
+}
+
 img,
 svg {
   display: block;
   margin: auto;
   max-width: 100%;
+}
+
+figure {
+  margin: $block-spacing 0;
+
+  > :has(+ figcaption) {
+    margin-bottom: 0;
+  }
+}
+
+figcaption {
+  margin-top: $intro-spacing;
+  color: var(--muted);
+  font-style: italic;
+  font-size: $small-font-size;
+  text-align: right;
 }
 
 pre {
@@ -72,17 +92,22 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+}
 
-  ul,
-  ol {
-    padding-left: $list-indent;
-  }
+p:has(+ ul),
+p:has(+ ol) {
+  margin-bottom: $intro-spacing;
+}
+
+p + ul,
+p + ol {
+  margin-top: $intro-spacing;
 }
 
 ul,
 ol {
-  margin: 1em 0;
-  padding-left: 0;
+  margin: $paragraph-spacing 0;
+  padding-left: $list-indent;
   list-style-position: outside;
 
   ul,

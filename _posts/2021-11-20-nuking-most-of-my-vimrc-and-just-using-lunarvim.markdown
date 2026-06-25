@@ -26,8 +26,10 @@ Most of [my mappings](https://github.com/fnune/dotfiles/blob/master/neovim/.conf
 
 LunarVim makes excellent use of [`which-key`](https://github.com/folke/which-key.nvim), a pop-up window that suggests options to help you complete a keybinding.
 
-![The which-key plugin in LunarVim after pressing the leader key](/img/lvim/which-key-leader.png)
-_The which-key plugin in LunarVim after pressing the leader key_
+<figure>
+  <img src="/img/lvim/which-key-leader.png" alt="The which-key plugin in LunarVim after pressing the leader key">
+  <figcaption markdown="span">The which-key plugin in LunarVim after pressing the leader key</figcaption>
+</figure>
 
 There's the reassuring certainty that I'll be able to find the keybinding again if I've found it once, by exploring the nested menus that update as you select an option.
 
@@ -39,23 +41,29 @@ I did end up adding exactly four keybindings that I missed:
 vim.cmd("map 0 ^")
 ```
 
-![map 0 ^](/img/lvim/zero.png)
-_I rarely want my cursor to go to position (2). By default, `0` takes you to the first column, but I want it to take me to the first character in the line._
+<figure>
+  <img src="/img/lvim/zero.png" alt="map 0 ^">
+  <figcaption markdown="span">I rarely want my cursor to go to position (2). By default, `0` takes you to the first column, but I want it to take me to the first character in the line.</figcaption>
+</figure>
 
 ```lua
 vim.cmd("nnoremap Q <nop>")
 ```
 
-![nnoremap Q nop](/img/lvim/ex.png)
-_I [never became friends with Ex mode](https://vi.stackexchange.com/questions/457/does-ex-mode-have-any-practical-use), and seeing this always frustrated me, so I disabled its keybinding._
+<figure>
+  <img src="/img/lvim/ex.png" alt="nnoremap Q nop">
+  <figcaption markdown="span">I [never became friends with Ex mode](https://vi.stackexchange.com/questions/457/does-ex-mode-have-any-practical-use), and seeing this always frustrated me, so I disabled its keybinding.</figcaption>
+</figure>
 
 ```lua
 vim.cmd("nnoremap j gj")
 vim.cmd("nnoremap k gk")
 ```
 
-![nnoremap j gj](/img/lvim/gj.png)
-_If you write prose and you've enabled line-wrapping, then remapping `j` to `gj` and `k` to `gk` is a great idea. Pressing `j` here will take me to position (1) and not (2)._
+<figure>
+  <img src="/img/lvim/gj.png" alt="nnoremap j gj">
+  <figcaption markdown="span">If you write prose and you've enabled line-wrapping, then remapping `j` to `gj` and `k` to `gk` is a great idea. Pressing `j` here will take me to position (1) and not (2).</figcaption>
+</figure>
 
 ## Fuzzy finder
 
@@ -63,8 +71,10 @@ I've used the magnificent [`fzf.vim`](https://github.com/junegunn/fzf.vim) for s
 
 One of them is that it simply looks great: it goes really well together with a patched font (in this case `Cascadia Code SemiLight`) thanks to the iconography, and the preview on the right is syntax-highlighted, and it'll hide responsively depending on the available size of the terminal.
 
-![Telescope in LunarVim](/img/lvim/telescope.png)
-_It just looks beautiful_
+<figure>
+  <img src="/img/lvim/telescope.png" alt="Telescope in LunarVim">
+  <figcaption markdown="span">It just looks beautiful</figcaption>
+</figure>
 
 Each fragment in a file path can be truncated to fit a longer path in the screen. I thought this would be confusing at first, but I've had no trouble with it.
 
@@ -100,8 +110,10 @@ I was a happy user of [`nnn`](https://github.com/jarun/nnn), a terminal file exp
 
 LunarVim comes with [`nvim-tree`](https://github.com/kyazdani42/nvim-tree.lua). Honestly, I can't complain. I wasn't an advanced user of `nnn`. In `nvim-tree`, all features are quickly discoverable by entering `g?` ("go to help", in and of itself an easily discoverable combination).
 
-![nvim-tree in LunarVim](/img/lvim/nvim-tree.png)
-_The file explorer opens with the file from the current buffer selected. It also (in my opinion) benefits greatly from the patched font._
+<figure>
+  <img src="/img/lvim/nvim-tree.png" alt="nvim-tree in LunarVim">
+  <figcaption markdown="span">The file explorer opens with the file from the current buffer selected. It also (in my opinion) benefits greatly from the patched font.</figcaption>
+</figure>
 
 ## Git interface
 
@@ -111,8 +123,10 @@ Since then, I've been through different solutions, including using an always-run
 
 LunarVim's porcelain of choice is [`lazygit`](https://github.com/jesseduffield/lazygit). I'd been meaning to try `lazygit` for a while now, and this was the perfect opportunity. The "unboxing" experience was great: `lazygit` shows a link to [a YouTube video](https://www.youtube.com/watch?v=CPLdltN7wgE) by the author Jesse Duffield. I can't make the software justice in this introduction, so I would recommend that you simply try it out.
 
-![lazygit in LunarVim](/img/lvim/lazygit.png)
-_Obligatory screenshot. Please [watch the YouTube video](https://www.youtube.com/watch?v=CPLdltN7wgE) for a proper introduction._
+<figure>
+  <img src="/img/lvim/lazygit.png" alt="lazygit in LunarVim">
+  <figcaption markdown="span">Obligatory screenshot. Please [watch the YouTube video](https://www.youtube.com/watch?v=CPLdltN7wgE) for a proper introduction.</figcaption>
+</figure>
 
 One minor drawback of using `lazygit` inside of Neovim is that its `open` and `edit` commands when pointing at files will open a nested `$EDITOR` inside of the `lazygit` terminal. With `vim-fugitive`, opening a file in its UI would simply reuse the current Neovim instance. I had this expectation of `lazygit` running inside LunarVim as well. I've read about using [Neovim in remote mode](https://github.com/mhinz/neovim-remote) to solve this, but I haven't gotten around to it. I do feel like if LunarVim picks `lazygit` as its integrated Git interface, it could also come with a working solution for this.
 

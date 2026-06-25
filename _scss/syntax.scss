@@ -14,9 +14,19 @@ code.highlighter-rouge {
   color: var(--code-fg);
 }
 
+// An intro line ("...:") should bind to the code block it introduces, sitting
+// closer to the block below than to the prose above.
+p:has(+ .highlighter-rouge) {
+  margin-bottom: $intro-spacing;
+}
+
+p + .highlighter-rouge .highlight {
+  margin-top: $intro-spacing;
+}
+
 .highlight {
   font-size: $code-font-size;
-  margin: $block-spacing (-$code-padding-inline / 2);
+  margin: $block-spacing (-$code-padding-inline / 2) $paragraph-spacing;
 
   pre {
     padding: $code-padding-block $code-padding-inline;
