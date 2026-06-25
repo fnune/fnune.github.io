@@ -14,17 +14,19 @@ Scroll snap points, in case you haven't heard of them yet, are a way of introduc
 
 There are some cool libraries which implement this with cross-browser compatibility, such as the ever-famous [pagePiling.js](https://github.com/alvarotrigo/pagePiling.js) (which does a lot more things than just scroll snapping), but the native CSS property doesn't work on Chrome.
 
-CSS scroll snap points work for the horizontal axis as well as for the vertical axis. I'm going to give you an example of a vertical scrolling container with scroll snap points. Hop to Firefox if you're not there already.
+CSS scroll snap points work for the horizontal axis as well as for the vertical axis. I'm going to give you an example of a vertical scrolling container with scroll snap points.
 
-<div style="position:relative; max-height:200px; -webkit-overflow-scrolling: touch; scroll-snap-type: mandatory; scroll-snap-destination: 0% 100%; scroll-snap-points-y: repeat(200px); overflow:auto;">
-  <p style="position:absolute; bottom:10%; left:10%; color:rgba(0,0,0,0.2);">This will only work on Firefox</p>
-  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#DFFFBC;">
+> Update from 2026: when I wrote this in 2016, the code below used the original scroll snap draft (`scroll-snap-points-y` and `scroll-snap-destination`), which only Firefox shipped. That draft was scrapped, and Firefox removed it in version 68. The properties no longer exist in any browser, so the original example stopped working everywhere. I've updated the demo and the snippet to the current [CSS Scroll Snap Module Level 1](https://www.w3.org/TR/css-scroll-snap-1/), which all browsers support today.
+
+<div style="position:relative; max-height:200px; -webkit-overflow-scrolling: touch; scroll-snap-type: y mandatory; overflow:auto;">
+  <p style="position:absolute; bottom:10%; left:10%; color:rgba(0,0,0,0.2);">Scroll me, this snaps in any browser now</p>
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#DFFFBC; scroll-snap-align:start;">
   </div>
-  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFCAB6;">
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFCAB6; scroll-snap-align:start;">
   </div>
-  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#CCFFFF;">
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#CCFFFF; scroll-snap-align:start;">
   </div>
-  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFD5FE;">
+  <div style="box-sizing:border-box; border:20px solid rgba(0,0,0,0.2); width:100%; height:200px; background:#FFD5FE; scroll-snap-align:start;">
   </div>
 </div>
 
@@ -32,9 +34,12 @@ For a great guide on how to use this, refer to [CSS Tricks](https://css-tricks.c
 
 ```css
 .container {
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(px, vh, vw, percentage);
-  scroll-snap-destination: x y;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+.container > * {
+  scroll-snap-align: start;
 }
 ```
 
