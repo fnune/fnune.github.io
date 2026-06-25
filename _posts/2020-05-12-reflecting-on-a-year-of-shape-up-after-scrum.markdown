@@ -82,13 +82,9 @@ Make **saying "no"** your default during betting table meetings. You're there to
 
 Finally, assign responsibilities regarding **communication of progress**. If there are frequent updates, nobody needs to go around asking "how's the project going".
 
----
-
 The devil is in the detail. Perhaps we weren't doing Scrum the right way, or maybe we're not doing Shape Up the right way, but we're definitely learning a lot about our team, and ultimately building up trust by slowly but steadily discussing every issue that arises with the intention of improving. May I suggest, if things are not going as you'd like in your team: try new ideas! Every team is different, and no existing solution will fit it perfectly.
 
 Switching to Shape Up has made us ask ourselves important questions, but also important discoveries. The team wants to continue doing it: hopefully, I'll make another post when the time comes.
-
----
 
 ### References
 

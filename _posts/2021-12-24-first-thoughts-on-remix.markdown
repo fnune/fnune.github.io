@@ -135,12 +135,8 @@ It's implemented [here][rm-scroll-res-impl] and works roughly so:
     probably not possible because one would need to go into other modules. Maybe the `TypedForm<T>`
     approach is good as long as one shares `T` with child controls.
 
----
-
 That's it for now! I'll probably give Remix a proper try once I have a need for it. I feel like the
 typing issues I mentioned can be avoided through discipline, and the DX looks promising.
-
----
 
 Relevant documentation:
 

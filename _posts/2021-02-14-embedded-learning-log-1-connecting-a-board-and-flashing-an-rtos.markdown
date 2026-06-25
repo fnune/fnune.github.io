@@ -23,8 +23,6 @@ I'm surprised that I need to download tarfiles.
 - The Espressif docs encourage me to install things in `~/esp` and then add them to my path. What if I lose access to this version of the toolchain and I want to run this in the future?
 - There seems to be no unifying tool, I guess the ecosystem for each board is a different world.
 
----
-
 A first `ls` in the binaries offered by the toolchain gives me this:
 
 ```bash
@@ -49,8 +47,6 @@ I can only guess what some of those things are for. I haven't read the full docu
 - `*-strip` is for removing or renaming symbols?
 
 Some of these tools are already available in my `PATH` but not specifically for `xtensa-lx106-elf`, I guess because I've installed `build-essential`: `gcc`, `strip`, `objdump`, `objcopy`... what do these binaries work on? `x86_64` Linux?
-
----
 
 The "supported" IDE is Eclipse, but the docs start with this:
 
@@ -197,8 +193,6 @@ GGq4O.���ɏ�ɏQ�0�~?�4�!�S{�O�:9�O�:9�COAa�$\��
 ```
 
 At this point I'm going to give up and just use `make monitor`, and figure this out later with the help of someone more experienced.
-
----
 
 As it turns out, there are "standard" baud rates, blessed by most tooling around, and it seems like `screen` and `minicom` aren't able to read at 74880bps even if configured to do so. I'm still not sure why flashing with `ESPBAUD=SOMETHING_ELSE` doesn't then let me connect at speed `SOMETHING_ELSE`, so it seems like I'll have to rely on `make monitor` for my connection.
 

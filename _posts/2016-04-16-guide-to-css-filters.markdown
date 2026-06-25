@@ -18,8 +18,6 @@ As you can see, there's a million things you can do with the CSS filter property
 
 ## CSS filter FAQ
 
----
-
 Most of these effects are self-explanatory. But there are some things which may cause a little bit of head scratching. Here's my attempt at guessing what those are:
 
 #### Why would I use an opacity filter when I can just use the good old opacity property?

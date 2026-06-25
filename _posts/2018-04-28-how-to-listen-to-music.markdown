@@ -38,6 +38,4 @@ There's something in common between classics: you could very easily come up with
 
 A lot of music sounds sad, and you'll find classics are often sad. Don't be scared: you can feel happy listening to sad music. In fact, for some reason, sad music is one of the things that makes me happiest. There's a sweetness in the way sad music is touching, you can think of it as a moment of indulgence, where you have the chance to forgive yourself: some sort of cleansing mechanism.
 
----
-
 Do not take music for granted. It's out there somewhere, waiting for you, and of all the ways you can go about feeling good, it's the lowest-hanging fruit. Seize the opportunity, and give yourself the pleasure of really listening to it.

@@ -65,8 +65,6 @@ E (463) mflt: Coredumps enabled but no storage partition found!
 
 I'm not sure which one is causing the reboots, so I'm going to fix the MAC address problem first. It should be a matter of using a different method that doesn't get the "base" MAC address but the one from EFUSE. For context, I'm trying to use the MAC address as a device identifier to send to the Memfault cloud.
 
----
-
 I gave up trying to fix the MAC address problem because no matter what I picked, it would crash. I'll name this device `"the-one-and-only"` instead so that I can skip the problem of fetching the MAC address.
 
 We're left with:
@@ -330,8 +328,6 @@ case ESP_RST_WDT: return kMfltRebootReason_SoftwareWatchdog;
 ```
 
 Reset cause `0x7` corresponds to "other watchdogs", so I'm going to map that to `HardwareWatchdog` instead, since that's what the logs say. The `Hardware Watchdog` log from the Memfault SDK was there long before I added my mapping, so that suggests to me that they knew the reset reason all along. Why did I have to implement the mapping, then?
-
----
 
 As it turns out, it's because I didn't read the port included in the SDK well enough (duh). It includes [an implementation of `memfault_reboot_reason_get`](https://github.com/memfault/memfault-firmware-sdk/blob/master/ports/esp8266_sdk/memfault/esp_reboot_tracking.c) which I should have used from the start.
 
