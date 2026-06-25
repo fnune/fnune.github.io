@@ -8,7 +8,7 @@ code {
 code.highlighter-rouge {
   background: var(--code-inline-bg);
   border: $border-width solid var(--code-inline-border);
-  border-radius: $border-radius;
+  border-radius: $small-border-radius;
   padding: 0 4px;
   font-size: $code-font-size;
   color: var(--code-fg);
@@ -27,7 +27,7 @@ code.highlighter-rouge {
   }
 
   .hll {
-    background-color: #ffffcc;
+    background-color: var(--syntax-line-highlight);
   }
 
   .c,
@@ -70,8 +70,7 @@ code.highlighter-rouge {
   }
 
   .err {
-    color: #a61717;
-    background-color: #e3d2d2;
+    color: var(--syntax-error);
   }
 
   .gd {
@@ -90,7 +89,7 @@ code.highlighter-rouge {
 
   .gr,
   .gt {
-    color: #aa0000;
+    color: var(--syntax-error);
   }
 
   .go {
@@ -156,7 +155,7 @@ code.highlighter-rouge {
   }
 
   .ni {
-    color: #800080;
+    color: var(--syntax-builtin);
   }
 
   .nt {
