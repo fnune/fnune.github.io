@@ -1,19 +1,60 @@
 <script type="module">
-  if (document.querySelector('.mermaid')) {
-    const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11.12.0/+esm');
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'base',
-      fontFamily: "'Clear Sans', sans-serif",
-      themeVariables: {
-        fontFamily: "'Clear Sans', sans-serif",
-        primaryColor: '#eeeded',
-        primaryTextColor: '#000000',
-        primaryBorderColor: '#d6d3d3',
-        lineColor: '#1d70b8',
-        secondaryColor: '#ffffff',
-        tertiaryColor: '#ffffff',
-      },
+  const diagrams = document.querySelectorAll('.mermaid');
+
+  async function mermaidLiveUrl(code) {
+    const state = JSON.stringify({
+      code,
+      mermaid: JSON.stringify({ theme: 'default' }),
+      autoSync: true,
+      updateDiagram: true,
     });
+    const stream = new Blob([state]).stream().pipeThrough(new CompressionStream('deflate'));
+    const bytes = new Uint8Array(await new Response(stream).arrayBuffer());
+    let binary = '';
+    bytes.forEach((b) => (binary += String.fromCharCode(b)));
+    const pako = btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    return `https://mermaid.live/edit#pako:${pako}`;
+  }
+
+  async function showFallback(el) {
+    el.classList.add('mermaid-error');
+    try {
+      const link = document.createElement('a');
+      link.href = await mermaidLiveUrl(el.textContent.trim());
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'view it on mermaid.live';
+
+      const notice = document.createElement('div');
+      notice.className = 'mermaid-fallback';
+      notice.append('This diagram failed to render, so its source is shown below. You can ', link, '.');
+
+      (el.closest('.mermaid-frame') || el).insertAdjacentElement('beforebegin', notice);
+    } catch {}
+  }
+
+  if (diagrams.length) {
+    try {
+      const { default: mermaid } = await import('https://cdn.jsdelivr.net/npm/mermaid@11.12.0/+esm');
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'base',
+        fontFamily: "'Clear Sans', sans-serif",
+        themeVariables: {
+          fontFamily: "'Clear Sans', sans-serif",
+          primaryColor: '#eeeded',
+          primaryTextColor: '#000000',
+          primaryBorderColor: '#d6d3d3',
+          lineColor: '#1d70b8',
+          secondaryColor: '#ffffff',
+          tertiaryColor: '#ffffff',
+        },
+      });
+      await mermaid.run();
+    } catch {
+      for (const el of diagrams) {
+        if (!el.querySelector('svg')) await showFallback(el);
+      }
+    }
   }
 </script>

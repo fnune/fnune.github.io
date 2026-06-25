@@ -1,5 +1,52 @@
+@use 'variables' as *;
+
 .excalidraw rect {
   fill: transparent;
+}
+
+.mermaid-frame {
+  position: relative;
+  width: 100%;
+  max-width: var(--mermaid-max-width, 100%);
+  margin: $block-spacing auto;
+  aspect-ratio: var(--mermaid-aspect, auto);
+  overflow: hidden;
+}
+
+.mermaid-frame .mermaid {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.mermaid-frame .mermaid svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.mermaid-frame:has(.mermaid-error) {
+  max-width: none;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.mermaid-frame:has(.mermaid-error) .mermaid {
+  position: static;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.mermaid-fallback {
+  width: 100%;
+  margin: $block-spacing 0;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--syntax-line-highlight);
+  color: var(--fg);
+  font-size: 0.9rem;
 }
 
 .mermaid {

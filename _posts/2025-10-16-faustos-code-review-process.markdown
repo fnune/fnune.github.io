@@ -25,6 +25,7 @@ Almost every review I leave will either approve the pull request or request chan
 
 ## The process
 
+<div class="mermaid-frame" style="--mermaid-aspect: 973 / 1391; --mermaid-max-width: 973px">
 <pre class="mermaid">
 flowchart TD
     Start([PR Ready for Review]) --> Review[Review PR & leave comments]
@@ -52,6 +53,7 @@ flowchart TD
     class ApproveComments nodeApprove
     class RequestChanges nodeWarning
 </pre>
+</div>
 
 ### Default action: approve
 
