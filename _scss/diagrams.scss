@@ -2,22 +2,97 @@
   fill: transparent;
 }
 
+.mermaid {
+  .node {
+    rect,
+    polygon,
+    circle,
+    path {
+      fill: var(--code-block-bg) !important;
+      stroke: var(--border) !important;
+    }
+
+    .nodeLabel,
+    .label,
+    span,
+    p,
+    text {
+      color: var(--fg) !important;
+      fill: var(--fg) !important;
+    }
+  }
+
+  .flowchart-link,
+  .edgePath path {
+    stroke: var(--link) !important;
+  }
+
+  .marker,
+  .arrowMarkerPath {
+    fill: var(--link) !important;
+    stroke: var(--link) !important;
+  }
+
+  .edgeLabel,
+  .edgeLabel p {
+    color: var(--fg) !important;
+    background: var(--bg) !important;
+  }
+
+  .edgeLabel rect,
+  .edgeLabel .labelBkg {
+    fill: var(--bg) !important;
+  }
+
+  .node.nodeStart {
+    rect,
+    polygon,
+    path {
+      stroke: var(--link) !important;
+      stroke-width: 2px !important;
+    }
+  }
+
+  .node.nodeApprove {
+    rect,
+    polygon,
+    path {
+      fill: var(--syntax-diff-add-bg) !important;
+      stroke: var(--syntax-diff-add-fg) !important;
+    }
+  }
+
+  .node.nodeSuccess {
+    rect,
+    polygon,
+    path {
+      fill: var(--syntax-diff-add-bg) !important;
+      stroke: var(--syntax-diff-add-fg) !important;
+    }
+  }
+
+  .node.nodeWarning {
+    rect,
+    polygon,
+    path {
+      fill: var(--syntax-line-highlight) !important;
+      stroke: var(--border) !important;
+    }
+  }
+
+  .node.nodeDanger {
+    rect,
+    polygon,
+    path {
+      fill: var(--syntax-diff-del-bg) !important;
+      stroke: var(--syntax-diff-del-fg) !important;
+    }
+  }
+}
+
 @mixin diagram-dark {
   .excalidraw {
     filter: invert(1) hue-rotate(180deg);
-  }
-
-  .mermaid {
-    .flowchart-link {
-      stroke: var(--fg) !important;
-      stroke-width: 2px !important;
-    }
-
-    .marker,
-    .arrowMarkerPath {
-      fill: var(--fg) !important;
-      stroke: var(--fg) !important;
-    }
   }
 }
 

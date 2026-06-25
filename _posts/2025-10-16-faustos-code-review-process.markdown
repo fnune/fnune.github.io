@@ -7,11 +7,6 @@ date: 2025-10-16 11:59:00 +0200
 excerpt: 'I try to review code quickly and in a standard manner: my goal is to enable colleagues and improve velocity.'
 ---
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/+esm'
-    mermaid.initialize({ startOnLoad: true });
-</script>
-
 - [Guiding principles](#guiding-principles)
   - [Unblock the author](#unblock-the-author)
   - [Reviews must be actionable](#reviews-must-be-actionable)
@@ -68,11 +63,11 @@ flowchart TD
     AuthorChoice --> Merge([PR can be merged])
     ReReview --> Review
 
-    style Start fill:#e1f5ff,color:#000
-    style Merge fill:#d4edda,color:#000
-    style End fill:#f8d7da,color:#000
-    style ApproveComments fill:#90EE90,stroke:#2d6a2d,stroke-width:3px,color:#000
-    style RequestChanges fill:#FFE4B5,color:#000
+    class Start nodeStart
+    class Merge nodeSuccess
+    class End nodeDanger
+    class ApproveComments nodeApprove
+    class RequestChanges nodeWarning
 </pre>
 
 ### Default action: approve
