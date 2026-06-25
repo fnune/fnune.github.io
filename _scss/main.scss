@@ -55,12 +55,17 @@ p {
 img,
 svg {
   display: block;
-  margin: auto;
+  margin: $block-spacing auto;
   max-width: 100%;
 }
 
 figure {
   margin: $block-spacing 0;
+
+  img,
+  svg {
+    margin: auto;
+  }
 
   > :has(+ figcaption) {
     margin-bottom: 0;
@@ -119,10 +124,16 @@ ol {
 
 hr {
   border: none;
-  width: 4rem;
-  height: $border-width;
-  margin: ($block-spacing * 2) auto;
-  background-color: var(--muted);
+  height: auto;
+  margin: $block-spacing 0;
+  color: var(--muted);
+  text-align: center;
+
+  &::before {
+    content: '\2217 \2217 \2217';
+    letter-spacing: 0.6em;
+    text-indent: 0.6em;
+  }
 }
 
 a {
