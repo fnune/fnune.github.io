@@ -11,7 +11,7 @@
       default = pkgs.mkShell {
         buildInputs = [
           pkgs.bundler
-          pkgs.nodePackages.prettier
+          pkgs.prettier
           pkgs.nodejs
           pkgs.ruby
         ];
