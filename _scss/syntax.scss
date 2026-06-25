@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use 'variables' as *;
 
 pre,
@@ -26,7 +27,7 @@ p + .highlighter-rouge .highlight {
 
 .highlight {
   font-size: $code-font-size;
-  margin: $block-spacing (-$code-padding-inline / 2) $paragraph-spacing;
+  margin: $block-spacing math.div(-$code-padding-inline, 2) $paragraph-spacing;
 
   pre {
     padding: $code-padding-block $code-padding-inline;
