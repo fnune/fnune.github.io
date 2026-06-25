@@ -71,6 +71,24 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+
+  ul,
+  ol {
+    padding-left: $list-indent;
+  }
+}
+
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 0;
+  list-style-position: outside;
+
+  ul,
+  ol {
+    margin: 0;
+    padding-left: $list-indent;
+  }
 }
 
 hr {
