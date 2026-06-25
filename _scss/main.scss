@@ -87,7 +87,7 @@ pre {
 blockquote {
   margin: $block-spacing 0;
   padding: 0.1em 0 0.1em 1.4em;
-  border-left: 3px solid var(--muted);
+  border-left: 2px solid var(--border);
   color: var(--fg);
 
   > :first-child {
@@ -153,20 +153,115 @@ a {
   }
 }
 
-.theme-toggle {
-  appearance: none;
-  padding: 0;
-  border: none;
-  background: none;
-  font: inherit;
-  color: var(--link);
-  cursor: pointer;
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0 0.75rem;
+  margin-bottom: $block-spacing;
+  border-bottom: $border-width solid var(--border);
+}
+
+.masthead-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  color: var(--fg);
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 
   &:hover {
-    text-decoration: underline;
+    color: var(--fg);
+    text-decoration: none;
   }
 
   &:focus {
     color: var(--link-focus);
   }
 }
+
+.masthead-mark {
+  flex: none;
+  width: 0.6em;
+  height: 0.6em;
+  background: var(--accent);
+}
+
+.masthead-suffix {
+  color: var(--muted);
+}
+
+.masthead-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  a {
+    color: var(--fg);
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    &:focus {
+      color: var(--link-focus);
+    }
+  }
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25em;
+}
+
+.theme-sep {
+  color: var(--muted);
+}
+
+.theme-option {
+  appearance: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: var(--muted);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--fg);
+  }
+
+  &[aria-checked='true'] {
+    color: var(--fg);
+  }
+
+  &:focus-visible {
+    color: var(--link-focus);
+  }
+}
+
+.post-meta {
+  margin-top: 0.5rem;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.colophon {
+  margin-top: calc(#{$block-spacing} * 2.5);
+  padding-top: $block-spacing;
+  border-top: $border-width solid var(--border);
+  color: var(--muted);
+  font-size: $small-font-size;
+}
+

@@ -1,14 +1,12 @@
-<footer>
+<footer class="colophon">
   <p>{{ site.author.description }}</p>
-  <p>Find me on <a href="{{ site.author.link }}" target="_blank" rel="noopener noreferrer">GitHub</a>. Subscribe using <a href="/atom.xml">RSS</a>.</p>
-  <p>© {{ site.author.name }}</p>
 </footer>
 
 <script>
   (function () {
-    var btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-    var order = ['system', 'light', 'dark'];
+    var group = document.querySelector('.theme-switch');
+    if (!group) return;
+    var options = group.querySelectorAll('.theme-option');
     function stored() {
       try {
         var v = localStorage.getItem('theme');
@@ -27,11 +25,17 @@
       }
     }
     function render() {
-      btn.textContent = 'Theme: ' + stored();
+      var current = stored();
+      options.forEach(function (option) {
+        var on = option.getAttribute('data-theme-value') === current;
+        option.setAttribute('aria-checked', on ? 'true' : 'false');
+      });
     }
-    btn.addEventListener('click', function () {
-      apply(order[(order.indexOf(stored()) + 1) % order.length]);
-      render();
+    options.forEach(function (option) {
+      option.addEventListener('click', function () {
+        apply(option.getAttribute('data-theme-value'));
+        render();
+      });
     });
     render();
   })();
