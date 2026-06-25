@@ -10,7 +10,7 @@
   font-family: 'Clear Sans';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: block;
   src: url('/fonts/ClearSans-Regular.woff2') format('woff2');
 }
 
@@ -18,7 +18,7 @@
   font-family: 'Clear Sans';
   font-style: italic;
   font-weight: 400;
-  font-display: optional;
+  font-display: block;
   src: url('/fonts/ClearSans-Italic.woff2') format('woff2');
 }
 
@@ -26,7 +26,7 @@
   font-family: 'Clear Sans';
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
+  font-display: block;
   src: url('/fonts/ClearSans-Bold.woff2') format('woff2');
 }
 
@@ -34,6 +34,6 @@
   font-family: 'Clear Sans';
   font-style: italic;
   font-weight: 700;
-  font-display: optional;
+  font-display: block;
   src: url('/fonts/ClearSans-BoldItalic.woff2') format('woff2');
 }
