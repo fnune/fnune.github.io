@@ -1,6 +1,7 @@
-@import 'variables';
+@use 'sass:color';
+@use 'variables' as *;
 
-$heading-anchor-color: lighten($heading-anchor-base-color, 42%);
+$heading-anchor-color: color.adjust($heading-anchor-base-color, $lightness: 42%);
 
 h1,
 h2,
