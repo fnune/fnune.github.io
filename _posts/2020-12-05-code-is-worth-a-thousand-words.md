@@ -18,6 +18,6 @@ What I'm proposing here is that you can do the same, but with the sole intention
 
 More often than I'd like, I find myself struggling to put in words some architectural decision, or to understand in conversation a design that a colleague is explaining to me. In those cases, I try to remember to always put it down in code, and maybe, as it happens with pictures, that piece of code is worth a thousand words.
 
-### References
+## References
 
 1. <div id="citation-1"></div>David Thomas and Andrew Hunt, The Pragmatic Programmer, 20th Anniversary Edition, Addison-Wesley, 2020.

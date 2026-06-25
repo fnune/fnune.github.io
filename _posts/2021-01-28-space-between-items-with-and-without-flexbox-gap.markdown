@@ -61,7 +61,7 @@ The main difference is that you can now combine it with `flex-wrap: wrap`.
 
 If you need support for Safari (and it's early 2021) or older versions of Chrome and Firefox, you'll have to resort to one of the many workarounds.
 
-### Margins on everything but the last thing
+## Margins on everything but the last thing
 
 This is easy to get right: every item gets a margin on the right except for the very last one.
 
@@ -92,7 +92,7 @@ A drawback is that we can't support potential wrapping items, since we would nee
   <div class="box box--bad"></div>
 </div>
 
-### The lobotomized owl
+## The lobotomized owl
 
 I've used this one the most. If I'm being honest, probably because of the memorable name. There are some advantages, though, but those are best explained by [A List Apart](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/).
 
@@ -123,7 +123,7 @@ Sadly, the lobotomized owl doesn't handle wrapping either:
   <div class="box box--bad"></div>
 </div>
 
-### Hidden negative margins
+## Hidden negative margins
 
 This one works by wrapping the layout with `overflow: hidden`.
 
@@ -171,7 +171,7 @@ To illustrate why the wrapper is necessary, here it is without it:
   <div class="box box--bad"></div>
 </div>
 
-### Flexible grid
+## Flexible grid
 
 We can achieve a very similar result using a Grid layout:
 

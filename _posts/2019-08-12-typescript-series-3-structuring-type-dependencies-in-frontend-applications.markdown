@@ -49,7 +49,7 @@ In `types/api.ts`, you have complete interfaces for what your API responds with 
 
 What could go wrong?
 
-### Code ergonomics
+## Code ergonomics
 
 When the type changes, it's very likely that you need to change a lot of code to go with that change as well. While the introduction of a new field in a type will likely not require changes in your application code, a breaking change on a big type could start a refactoring chain. The fact that the type is used indiscriminately everywhere makes it hard to see where logic should change.
 
@@ -57,7 +57,7 @@ In the case of generated types, a change in the code generation library will lik
 
 If you unit-test a lot, you're going to need to mock a lot more things in tests for them to compile. This can make your unit tests a lot less clear and remove them from their purpose.
 
-### Proper structure and architecture
+## Proper structure and architecture
 
 You may stop thinking about the design of your components' API and just use the type instead. Using a big type directly instead of thinking of what your component's API should be can lead to code that's harder to maintain, review and fix.
 

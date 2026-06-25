@@ -48,7 +48,7 @@ CONFIG_USING_ESP_CONSOLE=y
 
 Et voila! It has built! Time to get it flashed onto the board.
 
-### Reboot loop after integrating the SDK
+## Reboot loop after integrating the SDK
 
 There are some useful logs:
 
@@ -109,7 +109,7 @@ The configuration changed like so:
 
 I'm going to add that to the defaults file because it seems critical to the project. I also changed how I'm getting my WiFi SSID and password. Time to flash it again!
 
-### The reboot loop continues
+## The reboot loop continues
 
 But now it's different! There are no more errors from Memfault, and I get a reassuring message, but the device still reboots in a loop:
 
@@ -125,7 +125,7 @@ After some time trying to figure this out, I'm going to give up and hardcode the
 
 Now, the device is stable! I just don't know C.
 
-### Sending data
+## Sending data
 
 I need to add `memfault_esp_port_http_client_post_data()` somewhere.
 
@@ -145,7 +145,7 @@ My device now exists on Memfault!
 the-one-and-only	1.0.0+4bb166	ESP8266EX_CH340C	a minute ago
 ```
 
-### The ESP-IDF console
+## The ESP-IDF console
 
 The Memfault docs mention a `crash` CLI command. I'm not sure what this is. I tried to find some information about this, thinking it's related to the `CONFIG_USING_ESP_CONSOLE=y` flag I passed in for compilation. The ESP8266 documentation doesn't mention the `console` component or the `crash` CLI command.
 
@@ -159,7 +159,7 @@ I'm blocked at this step because the next steps depend on this: the crash data I
 
 I guess I need to find a way around the problem if I can't find out what this `crash` CLI command is.
 
-### Trying to force a crash by flashing buggy code
+## Trying to force a crash by flashing buggy code
 
 Let's try adding an infinite loop in a `GET` request handler under `/crash`.
 
@@ -279,7 +279,7 @@ a few seconds ago	Attached to Issue #38075
 
 Both were attached to issue `38075`.
 
-### Integrating reboot reasons
+## Integrating reboot reasons
 
 [Here's the documentation I'm following](https://docs.memfault.com/docs/embedded/reboot-reason-tracking).
 
@@ -331,7 +331,7 @@ Reset cause `0x7` corresponds to "other watchdogs", so I'm going to map that to 
 
 As it turns out, it's because I didn't read the port included in the SDK well enough (duh). It includes [an implementation of `memfault_reboot_reason_get`](https://github.com/memfault/memfault-firmware-sdk/blob/master/ports/esp8266_sdk/memfault/esp_reboot_tracking.c) which I should have used from the start.
 
-### Sending data periodically
+## Sending data periodically
 
 I simply used the code from [my previous investigation]({% post_url 2021-02-21-embedded-learning-log-3-running-a-recurring-freertos-task %}) on how to create a recurring task on FreeRTOS and called `memfault_esp_port_http_client_post_data` from there. [Here's how it ended up looking](https://github.com/fnune/toastboard/blob/061238f3ccffd2f7f13eb0a4d0844fc31d5ad9c8/src/main/main.c#L148).
 

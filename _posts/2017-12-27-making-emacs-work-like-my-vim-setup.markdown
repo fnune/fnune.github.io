@@ -6,17 +6,7 @@ date: 2017-12-27 12:47:51 +0200
 excerpt: 'I decided to surrender to my sacrilegous self and try to emulate everything I do with Vim from an empty Emacs config file built with Org-mode.'
 ---
 
-### Table of contents
-
-1. [Package management](#package-management): from [vim-plug](https://github.com/junegunn/vim-plug) to [Package.el](https://www.emacswiki.org/emacs/ELPA) and [use-package](https://github.com/jwiegley/use-package).
-2. [Vim things and Evil things](#vim-things-and-evil-things): experiences using [Evil mode](https://github.com/emacs-evil/evil).
-3. [Project management and file navigation](#project-management-and-file-navigation): from [fzf](https://github.com/junegunn/fzf) to [Helm](https://github.com/emacs-helm/helm) and [Projectile](https://github.com/bbatsov/projectile).
-4. [Specific packages](#specific-packages): a small teaser on alternatives for popular Vim packages.
-5. [Theming](#theming): everybody wants some eye-candy.
-6. [Performance and server mode](#performance-and-server-mode): naïve comparison of how Neovim and Emacs feel differently performance-wise.
-7. [Conclusion](#conclusion) and fare-thee-wells.
-
-### My configuration repositories
+## My configuration repositories
 
 Do not expect extremely polished dotfiles. I know some of you will be pulling your hair out with some of the stuff you see here:
 
@@ -45,7 +35,7 @@ During the last weeks I've noticed several tools and concepts in the Emacs which
 
 So I decided to surrender to my sacrilegous self and try to **emulate everything I do with Vim** from an empty Emacs config file built with Org-mode. And I must say: it's been a breeze! I haven't even needed to dedicate much time to learning actual Emacs, and what I've learned has actually been nice. In this post I'll try to go through what I did to rebuild my setup; I hope you'll enjoy it as much as I did.
 
-### Package management
+## Package management
 
 For package management needs the Vim community has contributed several awesome packages like [Pathogen](https://github.com/tpope/vim-pathogen) or [vim-plug](https://github.com/junegunn/vim-plug) among the many worth mentioning. I've always used vim-plug and never found a problem with it. As active as the Emacs community is in regards to package development, I expected a solution that would provide the same level of comfort.
 
@@ -62,7 +52,7 @@ Package, however, does not take responsibility for automatic fetching, updates, 
 
 It didn't take me too long to learn this, and use-package allegedly does a thousand more things which I'll begin to learn with time.
 
-### Vim things and Evil things
+## Vim things and Evil things
 
 [Evil](https://github.com/emacs-evil/evil) calls itself the _extensible vi layer for Emacs_, and claims that it _emulates the main features of Vim_. I'd say this is an understatement; Evil feels like a complete re-implementation of Vim's porcelain. It makes you feel right at home once you start using it:
 
@@ -75,7 +65,7 @@ It didn't take me too long to learn this, and use-package allegedly does a thous
 
 Using [evil-leader](https://github.com/cofi/evil-leader) you can configure a leader key. I've configured mine to `Space`, and added a several keybindings. The same results can be achieved with the more powerful [general.el](https://github.com/noctuid/general.el), and if you need chained keystrokes to produce a command (for example, I used to have `<leader> wq`, which I found faster than `:wq`), you can use [Hydra](https://github.com/abo-abo/hydra). I haven't found a need for these and I'm doing just fine with evil-leader.
 
-### Project management and file navigation
+## Project management and file navigation
 
 My setup using Vim is basically [fzf](https://github.com/junegunn/fzf) (which I use for many more things outside Vim) powered by [Ag (or The Silver Searcher)](https://github.com/ggreer/the_silver_searcher) for finding files and [ripgrep](https://github.com/BurntSushi/ripgrep) for finding text in a project. This works flawlessly.
 
@@ -85,7 +75,7 @@ The scope of fzf is by no means comparable to that of Helm and Projectile, so th
 
 As you can see [on my Emacs configuration](https://github.com/fnune/emacs.d/), my setup for Helm and Projectile is extremely basic and I haven't needed further customization yet. And I must say: they look much prettier than the Vim setup I use.
 
-### Specific packages
+## Specific packages
 
 A quick search on your favorite engine will yield at least a couple different solutions to problems some of the nicest Vim plugins solve. Here's a quick list to encourage you:
 
@@ -97,13 +87,13 @@ A quick search on your favorite engine will yield at least a couple different so
 
 Regarding [Tim Pope plugins](https://github.com/tpope?tab=repositories): there's an Emacs port for everything Mr. Pope does. Many of these go on top of Evil, and it's a no-brainer to add them and use them if you're used to their Vim counterpart.
 
-### Theming
+## Theming
 
 Themes are really easy to set up on Emacs. Just add a use-package declaration and then load it with `(load-theme 'pretty-theme t)`. The second argument automatically answers "yes" to a couple security questions that pop up every time you load a new theme. Emacs themes can run arbitrary Elisp so they can do a lot of nasty stuff. Make sure you trust the sources where you get your themes.
 
 If I had to complain about anything, I'd say most themes work much better on the GUI version of Emacs, and I use the terminal version (`emacs -nw`). Many themes' backgrounds are broken and show up differently depending on your `$TERM` environment variable. Of the ones I've tried, I've found [Monokai](https://github.com/oneKelvinSmith/monokai-emacs) and [Badger](https://github.com/ccann/badger-theme) to work look best on terminal Emacs.
 
-### Performance and server mode
+## Performance and server mode
 
 Neovim feels a lot snappier for a lot of interactions. This, however, is not important at all most of the time, because it never shows while writing or navigating text inside a buffer.
 

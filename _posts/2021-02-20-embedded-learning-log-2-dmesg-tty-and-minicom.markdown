@@ -42,7 +42,7 @@ I suppose this is what terminal emulators such as Kitty do when they open: they 
 
 So now I know! `sudo dmesg` prints kernel logs and we try to find matches for `tty`, which should give us logs for when devices connected. When devices connect, Linux will create files for them under `/dev`, and these show up as `/dev/tty*`, in my case `/dev/ttyUSB0` because my device is the first on the USB serial port adapter.
 
-### Playing with `minicom`
+## Playing with `minicom`
 
 On a first attempt to verify that serial communication to my development board works, I did this:
 

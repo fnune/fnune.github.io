@@ -12,6 +12,10 @@
   {% assign tocItems = toc | split: '<li' | size | minus: 1 %}
   {% if tocItems > 1 %}
     {% assign intro = body | split: '<h2' | first %}
+    {% assign s3 = body | split: '<h3' | first %}
+    {% assign s4 = body | split: '<h4' | first %}
+    {% if s3.size < intro.size %}{% assign intro = s3 %}{% endif %}
+    {% if s4.size < intro.size %}{% assign intro = s4 %}{% endif %}
     {% assign rest = body | remove_first: intro %}
     {{ intro }}
     <nav aria-label="Table of contents">
