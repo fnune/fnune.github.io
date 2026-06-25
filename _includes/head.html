@@ -21,9 +21,9 @@
 
   <link rel="preload" href="/fonts/ClearSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" >
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}" >
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon-32x32.png" | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon-16x16.png" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/atom.xml" | prepend: site.baseurl
