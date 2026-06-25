@@ -246,6 +246,11 @@ I'm looking forward to using `gap` with Flexbox. Especially once the next major 
 Thanks to [sirlantis for a careful review of this post](https://github.com/fnune/fnune.github.io/pull/17).
 
 <style>
+.boxes,
+.boxes-wrapper--negative-margins {
+  margin: 1rem 0;
+}
+
 .boxes {
   display: flex;
   border-radius: 5px;
