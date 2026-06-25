@@ -253,6 +253,38 @@ a {
   color: var(--muted);
 }
 
+.intro {
+  margin: 0 0 $block-spacing;
+}
+
+.home-section {
+  margin-bottom: $block-spacing;
+
+  h2 {
+    margin-bottom: $intro-spacing;
+  }
+}
+
+.post-entry {
+  margin-bottom: $paragraph-spacing;
+}
+
+.post-entry-title {
+  margin-bottom: 0.2rem;
+}
+
+.post-entry-meta {
+  margin: 0 0 0.4rem;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.post-entry-excerpt {
+  margin: 0;
+}
+
 .colophon {
   margin-top: calc(#{$block-spacing} * 2.5);
   padding-top: $block-spacing;

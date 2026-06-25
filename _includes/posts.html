@@ -1,8 +1,13 @@
-<ol type="i" reversed>
+<div class="post-list">
   {% for post in include.posts %}
-  <li>
-    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
-  </li>
+  <article class="post-entry">
+    <h3 class="post-entry-title">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h3>
+    <p class="post-entry-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+    </p>
+    <p class="post-entry-excerpt">{{ post.excerpt | markdownify | strip_html | strip_newlines | truncate: 200 }}</p>
+  </article>
   {% endfor %}
-</ol>
+</div>

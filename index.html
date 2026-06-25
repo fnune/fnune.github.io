@@ -2,4 +2,67 @@
 layout: default
 ---
 
-{% include posts.html posts=site.posts %}
+<section class="intro">
+  <p>
+    I'm Fausto, a software engineer based in Berlin, building products end to end for over a decade. Below: my
+    open-source work and writing, mostly about engineering.
+  </p>
+</section>
+
+<section class="home-section">
+  <h2>Open source</h2>
+  <ul class="project-list">
+    <li>
+      Contributions to projects like
+      <a href="https://github.com/NixOS/nixpkgs/pulls?q=author%3Afnune" target="_blank" rel="noopener noreferrer"
+        >nixpkgs</a
+      >,
+      <a
+        href="https://github.com/sveltejs/language-tools/pulls?q=author%3Afnune"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Svelte</a
+      >, and the
+      <a href="https://github.com/servo/servo/pulls?q=author%3Afnune" target="_blank" rel="noopener noreferrer"
+        >Servo browser engine</a
+      >
+    </li>
+    <li>
+      At work, contributions to
+      <a href="https://github.com/pulumi/pulumi/pulls?q=author%3Afnune" target="_blank" rel="noopener noreferrer"
+        >Pulumi</a
+      >
+      and Memfault's
+      <a href="https://github.com/memfault/memfault-linux-sdk" target="_blank" rel="noopener noreferrer">Linux SDK</a>
+    </li>
+    <li>
+      <a href="https://github.com/fnune/vampa" target="_blank" rel="noopener noreferrer">Vampa</a>, a toy LLVM-based
+      programming language written in Rust
+    </li>
+    <li>
+      <a href="https://kyaraben.org" target="_blank" rel="noopener noreferrer">Kyaraben</a>, retro game emulation for
+      Steam Deck and Linux, with automatic Syncthing
+    </li>
+    <li>
+      Neovim plugins like
+      <a href="https://github.com/fnune/recall.nvim" target="_blank" rel="noopener noreferrer">Recall</a>
+      and
+      <a href="https://github.com/fnune/codeactions-on-save.nvim" target="_blank" rel="noopener noreferrer"
+        >codeactions-on-save.nvim</a
+      >
+    </li>
+    <li>
+      <a href="https://github.com/fnune/home.nix" target="_blank" rel="noopener noreferrer">home.nix</a>, my Nix-based
+      system configuration and dotfiles
+    </li>
+    <li>
+      <a href="https://fnune.com/waza" target="_blank" rel="noopener noreferrer">Waza</a>, a tiny page of judo
+      vocabulary sorted by word frequency in techniques
+    </li>
+  </ul>
+</section>
+
+<section class="home-section">
+  <h2>Writing</h2>
+  {% include posts.html posts=site.posts %}
+</section>
