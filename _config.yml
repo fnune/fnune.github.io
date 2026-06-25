@@ -8,16 +8,16 @@
 # Site settings
 title: Fausto Núñez Alberro's blog
 description: >
-  I am a web developer based in Berlin. I work for Pulumi, where we create
-  developer tools for companies shipping to the cloud. I have a focus on
-  front-end web development, but I'm trying to become a generalist.
+  I am a software engineer based in Berlin. I work for Pulumi, where we build
+  developer tools for companies shipping to the cloud. I work across the stack,
+  from frontends to backends, systems engineering, and infrastructure tooling.
 author:
   name: Fausto Núñez Alberro
   link: https://github.com/fnune
   description: >
-    I am a web developer based in Berlin. I work for Pulumi, where we create
-    developer tools for companies shipping to the cloud. I have a focus on
-    front-end web development, but I'm trying to become a generalist.
+    I am a software engineer based in Berlin. I work for Pulumi, where we build
+    developer tools for companies shipping to the cloud. I work across the stack,
+    from frontends to backends, systems engineering, and infrastructure tooling.
   email: fausto.nunez@mailbox.org
 baseurl: '' # the subpath of your site, e.g. /blog
 repository_url: 'https://github.com/fnune/fnune.github.io'
