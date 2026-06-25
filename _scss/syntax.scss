@@ -10,6 +10,7 @@ code.highlighter-rouge {
   border: 1px solid var(--code-inline-border);
   border-radius: 6px;
   padding: 0 4px;
+  font-size: $code-font-size;
   color: var(--code-fg);
 }
 

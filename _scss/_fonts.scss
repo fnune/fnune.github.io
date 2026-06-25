@@ -1,0 +1,39 @@
+// Clear Sans (Apache-2.0, by Intel), Latin-subset woff2 from Fontsource.
+// To update, re-download the four weights into /fonts under these names:
+//   base=https://cdn.jsdelivr.net/fontsource/fonts/clear-sans@latest
+//   curl -fsSL $base/latin-400-normal.woff2 -o fonts/ClearSans-Regular.woff2
+//   curl -fsSL $base/latin-400-italic.woff2 -o fonts/ClearSans-Italic.woff2
+//   curl -fsSL $base/latin-700-normal.woff2 -o fonts/ClearSans-Bold.woff2
+//   curl -fsSL $base/latin-700-italic.woff2 -o fonts/ClearSans-BoldItalic.woff2
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url('/fonts/ClearSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: optional;
+  src: url('/fonts/ClearSans-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url('/fonts/ClearSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Clear Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: optional;
+  src: url('/fonts/ClearSans-BoldItalic.woff2') format('woff2');
+}
