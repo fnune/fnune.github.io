@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TypeScript - Poor man's async await using generators"
+title: "TypeScript – Poor man's async await using generators"
 comments: true
 categories: [typescript]
 date: 2020-07-31 17:37:25 +0200

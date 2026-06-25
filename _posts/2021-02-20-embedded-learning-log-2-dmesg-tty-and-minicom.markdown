@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Embedded learning log - A foray into Linux specifics: dmesg, tty and playing with minicom'
+title: 'Embedded learning log – A foray into Linux specifics: dmesg, tty and playing with minicom'
 comments: true
 categories: [embedded-learning-log]
 date: 2021-02-20 20:22:51 +0200

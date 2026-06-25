@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Binding devices with libusbip - usairb devlog #2'
+title: 'Binding devices with libusbip – usairb devlog #2'
 comments: true
 categories: devlog usairb
 date: 2022-03-18 14:56:00 +0200

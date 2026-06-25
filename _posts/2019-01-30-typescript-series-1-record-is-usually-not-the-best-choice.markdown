@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'TypeScript - Using Record is usually not the best choice'
+title: 'TypeScript – Using Record is usually not the best choice'
 comments: true
 categories: [typescript]
 date: 2019-01-30 11:03:00 +0200

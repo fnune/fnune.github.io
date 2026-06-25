@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Embedded learning log - Connecting a board and flashing an RTOS'
+title: 'Embedded learning log – Connecting a board and flashing an RTOS'
 comments: true
 categories: [embedded-learning-log]
 date: 2021-02-14 19:22:51 +0200

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Listening to devices with libudev - usairb devlog #1'
+title: 'Listening to devices with libudev – usairb devlog #1'
 comments: true
 categories: devlog usairb
 date: 2022-02-05 12:43:00 +0200

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Embedded learning log - Running a FreeRTOS recurring task'
+title: 'Embedded learning log – Running a FreeRTOS recurring task'
 comments: true
 categories: [embedded-learning-log]
 date: 2021-02-21 21:00:51 +0200

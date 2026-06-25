@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'TypeScript - Structuring type dependencies in frontend applications'
+title: 'TypeScript – Structuring type dependencies in frontend applications'
 comments: true
 categories: [typescript]
 date: 2019-08-12 19:55:00 +0200

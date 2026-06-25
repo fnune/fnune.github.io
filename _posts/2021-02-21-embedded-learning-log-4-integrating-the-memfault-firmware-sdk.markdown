@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Embedded learning log - Integrating the Memfault Firmware SDK'
+title: 'Embedded learning log – Integrating the Memfault Firmware SDK'
 comments: true
 categories: [embedded-learning-log]
 date: 2021-02-21 21:00:51 +0200

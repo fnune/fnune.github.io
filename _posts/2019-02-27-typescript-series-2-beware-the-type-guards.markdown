@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'TypeScript - Beware the user-defined type guards'
+title: 'TypeScript – Beware the user-defined type guards'
 comments: true
 categories: [typescript]
 date: 2019-02-27 18:15:00 +0200

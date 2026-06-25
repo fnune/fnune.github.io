@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'TypeScript - Record and the <code>satisfies</code> operator'
+title: 'TypeScript – Record and the <code>satisfies</code> operator'
 comments: true
 categories: [typescript]
 date: 2022-11-15 21:16:00 +0200
