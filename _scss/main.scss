@@ -86,8 +86,8 @@ pre {
 
 blockquote {
   margin: $block-spacing 0;
-  padding: 0.1em 0 0.1em 1.4em;
-  border-left: 2px solid var(--border);
+  padding: 0.1em 0 0.1em 1.6em;
+  font-style: italic;
   color: var(--fg);
 
   > :first-child {
@@ -138,6 +138,8 @@ hr {
 
 a {
   text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
   color: var(--link);
 
   &:visited {
@@ -145,7 +147,7 @@ a {
   }
 
   &:hover {
-    text-decoration: underline;
+    text-decoration-line: underline;
   }
 
   &:focus {
@@ -172,20 +174,15 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 
-  &:hover {
+  &:visited {
     color: var(--fg);
-    text-decoration: none;
-  }
-
-  &:focus {
-    color: var(--link-focus);
   }
 }
 
 .masthead-mark {
   flex: none;
-  width: 0.6em;
-  height: 0.6em;
+  width: $mark-size;
+  height: $mark-size;
   background: var(--accent);
 }
 
@@ -204,13 +201,8 @@ a {
   a {
     color: var(--fg);
 
-    &:hover {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    &:focus {
-      color: var(--link-focus);
+    &:visited {
+      color: var(--fg);
     }
   }
 }
