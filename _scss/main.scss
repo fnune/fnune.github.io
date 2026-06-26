@@ -73,6 +73,7 @@ svg {
   display: block;
   margin: $block-spacing auto;
   max-width: 100%;
+  height: auto;
 }
 
 figure {
@@ -179,6 +180,12 @@ a {
   padding: 0.5rem 0 0.75rem;
   margin-bottom: $block-spacing;
   border-bottom: $border-width solid var(--border);
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
 }
 
 .masthead-brand {
