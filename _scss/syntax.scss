@@ -182,3 +182,13 @@ p + .highlighter-rouge .highlight {
     color: var(--syntax-builtin);
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .highlight {
+    margin: $block-spacing math.div(-$mobile-code-padding-inline, 2) $paragraph-spacing;
+
+    pre {
+      padding: $mobile-code-padding-block $mobile-code-padding-inline;
+    }
+  }
+}

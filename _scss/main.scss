@@ -42,6 +42,10 @@ body {
   max-width: 44rem;
   overflow-y: scroll;
   padding: $body-padding;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0.3rem $mobile-body-horizontal-padding $mobile-body-horizontal-padding;
+  }
 }
 
 h1,
