@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+prompt() {
+  local label="$1" default="${2:-}" reply
+  if [[ -n "$default" ]]; then
+    read -rp "$label [$default]: " reply
+    printf '%s' "${reply:-$default}"
+  else
+    read -rp "$label (enter to skip): " reply
+    printf '%s' "$reply"
+  fi
+}
+
+slugify() {
+  printf '%s' "$1" | tr '[:upper:]' '[:lower:]' |
+    sed -E 's/[^a-z0-9]+/-/g; s/^-+//; s/-+$//'
+}
+
+format() {
+  if command -v prettier >/dev/null 2>&1; then
+    prettier --write "$1" >/dev/null 2>&1 || true
+  elif command -v npx >/dev/null 2>&1; then
+    npx --yes prettier --write "$1" >/dev/null 2>&1 || true
+  fi
+}
+
+title=$(prompt "Title")
+while [[ -z "$title" ]]; do
+  echo "A title is required to name the file."
+  title=$(prompt "Title")
+done
+
+default_slug=$(slugify "$title")
+slug=$(prompt "Slug" "$default_slug")
+excerpt=$(prompt "Excerpt")
+date_human=$(date '+%Y-%m-%d %H:%M:%S %z')
+date_file=$(date '+%Y-%m-%d')
+
+file="_posts/${date_file}-${slug}.markdown"
+if [[ -e "$file" ]]; then
+  echo "Refusing to overwrite existing file: $file" >&2
+  exit 1
+fi
+
+{
+  echo '---'
+  echo 'layout: post'
+  printf 'title: "%s"\n' "${title//\"/\\\"}"
+  echo 'comments: true'
+  printf 'date: %s\n' "$date_human"
+  if [[ -n "$excerpt" ]]; then
+    printf 'excerpt: "%s"\n' "${excerpt//\"/\\\"}"
+  fi
+  echo '---'
+  echo
+} >"$file"
+
+format "$file"
+
+echo "Created $file"
+
+if [[ -n "${EDITOR:-}" && -t 0 ]]; then
+  exec "$EDITOR" "$file"
+fi
