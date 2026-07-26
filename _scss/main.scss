@@ -309,10 +309,9 @@ a {
 }
 
 .colophon {
-  margin-top: calc(#{$block-spacing} * 2.5);
+  margin-top: $block-spacing;
   padding-top: $block-spacing;
   border-top: $border-width solid var(--border);
   color: var(--muted);
   font-size: $small-font-size;
 }
-
